@@ -5,7 +5,7 @@ import {
     Box,
     Text,
     Button,
-    Image,
+    Img,
     Icon,
     createIcon,
     IconProps,
@@ -23,7 +23,7 @@ export default function Hero() {
                 py={{ base: 20, md: 28 }}
                 direction={{ base: 'column', md: 'row' }}>
                 <Stack flex={1} spacing={{ base: 5, md: 10 }} px={{ base: 4, md: 2 }} className={"wow fadeIn"}>
-                    <Image src="/img/logoXL.png" alt="logo" />
+                    <Img src="/img/logoXL.png" alt="logo" />
                     <Text color={'gray.500'} textAlign="center" fontFamily="cursive" >
                         El camino para llegar al arte; a su comprensión, anteponiendo a la razón, sensitividad; a la lógica, intuición; a la metafísica, la conciencia. Primer valor del arte. Sensibilizar.
                     </Text>
@@ -65,9 +65,8 @@ export default function Hero() {
                         boxShadow={'2xl'}
                         overflow={'hidden'}>
 
-                        <Image
+                        <Img
                             alt={'Hero Image'}
-                            fit={'cover'}
                             align={'center'}
                             w={'100%'}
                             h={'100%'}

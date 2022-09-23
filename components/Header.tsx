@@ -8,7 +8,7 @@ import {
     useDisclosure,
     useColorModeValue,
     Stack,
-    Image
+    Img
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 
@@ -43,7 +43,7 @@ export function Header() {
                         onClick={isOpen ? onClose : onOpen}
                     />
                     <HStack spacing={8} alignItems={'center'}>
-                        <Image src="/img/logo.png" alt="logo" />
+                        <Img src="/img/logo.png" alt="logo" />
                         <HStack
                             as={'nav'}
                             spacing={4}
