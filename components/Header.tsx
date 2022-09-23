@@ -43,7 +43,7 @@ export function Header() {
                         onClick={isOpen ? onClose : onOpen}
                     />
                     <HStack spacing={8} alignItems={'center'}>
-                        <Image src="/img/logo.png" />
+                        <Image src="/img/logo.png" alt="logo" />
                         <HStack
                             as={'nav'}
                             spacing={4}
