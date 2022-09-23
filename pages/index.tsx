@@ -22,7 +22,7 @@ const Card = ({ children }: { children: React.ReactNode }) => (
     bg="#FFFFFF60"
     filter="drop-shadow(2px 4px 6px black)"
     padding={5}
-    w="80%"
+    w="full"
   >
     <Text
       fontWeight="600"
@@ -44,7 +44,16 @@ export default function Home() {
   return <>
     <Header />
     <Hero />
-    <Stack justify="center" align="center" bgImage="/img/fig1.jpeg" bgSize="cover" mt="10px" p={10} spacing={5}>
+    <Stack
+      justify="center"
+      align="center"
+      bgImage="/img/fig1.jpeg"
+      bgSize="cover"
+      mt="10px"
+      minH="500px"
+      p={{ base: 5, md: 10 }}
+      spacing={{ base: 5, md: 10 }}
+    >
       <Card >
         Todo lo que un pintor puede hacer para comunicar su arte a los demás es intentar sugerirlo o indicarlo.
       </Card>

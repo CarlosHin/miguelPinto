@@ -12,7 +12,7 @@ const testimonials = [
     {
         year: '2011',
         title: "Pueblos de Madrid",
-        image: "/img/fig1.jpeg",
+        image: "/img/pueblos1.jpeg",
         content: "La comunidad de Madrid me proporciono una variedad infinita de pueblos y paisajes. Aquí nací y viví, admirando constantemente sus tierras y costumbres, enriqueciendo mi sensibilidad."
     },
     {
