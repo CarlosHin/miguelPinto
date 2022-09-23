@@ -1,10 +1,14 @@
 import { Hero } from "../components/Hero";
 import { Header } from "../components/Header";
 import {
-  Text, Stack, Heading, Box, Center
+  Text, Stack
 } from '@chakra-ui/react';
 import { Obra } from "./_components/Obra";
 import ObrasDestacadas from "./_components/ObrasDestacadas";
+import { useEffect } from "react";
+const isServer = typeof window === 'undefined'
+const WOW = !isServer ? require('wowjs') : null
+
 const epocas = [
   { title: "Figurativa", image: "/img/fig1.jpeg" },
   { title: "Subjetiva", image: "/img/sub1.jpeg" },
@@ -12,6 +16,7 @@ const epocas = [
 
 const Card = ({ children }: { children: React.ReactNode }) => (
   <Stack
+    className={"wow fadeIn"}
     borderWidth="1px"
     borderRadius="lg"
     bg="#FFFFFFBB"
@@ -26,11 +31,17 @@ const Card = ({ children }: { children: React.ReactNode }) => (
 
 )
 export default function Home() {
+  useEffect(() => {
+    new WOW.WOW({
+      live: false
+    }).init();
+  }, [])
+
   return <>
     <Header />
     <Hero />
-    <Stack justify="center" align="center" bgImage="/img/fig1.jpeg" bgSize="cover" mt="10px" p={10}>
-      <Card>
+    <Stack justify="center" align="center" bgImage="/img/fig1.jpeg" bgSize="cover" mt="10px" p={10} >
+      <Card >
         Todo lo que un pintor puede hacer para comunicar su arte a los demás es intentar sugerirlo o indicarlo.
       </Card>
       <Card>

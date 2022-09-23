@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/animate.min.css";
 import { ChakraProvider } from "@chakra-ui/react";
 
 function MyApp({ Component, pageProps }) {

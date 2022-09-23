@@ -14,13 +14,15 @@ import {
 
 export function Hero() {
     return (
-        <Container maxW={'7xl'}>
+        <Container maxW={{ lg: '7xl' }}>
             <Stack
+                maxW="full"
+                overflow="hidden"
                 align={'center'}
                 spacing={{ base: 8, md: 10 }}
                 py={{ base: 20, md: 28 }}
                 direction={{ base: 'column', md: 'row' }}>
-                <Stack flex={1} spacing={{ base: 5, md: 10 }} px={{ base: 4, md: 2 }}>
+                <Stack flex={1} spacing={{ base: 5, md: 10 }} px={{ base: 4, md: 2 }} className={"wow fadeIn"}>
                     <Image src="/img/logoXL.png" />
                     <Text color={'gray.500'} textAlign="center" fontFamily="cursive" >
                         El camino para llegar al arte; a su comprensión, anteponiendo a la razón, sensitividad; a la lógica, intuición; a la metafísica, la conciencia. Primer valor del arte. Sensibilizar.
@@ -45,6 +47,7 @@ export function Hero() {
                     justify={'center'}
                     align={'center'}
                     position={'relative'}
+                    className={"wow fadeInRight"}
                     w={'full'}>
                     <Blob
                         w={'150%'}

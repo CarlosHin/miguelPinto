@@ -11,10 +11,16 @@ import {
 
 const testimonials = [
     {
-        name: 'Brandon P.',
-        role: 'Chief Marketing Officer',
-        content: "Pueblos de Madrid",
-        avatar: "/img/fig1.jpeg"
+        year: '2011',
+        title: "Pueblos de Madrid",
+        image: "/img/fig1.jpeg",
+        content: "La comunidad de Madrid me proporciono una variedad infinita de pueblos y paisajes. Aquí nací y viví, admirando constantemente sus tierras y costumbres, enriqueciendo mi sensibilidad."
+    },
+    {
+        year: '2011',
+        title: "La cabeza de La Porra",
+        image: "/img/porra1.jpeg",
+        content: "Buscando un paisaje para pintar y memorizar en un cuadro, me encuentro con un paraje llamado LA PORRA."
     },
 ];
 
@@ -26,18 +32,17 @@ const backgrounds = [
 ];
 
 interface TestimonialCardProps {
-    name: string;
-    role: string;
+    title: string;
+    year: string;
     content: string;
-    avatar: string;
+    image: string;
     index: number;
 }
 
 function TestimonialCard(props: TestimonialCardProps) {
-    const { name, role, content, avatar, index } = props;
+    const { title, year, image, content, index } = props;
     return (
-        <Flex w="full" justify="center">
-
+        <Flex w="full" justify="center" className={"wow fadeIn"}>
             <Flex
                 boxShadow={'lg'}
                 maxW={'80%'}
@@ -70,24 +75,28 @@ function TestimonialCard(props: TestimonialCardProps) {
                     <Text
                         fontFamily={'Inter'}
                         fontWeight={'medium'}
-                        fontSize={'30px'}>
+                        fontSize={'30px'}
+                    >
+                        {title}
+                    </Text>
+                    <Text
+                        fontFamily={'Inter'}
+                        fontWeight={'medium'}
+                        fontSize={'20px'}
+                    >
                         {content}
                     </Text>
-                    <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={14}>
-                        {name}
-                        <chakra.span
-                            fontFamily={'Inter'}
-                            fontWeight={'medium'}
-                            color={'gray.500'}>
-                            {' '}
-                            - {role}
-                        </chakra.span>
-                    </chakra.p>
+                    <Text
+                        fontFamily={'Inter'}
+                        fontWeight={'medium'}
+                        color={'gray.500'}>
+                        {year}
+                    </Text>
                 </Flex>
                 <Avatar
-                    src={avatar}
-                    height={'80px'}
-                    width={'80px'}
+                    src={image}
+                    height={'200px'}
+                    width={'200px'}
                     alignSelf={'center'}
                     m={{ base: '0 0 35px 0', md: '0 0 0 50px' }}
                 />
