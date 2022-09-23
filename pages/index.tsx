@@ -1,4 +1,4 @@
-import { Hero } from "../components/Hero";
+import Hero from "./_components/Hero";
 import { Header } from "../components/Header";
 import {
   Text, Stack
@@ -12,19 +12,23 @@ const WOW = !isServer ? require('wowjs') : null
 const epocas = [
   { title: "Figurativa", image: "/img/fig1.jpeg" },
   { title: "Subjetiva", image: "/img/sub1.jpeg" },
-  { title: "Abstracta", image: "/img/abs1.jpeg" }]
+  { title: "Abstracta", image: "/img/abs1.jpeg" }
+];
 
 const Card = ({ children }: { children: React.ReactNode }) => (
   <Stack
     className={"wow fadeIn"}
-    borderWidth="1px"
     borderRadius="lg"
-    bg="#FFFFFFBB"
+    bg="#FFFFFF60"
     filter="drop-shadow(2px 4px 6px black)"
-    padding={10}
+    padding={5}
     w="80%"
   >
-    <Text >
+    <Text
+      fontWeight="600"
+      fontFamily="cursive"
+      color="white"
+    >
       {children}
     </Text>
   </Stack>
@@ -40,7 +44,7 @@ export default function Home() {
   return <>
     <Header />
     <Hero />
-    <Stack justify="center" align="center" bgImage="/img/fig1.jpeg" bgSize="cover" mt="10px" p={10} >
+    <Stack justify="center" align="center" bgImage="/img/fig1.jpeg" bgSize="cover" mt="10px" p={10} spacing={5}>
       <Card >
         Todo lo que un pintor puede hacer para comunicar su arte a los demás es intentar sugerirlo o indicarlo.
       </Card>

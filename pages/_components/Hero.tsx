@@ -12,7 +12,7 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 
-export function Hero() {
+export default function Hero() {
     return (
         <Container maxW={{ lg: '7xl' }}>
             <Stack

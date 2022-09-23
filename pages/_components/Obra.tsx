@@ -23,8 +23,7 @@ export default function Obra() {
                             transition: "all 0.1s ease-out",
                             _hover: {
                                 "& .epoca": {
-
-                                    transform: "scale(1.05)"
+                                    transform: "scale(1.5)"
                                 }
                             }
                         }}
@@ -44,20 +43,29 @@ export default function Obra() {
                             backgroundPosition="center"
                             cursor="pointer"
                             onClick={() => console.log("AAA")}
-                            transition="all 0.9s ease-out"
+                            transition="all 3s ease-out"
                         >
-                            <Text
-                                fontSize="30px"
-                                bgColor="white"
-                                justifySelf="center"
-                                alignSelf="center"
-                                fontWeight={600}
-                                borderRadius="8px"
-                                p={4}
-                            >
-                                {epoca.title}
-                            </Text>
                         </Box>
+
+                        <Text
+                            position="absolute"
+                            zIndex={99999}
+                            top={0}
+                            bottom={0}
+                            right={0}
+                            left={0}
+                            w="fit-content"
+                            h="fit-content"
+                            fontSize="30px"
+                            bgColor="#FFFFFF"
+                            // mixBlendMode="screen"
+                            fontWeight={500}
+                            borderRadius="8px"
+                            margin="auto"
+                            p={4}
+                        >
+                            {epoca.title}
+                        </Text>
                     </Box>
                 )
                 )

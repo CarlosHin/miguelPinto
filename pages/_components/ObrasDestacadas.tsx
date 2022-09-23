@@ -120,7 +120,7 @@ export default function ObrasDestacadas() {
             </Box>
             <SimpleGrid
                 w="full"
-                columns={{ base: 1, xl: 2 }}
+                columns={1}
                 spacing={'20'}
                 mt={16}>
                 {testimonials.map((cardInfo, index) => (
