@@ -67,7 +67,6 @@ export default function Hero() {
 
                         <Img
                             alt={'Hero Image'}
-                            align={'center'}
                             w={'100%'}
                             h={'100%'}
                             src={"https://www.miguelpinto.com/wp-content/uploads/2020/03/miguel.png"}
