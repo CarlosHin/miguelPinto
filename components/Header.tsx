@@ -41,6 +41,15 @@ export function Header() {
                         aria-label={'Open Menu'}
                         display={{ md: 'none' }}
                         onClick={isOpen ? onClose : onOpen}
+                        bg="transparent"
+                        sx={{
+                            _hover: {
+                                bg: "transparent"
+                            },
+                            _active: {
+                                bg: "transparent"
+                            }
+                        }}
                     />
                     <HStack spacing={8} alignItems={'center'}>
                         <Img src="/img/logo.png" alt="logo" />
