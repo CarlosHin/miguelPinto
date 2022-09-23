@@ -15,6 +15,7 @@ export function Obra() {
             {
                 epocas.map(epoca => (
                     <Box
+                        key={epoca.title}
                         className={"wow fadeInUp"}
                         w="full"
                         h="300px"

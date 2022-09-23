@@ -1,7 +1,6 @@
 import {
     Avatar,
     Box,
-    chakra,
     Heading,
     Flex,
     Text,
@@ -125,7 +124,7 @@ export default function ObrasDestacadas() {
                 spacing={'20'}
                 mt={16}>
                 {testimonials.map((cardInfo, index) => (
-                    <TestimonialCard {...cardInfo} index={index} />
+                    <TestimonialCard key={index} {...cardInfo} index={index} />
                 ))}
             </SimpleGrid>
 
