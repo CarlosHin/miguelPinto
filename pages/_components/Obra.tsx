@@ -6,7 +6,7 @@ const epocas = [
     { title: "Subjetiva", image: "/img/sub1.jpeg" },
     { title: "Abstracta", image: "/img/abs1.jpeg" }]
 
-export function Obra() {
+export default function Obra() {
     return <>
         <Center mt={10}>
             <Heading>Obra</Heading>

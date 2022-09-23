@@ -3,7 +3,7 @@ import { Header } from "../components/Header";
 import {
   Text, Stack
 } from '@chakra-ui/react';
-import { Obra } from "./_components/Obra";
+import Obra from "./_components/Obra";
 import ObrasDestacadas from "./_components/ObrasDestacadas";
 import { useEffect } from "react";
 const isServer = typeof window === 'undefined'
