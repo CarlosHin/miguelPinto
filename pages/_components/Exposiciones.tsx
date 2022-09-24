@@ -22,7 +22,7 @@ const settings = {
     autoplay: true,
     slidesToShow: 1,
     variableWidth: true,
-    speed: 2000,
+    speed: 300,
     autoplaySpeed: 5000,
 
 };
