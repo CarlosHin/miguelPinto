@@ -11,7 +11,7 @@ export default function Obra() {
         <Center mt={10}>
             <Heading>Obra</Heading>
         </Center>
-        <Stack p={10} spacing={6} direction={{ base: "column", md: "row" }}>
+        <Stack p={6} spacing={6} direction={{ base: "column", md: "row" }}>
             {
                 epocas.map(epoca => (
                     <Box
@@ -71,7 +71,7 @@ export default function Obra() {
                 )
             }
         </Stack>
-        <Center mt={0}>
+        <Center mt={0} px={6} className={"wow fadeInUp"}>
             <Button
                 rounded={'full'}
                 size={'lg'}

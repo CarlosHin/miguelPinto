@@ -1,11 +1,12 @@
 import Hero from "./_components/Hero";
 import { Header } from "../components/Header";
 import {
-  Text, Stack
+  Text, Stack, Heading, Center
 } from '@chakra-ui/react';
 import Obra from "./_components/Obra";
 import ObrasDestacadas from "./_components/ObrasDestacadas";
 import { useEffect } from "react";
+import Exposiciones from "./_components/Exposiciones";
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -66,6 +67,8 @@ export default function Home() {
     </Stack>
     <Obra />
     <ObrasDestacadas />
+    <Exposiciones />
+
     <Stack h="300px"></Stack>
 
   </>
