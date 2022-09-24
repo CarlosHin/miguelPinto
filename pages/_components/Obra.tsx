@@ -57,8 +57,8 @@ export default function Obra() {
                             w="fit-content"
                             h="fit-content"
                             fontSize="30px"
-                            bgColor="#FFFFFF"
-                            // mixBlendMode="screen"
+                            bgColor="#FFFFFFED"
+                            mixBlendMode="screen"
                             fontWeight={500}
                             borderRadius="8px"
                             margin="auto"

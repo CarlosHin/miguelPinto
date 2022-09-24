@@ -22,18 +22,28 @@ export default function Exposiones() {
     const cards = [
         {
             title: 'Morata',
-            text: "Aaaaa",
-            image: "/img/fig1.jpeg"
+            text: "Descripción exposición",
+            image: "/img/pueblos1.jpeg",
+            date: "Julio 2021"
         },
         {
             title: 'Madrid',
-            text: "Aaaaa",
-            image: "/img/abs1.jpeg"
+            text: "Descripción exposición",
+            image: "/img/abs1.jpeg",
+            date: "Septiembre 2021"
+
         },
         {
             title: 'Perales',
-            text: "Aaaaa",
-            image: "/img/porra1.jpeg"
+            text: "Descripción exposición",
+            image: "/img/porra1.jpeg",
+            date: "Noviembre 2022"
+        },
+        {
+            title: 'Valdelaguna',
+            text: "Descripción exposición",
+            image: "/img/fig1.jpeg",
+            date: "Mayo 2021"
         },
     ];
     const speed = useBreakpointValue({ base: 500, md: 2000 })
@@ -96,12 +106,15 @@ export default function Exposiones() {
                                 {/* This is the block you need to change, to customize the caption */}
                                 <Container size="container.lg" height="full" position="relative">
                                     <Stack
-                                        spacing={2}
+                                        spacing={0}
                                         w={'full'}
                                         maxW={'lg'}
                                         position="absolute"
                                         bottom="5%"
                                     >
+                                        <Text color="white" border="1px solid white" w="max-content" py="1px" px={2} bg="#00000040">
+                                            {card.date}
+                                        </Text>
                                         <Heading color="white">
                                             {card.title}
                                         </Heading>
