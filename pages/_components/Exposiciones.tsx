@@ -15,17 +15,7 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import Slider from 'react-slick';
 
 // Settings for the slider
-const settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    slidesToShow: 1,
-    variableWidth: true,
-    speed: 300,
-    autoplaySpeed: 5000,
 
-};
 
 export default function Exposiones() {
     const [slider, setSlider] = React.useState<Slider | null>(null);
@@ -46,6 +36,19 @@ export default function Exposiones() {
             image: "/img/porra1.jpeg"
         },
     ];
+    const speed = useBreakpointValue({ base: 500, md: 2000 })
+
+    const settings = {
+        dots: false,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 1,
+        variableWidth: true,
+        speed: speed,
+        autoplaySpeed: 5000,
+
+    };
 
     return (
         <>
