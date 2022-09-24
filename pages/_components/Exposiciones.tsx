@@ -16,7 +16,7 @@ import Slider from 'react-slick';
 
 // Settings for the slider
 const settings = {
-    dots: true,
+    dots: false,
     arrows: false,
     infinite: true,
     autoplay: true,
@@ -113,7 +113,7 @@ export default function Exposiones() {
                 </Box>
             </Center >
 
-            <Stack direction="row" justify="center" display="none">
+            <Stack direction="row" justify="center" mt={5} >
                 <IconButton
                     aria-label="left-arrow"
                     variant="ghost"
