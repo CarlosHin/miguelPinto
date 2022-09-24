@@ -61,11 +61,11 @@ export default function Exposiones() {
     };
 
     return (
-        <>
+        <Box className={"wow fadeIn"}>
             <Center mt={10} mb={5}>
                 <Heading>Exposiciones</Heading>
             </Center>
-            <Center pl="20px">
+            <Center pl="20px" >
 
                 <Box
                     position={'relative'}
@@ -144,7 +144,7 @@ export default function Exposiones() {
                     <BiRightArrowAlt size="40px" />
                 </IconButton>
             </Stack>
-        </>
+        </Box>
 
     );
 }
