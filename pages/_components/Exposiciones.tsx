@@ -63,7 +63,7 @@ export default function Exposiones() {
                     width={'full'}
                     sx={{
                         ".slick-slide": {
-                            w: { base: "200px !important", md: "fit-content !important" },
+                            w: { base: "300px !important", md: "fit-content !important" },
                             mr: "10px",
                         }
 
@@ -86,8 +86,8 @@ export default function Exposiones() {
                         {cards.map((card, index) => (
                             <Box
                                 key={index}
-                                height={{ base: "200px", md: '300px' }}
-                                w={{ base: "200px !important", md: '400px !important' }}
+                                height={{ base: "250px", md: '300px' }}
+                                w={{ base: "300px !important", md: '400px !important' }}
                                 position="relative"
                                 backgroundPosition="center"
                                 backgroundRepeat="no-repeat"
