@@ -1,7 +1,7 @@
 import Hero from "./_components/Hero";
 import { Header } from "../components/Header";
 import {
-  Text, Stack, Heading, Center
+  Text, Stack
 } from '@chakra-ui/react';
 import Obra from "./_components/Obra";
 import ObrasDestacadas from "./_components/ObrasDestacadas";
@@ -26,6 +26,7 @@ const Card = ({ children }: { children: React.ReactNode }) => (
     w="full"
   >
     <Text
+      fontSize="20px"
       fontWeight="600"
       fontFamily="cursive"
       color="white"

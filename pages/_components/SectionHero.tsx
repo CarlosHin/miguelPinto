@@ -3,7 +3,7 @@ import {
     Stack,
     Flex,
     Box,
-    Text,
+    Heading,
     Img,
     Icon,
     IconProps,
@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-export default function Hero() {
+export default function SectionHero({ title }: { title?: string }) {
     return (
         <Container maxW={{ lg: '7xl' }} >
             <Stack
@@ -19,15 +19,13 @@ export default function Hero() {
                 overflow="hidden"
                 align={'center'}
                 spacing={{ base: 8, md: 10 }}
-                py={{ base: 20, md: 28 }}
+                pt={{ base: 20, md: 28 }}
+                pb={{ base: 10, md: 24 }}
                 direction={{ base: 'column-reverse', md: 'row' }}>
                 <Stack flex={1} spacing={{ base: 5, md: 10 }} px={{ base: 4, md: 2 }} className={"wow fadeIn"}>
-                    <>
-                        <Img src="/img/logoBig.png" alt="logo" />
-                        <Text color={'gray.500'} textAlign="center" fontFamily="cursive" >
-                            El camino para llegar al arte; a su comprensión, anteponiendo a la razón, sensitividad; a la lógica, intuición; a la metafísica, la conciencia. Primer valor del arte. Sensibilizar.
-                        </Text>
-                    </>
+                    <Heading color="orange.200" fontSize={{ base: "60px", md: "100px" }} ml={{ lg: "100px" }}>
+                        {title}
+                    </Heading>
                 </Stack>
                 <Flex
                     flex={1}

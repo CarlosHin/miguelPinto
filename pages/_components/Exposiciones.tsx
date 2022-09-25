@@ -96,8 +96,8 @@ export default function Exposiones() {
                         {cards.map((card, index) => (
                             <Box
                                 key={index}
-                                height={{ base: "250px", md: '300px' }}
-                                w={{ base: "300px !important", md: '400px !important' }}
+                                height={{ base: "250px", md: '400px' }}
+                                w={{ base: "300px !important", md: '600px !important' }}
                                 position="relative"
                                 backgroundPosition="center"
                                 backgroundRepeat="no-repeat"
