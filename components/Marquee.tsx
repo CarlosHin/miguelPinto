@@ -1,5 +1,5 @@
 import {
-    Stack, Text, Box, Heading, Img
+    Box, Img
 } from '@chakra-ui/react';
 import { useEffect } from "react";
 const isServer = typeof window === 'undefined'
@@ -9,7 +9,7 @@ const MarqueeImages = ({ srcList }) => (
     <>
         {srcList.map((src, key) => (
             <Img
-                key="index"
+                key={key}
                 alt={'image'}
                 w={'200px'}
                 h={'150px'}
@@ -23,11 +23,16 @@ const MarqueeImages = ({ srcList }) => (
     </>
 )
 
-export const Marquee = ({ srcList, reverse = false }: { srcList: string[], reverse?: boolean }) => {
+export const Marquee = ({ srcList, reverse = false, duration }: { srcList: string[], reverse?: boolean, duration: string }) => {
     return (
         <Box className="marquee">
             <Box
-                as="ul" className={`marquee__content ${reverse ? "marquee__content_reverse" : ""}`}>
+                as="ul"
+                className={`marquee__content ${reverse ? "marquee__content_reverse" : ""}`}
+                sx={{
+                    "animation-duration": duration
+                }}
+            >
                 <MarqueeImages
                     srcList={srcList}
                 />
@@ -36,13 +41,15 @@ export const Marquee = ({ srcList, reverse = false }: { srcList: string[], rever
                 as="ul"
                 className={`marquee__content ${reverse ? "marquee__content_reverse" : ""}`}
                 sx={{
-                    "aria-hidden": "true"
+                    "aria-hidden": "true",
+                    "animation-duration": duration
+
                 }}
             >
                 <MarqueeImages
                     srcList={srcList}
                 />
             </Box>
-        </Box>
+        </Box >
     )
 }
