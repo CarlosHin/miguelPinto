@@ -112,7 +112,7 @@ export default function Obra() {
                     "110-140x190.jpg", "157-87x116.jpg", "191-95x146.jpg", "275-81x100.jpg", "343-55x95.jpg", "384-60x73.jpg", "419-81x100.jpg", "65-60x73.jpg",
                 ]}
                 path="/img/Figurativa/images/"
-                duration="100s"
+                duration="200s"
                 route="figurativa"
             >
                 <Text>
