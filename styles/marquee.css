@@ -46,14 +46,6 @@
   animation: scroll-reverse 40s linear infinite;
 }
 
-.marquee:hover .marquee__content {
-  animation-play-state: paused;
-}
-.marquee__section:hover .marquee__content {
-  animation-play-state: paused;
-}
-
-
 /* Other page demo styles */
 .marquee__content > * {
   flex: 0 0 auto;

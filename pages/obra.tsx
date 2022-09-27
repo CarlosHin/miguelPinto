@@ -29,7 +29,7 @@ const Section = ({ title, children, srcList1, srcList2, path, duration, route }:
                 sx={{
                     _hover: {
                         ".marquee": {
-                            opacity: 0.4
+                            opacity: 0.6
                         },
                         "& .button-container": {
                             display: "flex"
@@ -132,7 +132,7 @@ export default function Obra() {
                 ]}
                 path="/img/Figurativa/images/"
                 duration="100s"
-                route="figurativa"
+                route="subjetiva"
 
             >
                 <Text>
