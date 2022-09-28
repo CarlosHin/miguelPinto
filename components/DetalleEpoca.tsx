@@ -19,20 +19,24 @@ function chunckArrayInColumns(arr, columns) {
 
 
 export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: string, pathHQ: string, title: string, desc: string }) {
-    const [images, setimages] = useState<string[]>([])
-    const [modalImage, setModalImage] = useState("")
-    const [isOpen, setIsOpen] = useState(false)
+    const [images, setImages] = useState<string[]>([]);
+    const [modalImage, setModalImage] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     const importImages = async () => {
         fetch(path + 'map.txt')
             .then((r) => r.text())
             .then(text => {
-                setimages(text.split("\n").filter(el => el.indexOf("jpg") !== -1 || el.indexOf("png") !== -1));
+                setImages(text.split("\n").filter(el => el.indexOf("jpg") !== -1 || el.indexOf("png") !== -1));
             })
     }
     useEffect(() => {
-        new WOW.WOW({
-            live: false
-        }).init();
+        setTimeout(() => {
+            new WOW.WOW({
+                live: true
+            }).init();
+            setIsLoading(false)
+        }, 1500);
         importImages();
         // eslint-disable-next-line 
     }, [])
@@ -45,55 +49,65 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
             <Text>
                 {desc}
             </Text>
-            <Grid
-                templateColumns={`repeat(${imagesInColumns.length}, 1fr)`}
-                gap={2}
-                alignItems="flex-start"
-            >
-                {imagesInColumns.length > 0 ? imagesInColumns.map((column, index) => (
-                    <GridItem key={index} w='100%'>
-                        <Stack>
-                            {column.map((el, index) => (
-                                <Box
-                                    key={index}
-                                    className="wow fadeInUp"
-                                    w="full"
-                                    h="full"
-                                >
-                                    <Img
-                                        src={`${path}${el}`}
-                                        cursor="pointer"
-                                        _hover={{
-                                            transform: { md: "scale(1.2)" },
-                                            border: "3px solid white",
-                                            transition: "transform 0.2s ease-out"
-                                        }}
-                                        onClick={() => {
-                                            setModalImage(`${pathHQ}${el}`)
-                                            setIsOpen(true)
-                                        }}
-                                        h="max-content"
-                                        w="full"
-                                    />
-                                    {!isServer && < Img
-                                        src={`${pathHQ}${el}`}
-                                        display="none"
-                                    />}
-                                </Box>
-                            ))
-                            }
+            {images.map(el => (
+                <>
+                    {!isServer && < Img
+                        src={`${path}${el}`}
+                        display="none"
+                    />}
+                </>
+            ))}
+            {(!isLoading && imagesInColumns.length > 0) ? (
 
-                        </Stack>
-                    </GridItem>
-                )) : (
-                    <Center mt={10}>
-                        <Spinner w={{ base: "100px", md: '200px' }} h={{ base: "100px", md: '200px' }} thickness='4px' />
-                    </Center>
-                )}
-            </Grid>
+                <Grid
+                    templateColumns={`repeat(${imagesInColumns.length}, 1fr)`}
+                    gap={2}
+                    alignItems="flex-start"
+                >
+                    {imagesInColumns.map((column, index) => (
+                        <GridItem key={index} w='100%'>
+                            <Stack>
+                                {column.map((el, index) => (
+                                    <Box
+                                        key={index}
+                                        className="wow fadeInUp"
+                                        w="full"
+                                        h="full"
+                                    >
+                                        <Img
+                                            src={`${path}${el}`}
+                                            cursor="pointer"
+                                            _hover={{
+                                                transform: { md: "scale(1.2)" },
+                                                border: "3px solid white",
+                                                transition: "transform 0.2s ease-out"
+                                            }}
+                                            onClick={() => {
+                                                setModalImage(`${pathHQ}${el}`)
+                                                setIsOpen(true)
+                                            }}
+                                            h="max-content"
+                                            w="full"
+                                        />
+                                        {!isServer && < Img
+                                            src={`${pathHQ}${el}`}
+                                            display="none"
+                                        />}
+                                    </Box>
+                                ))
+                                }
+
+                            </Stack>
+                        </GridItem>
+                    ))}
+                </Grid>
+            ) : (
+                <Center mt={10}>
+                    <Spinner w={{ base: "100px", md: '200px' }} h={{ base: "100px", md: '200px' }} thickness='4px' />
+                </Center>
+            )}
         </Stack >
         <ImageModal images={images.map(el => `${pathHQ}${el}`)} src={modalImage} open={isOpen} close={() => setIsOpen(false)} />
-        <Stack h="300px"></Stack>
 
     </>
 }

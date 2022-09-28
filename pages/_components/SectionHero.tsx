@@ -19,10 +19,10 @@ export default function SectionHero({ title }: { title?: string }) {
                 overflow="hidden"
                 align={'center'}
                 spacing={{ base: 8, md: 10 }}
-                pt={10}
-                pb={10}
+                pt={{ base: 10, md: 16 }}
+                pb={{ base: 10, md: 16 }}
                 direction={{ base: 'column-reverse', md: 'row' }}>
-                <Stack flex={1} spacing={{ base: 5, md: 10 }} px={{ base: 4, md: 2 }} className={"wow fadeIn"}>
+                <Stack flex={1} spacing={{ base: 5, md: 10 }} px={{ base: 4, md: 2 }} className={"animated fadeIn"}>
                     <Heading color="orange.200" fontSize={{ base: "60px", md: "100px" }} ml={{ lg: "100px" }}>
                         {title}
                     </Heading>
@@ -32,7 +32,7 @@ export default function SectionHero({ title }: { title?: string }) {
                     justify={'center'}
                     align={'center'}
                     position={'relative'}
-                    className={"wow fadeInRight"}
+                    className={"animated fadeInRight"}
                     w={'full'}>
                     <Blob
                         w={'150%'}
