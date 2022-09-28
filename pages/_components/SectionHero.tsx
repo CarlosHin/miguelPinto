@@ -19,8 +19,8 @@ export default function SectionHero({ title }: { title?: string }) {
                 overflow="hidden"
                 align={'center'}
                 spacing={{ base: 8, md: 10 }}
-                pt={{ base: 20, md: 28 }}
-                pb={{ base: 10, md: 24 }}
+                pt={10}
+                pb={10}
                 direction={{ base: 'column-reverse', md: 'row' }}>
                 <Stack flex={1} spacing={{ base: 5, md: 10 }} px={{ base: 4, md: 2 }} className={"wow fadeIn"}>
                     <Heading color="orange.200" fontSize={{ base: "60px", md: "100px" }} ml={{ lg: "100px" }}>

@@ -1,5 +1,5 @@
 import {
-    Stack, Text, Grid, GridItem, Img, useBreakpointValue, Center, Spinner
+    Stack, Text, Grid, GridItem, Img, useBreakpointValue, Center, Spinner, Box
 } from '@chakra-ui/react';
 import React, { useEffect, useState } from "react";
 import { ImageModal } from "./ImageModal";
@@ -54,10 +54,13 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
                     <GridItem key={index} w='100%'>
                         <Stack>
                             {column.map((el, index) => (
-                                <>
+                                <Box
+                                    key={index}
+                                    className="wow fadeInUp"
+                                    w="full"
+                                    h="full"
+                                >
                                     <Img
-                                        key={index}
-                                        className={"wow fadeInUp"}
                                         src={`${path}${el}`}
                                         cursor="pointer"
                                         _hover={{
@@ -69,12 +72,14 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
                                             setModalImage(`${pathHQ}${el}`)
                                             setIsOpen(true)
                                         }}
+                                        h="max-content"
+                                        w="full"
                                     />
                                     {!isServer && < Img
                                         src={`${pathHQ}${el}`}
                                         display="none"
                                     />}
-                                </>
+                                </Box>
                             ))
                             }
 
