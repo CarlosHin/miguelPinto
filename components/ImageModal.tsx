@@ -62,8 +62,10 @@ export function ImageModal({ images, src, open, close }: { images: string[], src
                                 className="animated"
                                 src={images[index]}
                                 onClick={(e) => e.stopPropagation()}
-                                alt="Img"
-                                onChange={() => console.log("AAA")}
+                                sx={{
+
+                                    animationDuration: "0.4s"
+                                }}
                             />
                             <Text
                                 position="absolute"
