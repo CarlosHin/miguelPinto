@@ -18,14 +18,16 @@ export function ImageModal({ images, src, open, close }: { images: string[], src
 
     const changeImgClass = (animation) => {
         var modalImage = document.getElementById("modal-image");
-        modalImage.classList.remove("animate__fadeInRight");
-        modalImage.classList.remove("animate__fadeInLeft");
+        modalImage.classList.remove("fadeInRight");
+        modalImage.classList.remove("fadeInLeft");
         setTimeout(() => modalImage.classList.add(animation), 0);
+        modalImage.style.opacity = "1";
+
     }
     const next = () => {
         if (!isLast) {
             setindex(index + 1);
-            changeImgClass("animate__fadeInRight");
+            changeImgClass("fadeInRight");
         }
     }
     const previous = () => {
@@ -33,7 +35,7 @@ export function ImageModal({ images, src, open, close }: { images: string[], src
             var modalImage = document.getElementById("modal-image");
             modalImage.style.opacity = "0";
             setindex(index - 1);
-            changeImgClass("animate__fadeInLeft");
+            changeImgClass("fadeInLeft");
         }
     }
     const {
@@ -57,7 +59,7 @@ export function ImageModal({ images, src, open, close }: { images: string[], src
                         >
                             <Img
                                 id="modal-image"
-                                className="animate__animated"
+                                className="animated"
                                 src={images[index]}
                                 onClick={(e) => e.stopPropagation()}
                                 alt="Img"

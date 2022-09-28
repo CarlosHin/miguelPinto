@@ -97,10 +97,10 @@ export default function Biografia() {
     return <>
         <Header />
         <SectionHero title="Biografía" />
-        <Center px={{ base: 5, md: 10 }}>
+        <Center px={{ base: 5, md: 10 }} className={"wow fadeIn"}>
             <Stack>
                 {items.map((el, index) => (
-                    <Flex key={index} align="start">
+                    <Flex key={index} align="start" className={"wow fadeIn"}>
                         < Circle
                             mt="6px"
                             mr={1}

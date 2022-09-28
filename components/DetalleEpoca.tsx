@@ -57,6 +57,7 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
                                 <>
                                     <Img
                                         key={index}
+                                        className={"wow fadeInUp"}
                                         src={`${path}${el}`}
                                         cursor="pointer"
                                         _hover={{
