@@ -64,7 +64,7 @@ export function ImageModal({ images, src, open, close }: { images: string[], src
                                 onClick={(e) => e.stopPropagation()}
                                 sx={{
 
-                                    animationDuration: "0.4s"
+                                    animationDuration: { base: "0.4s", md: "1s" }
                                 }}
                             />
                             <Text
