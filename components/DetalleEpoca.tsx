@@ -49,27 +49,31 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
                 templateColumns={`repeat(${imagesInColumns.length}, 1fr)`}
                 gap={2}
                 alignItems="flex-start"
-
-
             >
                 {imagesInColumns.length > 0 ? imagesInColumns.map((column, index) => (
                     <GridItem key={index} w='100%'>
                         <Stack>
                             {column.map((el, index) => (
-                                <Img
-                                    key={index}
-                                    src={`${path}${el}`}
-                                    cursor="pointer"
-                                    _hover={{
-                                        transform: { md: "scale(1.2)" },
-                                        border: "3px solid white",
-                                        transition: "transform 0.2s ease-out"
-                                    }}
-                                    onClick={() => {
-                                        setModalImage(`${pathHQ}${el}`)
-                                        setIsOpen(true)
-                                    }}
-                                />
+                                <>
+                                    <Img
+                                        key={index}
+                                        src={`${path}${el}`}
+                                        cursor="pointer"
+                                        _hover={{
+                                            transform: { md: "scale(1.2)" },
+                                            border: "3px solid white",
+                                            transition: "transform 0.2s ease-out"
+                                        }}
+                                        onClick={() => {
+                                            setModalImage(`${pathHQ}${el}`)
+                                            setIsOpen(true)
+                                        }}
+                                    />
+                                    {!isServer && < Img
+                                        src={`${pathHQ}${el}`}
+                                        display="none"
+                                    />}
+                                </>
                             ))
                             }
 

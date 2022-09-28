@@ -123,14 +123,12 @@ export default function Obra() {
                 title="Época Subjetiva"
                 // TODO: Change 
                 srcList1={[
-                    "1-59x80.jpg", "153-73x92.jpg", "187-90x110.jpg", "268-75x100.jpg", "34-59x79.jpg", "380-22x27.jpg", "416-80x100.jpg", "61-45x95.jpg",
-                    "106-57x68.jpg", "155-92x73.jpg", "188-81x100.jpg", "269-81x100.jpg", "340-65x81.jpg", "381-22x27.jpg", "417-81x100.jpg", "63-60x73.jpg",
+                    '10-60x81.jpg', '100-50x64.jpg', '101-50x64.jpg', '102-50x64.jpg', '103-50x64.jpg', '104-50x64.jpg', '105-50x64.jpg', '106-50x64.jpg', '124-60x100.jpg', '125-65x95.jpg',
                 ]}
                 srcList2={[
-                    "11-60x81.jpg", "156-92x73.jpg", "190-81x100.jpg", "274-81x100.jpg", "342-55x95.jpg", "382-22x27.jpg", "418-81x100.jpg", "64-60x73.jpg",
-                    "110-140x190.jpg", "157-87x116.jpg", "191-95x146.jpg", "275-81x100.jpg", "343-55x95.jpg", "384-60x73.jpg", "419-81x100.jpg", "65-60x73.jpg",
+                    '13-60x81.jpg', '131-60x81.jpg', '135-73x100.jpg', '136-73x100.jpg', '138-81x100.jpg', '144-71x100.jpg', '146-73x100.jpg', '148-73x92.jpg', '149-73x92.jpg', '16-60x81.jpg',
                 ]}
-                path="/img/Figurativa/images/"
+                path="/img/Subjetiva/images/"
                 duration="100s"
                 route="subjetiva"
 
@@ -140,18 +138,15 @@ export default function Obra() {
             </Section>
             <Section
                 title="Época Abstracta"
-                // TODO: Change 
                 srcList1={[
-                    "1-59x80.jpg", "153-73x92.jpg", "187-90x110.jpg", "268-75x100.jpg", "34-59x79.jpg", "380-22x27.jpg", "416-80x100.jpg", "61-45x95.jpg",
-                    "106-57x68.jpg", "155-92x73.jpg", "188-81x100.jpg", "269-81x100.jpg", "340-65x81.jpg", "381-22x27.jpg", "417-81x100.jpg", "63-60x73.jpg",
+                    '14-60x81.jpg', '212-102x190.jpg', '221-65x81.jpg', '230-60x81.jpg', '232-60x73.jpg', '233-60x73.jpg', '279-73x100.jpg', '303-81x100.jpg', '521-81x100.jpg', '522-81x100.jpg', '523-81x100.jpg', '524-60x81.jpg', '526-65x81.jpg',
                 ]}
                 srcList2={[
-                    "11-60x81.jpg", "156-92x73.jpg", "190-81x100.jpg", "274-81x100.jpg", "342-55x95.jpg", "382-22x27.jpg", "418-81x100.jpg", "64-60x73.jpg",
-                    "110-140x190.jpg", "157-87x116.jpg", "191-95x146.jpg", "275-81x100.jpg", "343-55x95.jpg", "384-60x73.jpg", "419-81x100.jpg", "65-60x73.jpg",
+                    '304-81x100.jpg', '31.jpg', '322-81x116.jpg', '421-90x180.jpg', '422-105x190.jpg', '451-60x81.jpg', '459-81x60.jpg', '463-60x85.jpg', '464-65x81.jpg', '466-65x81.jpg', '494-82x116.jpg', '496-81x116.jpg', '497-81x116.jpg', '499-81x116.jpg',
                 ]}
-                path="/img/Figurativa/images/"
+                path="/img/Abstracta/images/"
                 duration="100s"
-                route="figurativa"
+                route="abstracta"
             >
                 <Text>
                     Trabajando, trato de llegar a los pozos oscuros de mi ser. Atrapar sutiles caricias, choque y golpes que no veo pero siento; llegar al estado más puro de las cosas, a través de una comunión abierta al todo. Encontrarme con la perfección de lo más pequeño y efímero; a lo más grande y sublime. Mi pasado es un cañamazo con infinitos agujeros y el futuro un fantasma que sueña ajeno a realidades. Mi presente es barroco emocional, con vigor de siembra y nuevos significados.                </Text>

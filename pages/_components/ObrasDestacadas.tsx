@@ -1,5 +1,5 @@
 import {
-    Avatar,
+    Img,
     Box,
     Heading,
     Flex,
@@ -41,7 +41,14 @@ interface TestimonialCardProps {
 function TestimonialCard(props: TestimonialCardProps) {
     const { title, year, image, content, index } = props;
     return (
-        <Flex w="full" justify="center" className={"wow fadeIn"}>
+        <Flex
+            w="full"
+            justify="center"
+            className={"wow fadeIn"}
+            cursor="pointer"
+            transition="all 0.4s"
+            _hover={{ transform: "scale(1.05)" }}
+        >
             <Flex
                 boxShadow={'lg'}
                 maxW={'80%'}
@@ -92,11 +99,12 @@ function TestimonialCard(props: TestimonialCardProps) {
                         {year}
                     </Text>
                 </Flex>
-                <Avatar
+                <Img
                     src={image}
-                    height={'200px'}
-                    width={'200px'}
+                    height={{ base: '200px', md: "max-content" }}
+                    width={{ base: "max-content", md: '400px' }}
                     alignSelf={'center'}
+                    borderRadius="10%"
                     m={{ base: '0 0 35px 0', md: '0 0 0 50px' }}
                 />
             </Flex>

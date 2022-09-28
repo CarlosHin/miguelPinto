@@ -1,7 +1,6 @@
 import {
     Box, Img
 } from '@chakra-ui/react';
-import { useEffect } from "react";
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -11,9 +10,9 @@ const MarqueeImages = ({ srcList }) => (
             <Img
                 key={key}
                 alt={'image'}
-                w={'200px'}
+                w={'max-content'}
                 h={'150px'}
-                mx={5}
+                mx={1}
                 src={src}
             />
 
