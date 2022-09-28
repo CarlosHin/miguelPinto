@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Miguel Pinto</title>
         <meta name='description' content='Página oficial de Miguel Pinto Gallego' />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=1" />
       </Head>
       <Component {...pageProps} />
     </ChakraProvider>
