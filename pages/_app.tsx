@@ -3,6 +3,7 @@ import "../styles/marquee.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import Head from 'next/head'
 import { Header } from "../components/Header";
+import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </ChakraProvider>
   );
 }

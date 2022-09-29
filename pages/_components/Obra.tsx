@@ -7,11 +7,13 @@ const epocas = [
     { title: "Subjetiva", image: "/img/sub1.jpeg", path: "subjetiva" },
     { title: "Abstracta", image: "/img/abs1.jpeg", path: "abstracta" }]
 
-export default function Obra() {
+export default function Obra({ showTitle = true }) {
     return <>
-        <Center mt={10}>
-            <Heading>Obra</Heading>
-        </Center>
+        {showTitle &&
+            <Center mt={10}>
+                <Heading>Obra</Heading>
+            </Center>
+        }
         <Stack p={6} spacing={6} direction={{ base: "column", md: "row" }}>
             {
                 epocas.map(epoca => (
