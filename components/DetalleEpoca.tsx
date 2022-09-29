@@ -4,7 +4,6 @@ import {
 import React, { useEffect, useState } from "react";
 import { ImageModal } from "./ImageModal";
 import SectionHero from '../pages/_components/SectionHero';
-import { Header } from './Header';
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -43,7 +42,6 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
     const columns = useBreakpointValue({ base: 2, md: 5, lg: 6 });
     const imagesInColumns = images.length > 0 ? chunckArrayInColumns(images, columns) : [];
     return <>
-        <Header />
         <SectionHero title={title} />
         <Stack spacing={10} pt={{ md: 10 }} px={{ base: 5, md: 20 }}>
             <Text>

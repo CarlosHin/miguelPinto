@@ -1,5 +1,4 @@
 import Hero from "./_components/Hero";
-import { Header } from "../components/Header";
 import {
   Text, Stack
 } from '@chakra-ui/react';
@@ -44,7 +43,6 @@ export default function Home() {
   }, [])
 
   return <>
-    <Header />
     <Hero />
     <Stack
       justify="center"

@@ -1,5 +1,4 @@
 import SectionHero from "./_components/SectionHero";
-import { Header } from "../components/Header";
 import {
     Stack, Text, Box, Heading, Button, Flex
 } from '@chakra-ui/react';
@@ -90,7 +89,6 @@ export default function Obra() {
     }, [])
 
     return <>
-        <Header />
         <SectionHero title="Obra" />
         <Stack spacing={10} pt={{ md: 10 }} px={{ base: 5, md: 20 }}>
             <Stack>
