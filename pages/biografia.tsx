@@ -160,7 +160,7 @@ export default function Biografia() {
 
     return <>
         <SectionHero title="Biografía" />
-        <Stack px={{ base: 5, md: 10 }} pb={10} >
+        <Stack px={{ base: 5, md: 20 }} pb={10} >
             <Stack>
                 {items.map((el, index) => (
                     <YearRow key={index} year={el} />

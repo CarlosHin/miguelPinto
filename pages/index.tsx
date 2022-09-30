@@ -1,11 +1,12 @@
 import Hero from "./_components/Hero";
 import {
-  Text, Stack
+  Text, Stack, Button, Center
 } from '@chakra-ui/react';
 import Obra from "./_components/Obra";
 import ObrasDestacadas from "./_components/ObrasDestacadas";
 import { useEffect } from "react";
 import Exposiciones from "./_components/Exposiciones";
+import Link from "next/link";
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -25,9 +26,8 @@ const Card = ({ children }: { children: React.ReactNode }) => (
     w="full"
   >
     <Text
-      fontSize="20px"
-      fontWeight="600"
-      fontFamily="cursive"
+      fontSize="24px"
+      fontFamily="Dancing Script"
       color="white"
     >
       {children}
@@ -47,7 +47,7 @@ export default function Home() {
     <Stack
       justify="center"
       align="center"
-      bgImage="/img/fig1.jpeg"
+      bgImage="/img/Figurativa/images/110-140x190.jpg"
       bgSize="cover"
       mt="10px"
       minH="500px"
@@ -56,17 +56,26 @@ export default function Home() {
     >
       <Card >
         Todo lo que un pintor puede hacer para comunicar su arte a los demás es intentar sugerirlo o indicarlo.
-      </Card>
-      <Card>
+        <br /><br />
         Todo lo que un pintor puede hacer para comunicar su arte a los demás es intentar sugerirlo o indicarlo.
-      </Card>
-      <Card>
+        <br /><br />
         Una pintura verdadera, creativa, hace sentir una transformación, un choque espiritual intuitivo, la emoción que libera al alma de su capa de convicciones plagistas y creencias ajenas a su pureza natural.
       </Card>
     </Stack>
     <Obra />
     <ObrasDestacadas />
     <Exposiciones />
+    <Center mt={0} pt={4} px={6} className={"wow fadeInUp"}>
+
+      <Link href="exposiciones">
+        <Button
+          size={'lg'}
+          w={{ base: "full", sm: "fit-content" }}
+        >
+          Ver todas las exposiciones
+        </Button>
+      </Link>
+    </Center>
 
     <Stack h="300px"></Stack>
 

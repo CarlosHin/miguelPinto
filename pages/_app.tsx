@@ -1,13 +1,16 @@
 import "../styles/animate.min.css";
 import "../styles/marquee.css";
+import '@fontsource/nunito-sans/600.css'
+import '@fontsource/dancing-script/700.css'
 import { ChakraProvider } from "@chakra-ui/react";
 import Head from 'next/head'
 import { Header } from "../components/Header";
 import Footer from "../components/Footer";
+import theme from "../theme";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Head>
         <title>Miguel Pinto</title>
         <meta name='description' content='Página oficial de Miguel Pinto Gallego' />

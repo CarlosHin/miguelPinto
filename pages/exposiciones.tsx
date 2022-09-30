@@ -38,7 +38,7 @@ const exposionesActuales = [
     {
         title: 'Valdelaguna',
         text: "Descripción exposición",
-        image: "/img/fig1.jpeg",
+        image: "/img/Figurativa/images/110-140x190.jpg",
         date: "Mayo 2021"
     },
 ];
@@ -66,7 +66,7 @@ const exposionesAntiguas = [
     {
         title: 'Valdelaguna',
         text: "Descripción exposición",
-        image: "/img/fig1.jpeg",
+        image: "/img/Figurativa/images/110-140x190.jpg",
         date: "Mayo 2021"
     },
 ];

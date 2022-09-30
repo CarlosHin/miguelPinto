@@ -52,15 +52,7 @@ const Section = ({ title, children, srcList1, srcList2, path, duration, route }:
                             w="fit-content"
                             position="absolute"
                             h="80px"
-                            bg="#FFFFFFAA"
-                            _hover={{
-                                bg: "#FFFFFFDD"
-                            }}
-                            _active={{
-                                bg: "#FFFFFFDD"
-                            }}
                             border="1px solid"
-
                         >
                             Ver {title}
                         </Button>

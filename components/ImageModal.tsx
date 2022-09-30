@@ -1,5 +1,5 @@
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons"
-import { useDisclosure, Center, Text, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Img, useOutsideClick, keyframes } from "@chakra-ui/react"
+import { useDisclosure, Center, Text, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Img, useOutsideClick, keyframes, Button } from "@chakra-ui/react"
 import React, { useEffect, useState } from "react"
 import { useSwipe } from "../hooks/useSwipe";
 
@@ -67,51 +67,41 @@ export function ImageModal({ images, src, open, close }: { images: string[], src
                                     animationDuration: { base: "0.4s", md: "1s" }
                                 }}
                             />
-                            <Text
+                            <Button
                                 position="absolute"
                                 bottom={{ base: 20, md: 10 }}
-                                bg="#FFFFFFAA"
-                                p={2}
-                                borderRadius={2}
+                                p={4}
                                 onClick={(e) => e.stopPropagation()}
                             >
                                 Número de refencia: {numReferencia}
-                            </Text>
-                            <Text
+                            </Button>
+                            <Button
                                 position="absolute"
                                 bottom={{ base: 20, md: "50%" }}
                                 left={5}
-                                bg={isFirst ? "gray" : "#FFFFFFAA"}
+                                disabled={isFirst}
                                 p={2}
-                                borderRadius={2}
-                                cursor={"pointer"}
                                 onClick={(e) => {
                                     previous();
                                     e.stopPropagation()
                                 }}
-                                w="40px"
-                                textAlign="center"
                             >
                                 <ArrowBackIcon boxSize={6} />
-                            </Text>
-                            <Text
+                            </Button>
+                            <Button
                                 position="absolute"
                                 bottom={{ base: 20, md: "50%" }}
                                 right={5}
-                                bg={isLast ? "gray" : "#FFFFFFAA"}
+                                disabled={isLast}
                                 p={2}
-                                borderRadius={2}
-                                cursor={"pointer"}
                                 onClick={(e) => {
                                     next();
                                     e.stopPropagation();
                                 }}
-                                w="40px"
-                                textAlign="center"
                             >
                                 <ArrowForwardIcon boxSize={6} />
 
-                            </Text>
+                            </Button>
                         </Center>
                     </ModalBody>
                 </ModalContent>

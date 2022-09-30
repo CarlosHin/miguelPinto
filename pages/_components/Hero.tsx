@@ -18,14 +18,21 @@ export default function Hero() {
                 maxW="full"
                 overflow="hidden"
                 align={'center'}
-                spacing={{ base: 8, md: 10 }}
+                spacing={{ base: 8, sm: 20, md: 10 }}
                 py={{ base: 20, md: 28 }}
                 direction={{ base: 'column-reverse', md: 'row' }}>
-                <Stack flex={1} spacing={{ base: 5, md: 10 }} px={{ base: 4, md: 2 }} className={"animated fadeIn"}>
+                <Stack flex={1} spacing={{ base: 5, md: 10 }} px={{ base: 0, md: 2 }} className={"animated fadeIn"}>
                     <>
                         <Img src="/img/logoBig.png" alt="logo" />
-                        <Text color={'gray.500'} textAlign="center" fontFamily="cursive" >
-                            El camino para llegar al arte; a su comprensión, anteponiendo a la razón, sensitividad; a la lógica, intuición; a la metafísica, la conciencia. Primer valor del arte. Sensibilizar.
+                        <Text
+                            color={'gray.500'}
+                            textAlign="center"
+                            fontFamily="Dancing Script"
+                            fontSize={{ base: "20px", md: "24px" }}
+                        >
+                            El camino para llegar al arte; a su comprensión, anteponiendo a la razón, sensitividad;
+                            a la lógica, intuición; a la metafísica, la conciencia.
+                            Primer valor del arte. Sensibilizar.
                         </Text>
                     </>
                 </Stack>

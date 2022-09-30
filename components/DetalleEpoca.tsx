@@ -43,7 +43,7 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
     const imagesInColumns = images.length > 0 ? chunckArrayInColumns(images, columns) : [];
     return <>
         <SectionHero title={title} />
-        <Stack spacing={10} pt={{ md: 10 }} px={{ base: 5, md: 20 }}>
+        <Stack spacing={10} py={{ base: 4, md: 10 }} px={{ base: 5, md: 20 }}>
             <Text>
                 {desc}
             </Text>
