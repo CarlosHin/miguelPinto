@@ -24,8 +24,8 @@ const Libro = ({ title, subtitle, libro, children }) => {
             {children}
             <Flex w="full" justify="center" pt={8}>
                 <SimpleGrid maxW="600px" columns={2} gap={2}>
-                    <Img src={`/img/${libro}-portada.png`} h="full" />
-                    <Img src={`/img/${libro}-contraportada.png`} h="full" />
+                    <Img src={`/img/poesia/${libro}-portada.png`} h="full" />
+                    <Img src={`/img/poesia/${libro}-contraportada.png`} h="full" />
                 </SimpleGrid>
             </Flex>
         </>
