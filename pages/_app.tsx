@@ -7,6 +7,7 @@ import Head from 'next/head'
 import { Header } from "../components/Header";
 import Footer from "../components/Footer";
 import theme from "../theme";
+import CookieConsent from "react-cookie-consent";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -30,6 +31,16 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <Component {...pageProps} />
       <Footer />
+      <CookieConsent
+        location="bottom"
+        buttonText="Aceptar"
+        cookieName="authCookie"
+        style={{ background: "#FBD38D", color: "gray", border: "1px solid gray" }}
+        buttonStyle={{ color: "#4e503b", fontSize: "13px", backgroundColor: "white", borderRadius: "10%" }}
+        expires={150}
+      >
+        Está página we utiliza Cookies para mejorar la experiencia de usuario.
+      </CookieConsent>
     </ChakraProvider>
   );
 }

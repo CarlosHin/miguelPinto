@@ -72,7 +72,7 @@ const exposionesAntiguas = [
 ];
 
 
-export default function Biografia() {
+export default function Exposiciones() {
     useEffect(() => {
         new WOW.WOW({
             live: false
@@ -82,50 +82,52 @@ export default function Biografia() {
 
     return <>
         <SectionHero title="Exposiciones" />
-        <Stack px={{ base: 5, md: 10 }} pb={10} >
-            <Center pt={10} pb={8}>
-                <Heading>Exposiciones Actuales</Heading>
-            </Center>
-            <ExposicionesCarousel items={exposionesActuales} speed={speed} />
-            <Center pt={10} pb={8}>
-                <Heading>Exposiciones Antiguas</Heading>
-            </Center>
+        <Stack px={{ base: 5, md: 20 }} py={10} align="center" >
+            <Stack maxW="1200px">
+                <Center pt={10} pb={8}>
+                    <Heading>Exposiciones Actuales</Heading>
+                </Center>
+                <ExposicionesCarousel items={exposionesActuales} speed={speed} />
+                <Center pt={10} pb={8}>
+                    <Heading>Exposiciones Antiguas</Heading>
+                </Center>
 
-            <SimpleGrid columns={{ base: 2, md: 5 }} spacing={10}>
-                {exposionesAntiguas.map((card, index) => (
-                    <AspectRatio
-                        key={index}
-                        ratio={4 / 3}
-                        w={"full"}
-                        position="relative"
-                        backgroundPosition="center"
-                        backgroundRepeat="no-repeat"
-                        backgroundSize="cover"
-                        backgroundImage={`url(${card.image})`}>
-                        <Container size="container.lg" height="full" position="relative">
-                            <Stack
-                                spacing={1}
-                                w={'full'}
-                                maxW={'lg'}
-                                position="absolute"
-                                bottom="5%"
-                                left={2}
-                            >
-                                <Text color="white"
-                                    border="1px solid white"
-                                    w="max-content" py="1px" px={2} bg="#00000040"
-                                    fontSize="10px"
+                <SimpleGrid columns={{ base: 2, md: 5 }} spacing={10}>
+                    {exposionesAntiguas.map((card, index) => (
+                        <AspectRatio
+                            key={index}
+                            ratio={4 / 3}
+                            w={"full"}
+                            position="relative"
+                            backgroundPosition="center"
+                            backgroundRepeat="no-repeat"
+                            backgroundSize="cover"
+                            backgroundImage={`url(${card.image})`}>
+                            <Container size="container.lg" height="full" position="relative">
+                                <Stack
+                                    spacing={1}
+                                    w={'full'}
+                                    maxW={'lg'}
+                                    position="absolute"
+                                    bottom="5%"
+                                    left={2}
                                 >
-                                    {card.date}
-                                </Text>
-                                <Heading color="white" fontSize="20px">
-                                    {card.title}
-                                </Heading>
-                            </Stack>
-                        </Container>
-                    </AspectRatio>
-                ))}
-            </SimpleGrid>
+                                    <Text color="white"
+                                        border="1px solid white"
+                                        w="max-content" py="1px" px={2} bg="#00000040"
+                                        fontSize="10px"
+                                    >
+                                        {card.date}
+                                    </Text>
+                                    <Heading color="white" fontSize="20px">
+                                        {card.title}
+                                    </Heading>
+                                </Stack>
+                            </Container>
+                        </AspectRatio>
+                    ))}
+                </SimpleGrid>
+            </Stack >
         </Stack >
     </>
 }

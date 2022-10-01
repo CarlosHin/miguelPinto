@@ -122,7 +122,7 @@ const items3: Year[] = [
     },
     {
         year: 2021,
-        text: "Fallece en Arganda del Rey"
+        text: "Fallece en Madrid"
     },
 ]
 
@@ -160,32 +160,34 @@ export default function Biografia() {
 
     return <>
         <SectionHero title="Biografía" />
-        <Stack px={{ base: 5, md: 20 }} pb={10} >
-            <Stack>
-                {items.map((el, index) => (
-                    <YearRow key={index} year={el} />
-                ))}
-            </Stack>
-            <Flex w="full" justify="center" py={4} className="wow fadeIn">
-                <Img src="/img/dibujo_a1p.jpeg" w={{ base: "80%", md: "400px" }} />
-            </Flex>
+        <Stack px={{ base: 5, md: 20 }} py={10} align="center" >
+            <Stack maxW="1000px">
+                <Stack>
+                    {items.map((el, index) => (
+                        <YearRow key={index} year={el} />
+                    ))}
+                </Stack>
+                <Flex w="full" justify="center" py={4} className="wow fadeIn">
+                    <Img src="/img/dibujo_a1p.jpeg" w={{ base: "80%", md: "400px" }} />
+                </Flex>
 
-            <Stack>
-                {items2.map((el, index) => (
-                    <YearRow key={index} year={el} />
-                ))}
-            </Stack>
+                <Stack>
+                    {items2.map((el, index) => (
+                        <YearRow key={index} year={el} />
+                    ))}
+                </Stack>
 
-            <Flex w="full" justify="center" py={4} className="wow fadeIn">
-                <Img src="/img/dibujo_a2p.jpeg" w={{ base: "80%", md: "400px" }} />
-            </Flex>
+                <Flex w="full" justify="center" py={4} className="wow fadeIn">
+                    <Img src="/img/dibujo_a2p.jpeg" w={{ base: "80%", md: "400px" }} />
+                </Flex>
 
-            <Stack>
-                {items3.map((el, index) => (
-                    <YearRow key={index} year={el} />
-                ))}
-            </Stack>
+                <Stack>
+                    {items3.map((el, index) => (
+                        <YearRow key={index} year={el} />
+                    ))}
+                </Stack>
 
+            </Stack >
         </Stack >
     </>
 }
