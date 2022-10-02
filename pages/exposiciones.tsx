@@ -84,7 +84,7 @@ export default function Exposiciones() {
     return <>
         <SectionHero title="Exposiciones" />
         <Stack px={{ base: 5, md: 20 }} py={10} align="center" >
-            <Stack maxW="1200px">
+            <Stack maxW={{ base: "full", md: "800px", lg: "1100px" }}>
                 <Center pt={10} pb={8}>
                     <Heading>Exposiciones Actuales</Heading>
                 </Center>
