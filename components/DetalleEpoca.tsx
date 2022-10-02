@@ -16,12 +16,58 @@ function chunckArrayInColumns(arr, columns) {
     return chunk
 }
 
+const EpocaImage = (props) => {
+    const {
+        path,
+        pathHQ,
+        img,
+        setModalImage,
+        setIsOpen
+    } = props;
+    const [loaded, setLoaded] = useState(false);
+    const [loadedHQ, setLoadedHQ] = useState(false);
+    const src = `${loadedHQ ? pathHQ : path}${img}`
+    return (
+        <Box
+            className="wow fadeInUp"
+            w="full"
+            h="full"
+        >
+            <Img
+                className={loaded ? "img-epoca-loaded" : ""}
+                src={src}
+                cursor="pointer"
+                zIndex={1}
+                _hover={{
+                    transform: { md: "scale(1.2)" },
+                    border: "3px solid white",
+                    transition: "transform 0.2s ease-out",
+                    zIndex: 10
+                }}
+                onClick={() => {
+                    setModalImage(`${pathHQ}${img}`)
+                    setIsOpen(true)
+                }}
+                onLoad={() => setLoaded(true)}
+                h="max-content"
+                w="full"
+            />
+            {!isServer && < Img
+                src={`${pathHQ}${img}`}
+                display="none"
+                onLoad={() => setLoadedHQ(true)}
+
+            />}
+        </Box>
+    )
+}
 
 export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: string, pathHQ: string, title: string, desc: string }) {
     const [images, setImages] = useState<string[]>([]);
     const [modalImage, setModalImage] = useState("");
     const [isLoading, setIsLoading] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
+
     const importImages = async () => {
         fetch(path + 'map.txt')
             .then((r) => r.text())
@@ -34,11 +80,22 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
             new WOW.WOW({
                 live: true
             }).init();
-            setIsLoading(false)
+            checkLoaded()
         }, 1500);
         importImages();
         // eslint-disable-next-line 
     }, [])
+    const checkLoaded = () => {
+        const loaded = document.getElementsByClassName("img-epoca-loaded");
+        if (loaded.length === images.length) {
+            setIsLoading(false)
+        } else {
+            setTimeout(() => {
+                checkLoaded()
+            }, 500);
+        }
+    }
+
     const columns = useBreakpointValue({ base: 2, md: 5, lg: 6 });
     const imagesInColumns = images.length > 0 ? chunckArrayInColumns(images, columns) : [];
     return <>
@@ -66,32 +123,15 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
                         <GridItem key={index} w='100%'>
                             <Stack>
                                 {column.map((el, index) => (
-                                    <Box
+                                    <EpocaImage
                                         key={index}
-                                        className="wow fadeInUp"
-                                        w="full"
-                                        h="full"
-                                    >
-                                        <Img
-                                            src={`${path}${el}`}
-                                            cursor="pointer"
-                                            _hover={{
-                                                transform: { md: "scale(1.2)" },
-                                                border: "3px solid white",
-                                                transition: "transform 0.2s ease-out"
-                                            }}
-                                            onClick={() => {
-                                                setModalImage(`${pathHQ}${el}`)
-                                                setIsOpen(true)
-                                            }}
-                                            h="max-content"
-                                            w="full"
-                                        />
-                                        {!isServer && < Img
-                                            src={`${pathHQ}${el}`}
-                                            display="none"
-                                        />}
-                                    </Box>
+                                        path={path}
+                                        pathHQ={pathHQ}
+                                        img={el}
+                                        setModalImage={setModalImage}
+                                        setIsOpen={setIsOpen}
+
+                                    />
                                 ))
                                 }
 

@@ -84,7 +84,7 @@ export default function Obra() {
     return <>
         <SectionHero title="Obra" />
         <Stack px={{ base: 5, md: 20 }} py={10} align="center" >
-            <Stack maxW="1000px">
+            <Stack maxW={{ md: "1000px" }}>
                 <Stack>
                     <Text>
                         La pintura de Miguel Pinto ha ido evolucionando buscando nuevos caminos de expresión, manteniéndose dentro de una figuración y desarrollando en toda su trayectoria un estilo propio y diferenciador. En sus cuadros vacía sus emociones y expresa sus sentimientos representados por su juego cromático donde plasma colores imposibles y sus formas topográficas. Sus colores, formas y espacios hacen de él, un pintor intenso e independiente.
