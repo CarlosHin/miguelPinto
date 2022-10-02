@@ -73,6 +73,7 @@ export default function LaPorra() {
                 <Center mt={10}>
                     <Heading>Cuadros</Heading>
                 </Center>
+                <Text pb={5}>La obra esta compuesta por 8 lienzos al oleo de 3,00mX1,50m haciendo un total de 24,00mx1,5m</Text>
                 <Flex w="full" justify="center">
 
                     <Box w={{ base: "350px", sm: "400px", md: "700px", lg: "900px" }}
