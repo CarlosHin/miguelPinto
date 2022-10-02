@@ -3,6 +3,7 @@ import {
     Stack, Text, Img, Circle, Flex
 } from '@chakra-ui/react';
 import { useEffect } from "react";
+import { GetStaticProps } from "next";
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -191,3 +192,4 @@ export default function Biografia() {
         </Stack >
     </>
 }
+export const getStaticProps: GetStaticProps = async (_context) => { return { props: {} } }

@@ -7,6 +7,7 @@ import ObrasDestacadas from "./_components/ObrasDestacadas";
 import { useEffect } from "react";
 import Exposiciones from "./_components/Exposiciones";
 import Link from "next/link";
+import { GetStaticProps } from "next";
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -81,3 +82,5 @@ export default function Home() {
 
   </>
 }
+
+export const getStaticProps: GetStaticProps = async (_context) => { return { props: {} } }

@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { useEffect } from "react";
 import ExposicionesCarousel from "../components/ExposicionesCarousel";
+import { GetStaticProps } from "next";
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -131,3 +132,4 @@ export default function Exposiciones() {
         </Stack >
     </>
 }
+export const getStaticProps: GetStaticProps = async (_context) => { return { props: {} } }

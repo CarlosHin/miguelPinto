@@ -7,19 +7,22 @@ import {
     SimpleGrid,
     useColorModeValue,
 } from '@chakra-ui/react';
+import Link from 'next/link';
 
 const testimonials = [
     {
         year: '2011',
         title: "Pueblos de Madrid",
         image: "/img/pueblos1.jpeg",
-        content: "La comunidad de Madrid me proporciono una variedad infinita de pueblos y paisajes. Aquí nací y viví, admirando constantemente sus tierras y costumbres, enriqueciendo mi sensibilidad."
+        content: "La comunidad de Madrid me proporciono una variedad infinita de pueblos y paisajes. Aquí nací y viví, admirando constantemente sus tierras y costumbres, enriqueciendo mi sensibilidad.",
+        link: "pueblosMadrid"
     },
     {
         year: '2011',
         title: "La cabeza de La Porra",
         image: "/img/porra1.jpeg",
-        content: "Buscando un paisaje para pintar y memorizar en un cuadro, me encuentro con un paraje llamado LA PORRA."
+        content: "Buscando un paisaje para pintar y memorizar en un cuadro, me encuentro con un paraje llamado LA PORRA.",
+        link: "laPorra"
     },
 ];
 
@@ -36,80 +39,82 @@ interface TestimonialCardProps {
     content: string;
     image: string;
     index: number;
+    link: string;
 }
 
 function TestimonialCard(props: TestimonialCardProps) {
-    const { title, year, image, content, index } = props;
+    const { title, year, image, content, index, link } = props;
     return (
-        <Flex
-            w="full"
-            justify="center"
-            className={"wow fadeIn"}
-            cursor="pointer"
-            transition="all 0.4s"
-            _hover={{ transform: "scale(1.05)" }}
-        >
+        <Link key={index} href={link}>
             <Flex
-                boxShadow={'lg'}
-                maxW={'80%'}
-                direction={{ base: 'column-reverse', md: 'row' }}
-                width={'full'}
-                rounded={'xl'}
-                p={10}
-                justifyContent={'space-between'}
-                position={'relative'}
-                bg={useColorModeValue('white', 'gray.800')}
-                _before={{
-                    content: '""',
-                    position: 'absolute',
-                    zIndex: '-1',
-                    height: 'full',
-                    maxW: '640px',
-                    width: 'full',
-                    filter: 'blur(40px)',
-                    transform: 'scale(0.98)',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover',
-                    top: 0,
-                    left: 0,
-                    backgroundImage: backgrounds[index],
-                }}>
+                w="full"
+                justify="center"
+                className={"wow fadeIn"}
+                cursor="pointer"
+                transition="all 0.4s"
+                _hover={{ transform: "scale(1.05)" }}
+            >
                 <Flex
-                    direction={'column'}
-                    textAlign={'left'}
-                    justifyContent={'space-between'}>
-                    <Text
-                        fontFamily={'Inter'}
-                        fontWeight={'medium'}
-                        fontSize={'30px'}
-                    >
-                        {title}
-                    </Text>
-                    <Text
-                        fontFamily={'Inter'}
-                        fontWeight={'medium'}
-                        fontSize={'20px'}
-                    >
-                        {content}
-                    </Text>
-                    <Text
-                        fontFamily={'Inter'}
-                        fontWeight={'medium'}
-                        color={'gray.500'}>
-                        {year}
-                    </Text>
+                    boxShadow={'lg'}
+                    maxW={'80%'}
+                    direction={{ base: 'column-reverse', md: 'row' }}
+                    width={'full'}
+                    rounded={'xl'}
+                    p={10}
+                    justifyContent={'space-between'}
+                    position={'relative'}
+                    bg={useColorModeValue('white', 'gray.800')}
+                    _before={{
+                        content: '""',
+                        position: 'absolute',
+                        zIndex: '-1',
+                        height: 'full',
+                        maxW: '640px',
+                        width: 'full',
+                        filter: 'blur(40px)',
+                        transform: 'scale(0.98)',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover',
+                        top: 0,
+                        left: 0,
+                        backgroundImage: backgrounds[index],
+                    }}>
+                    <Flex
+                        direction={'column'}
+                        textAlign={'left'}
+                        justifyContent={'space-between'}>
+                        <Text
+                            fontFamily={'Inter'}
+                            fontWeight={'medium'}
+                            fontSize={'30px'}
+                        >
+                            {title}
+                        </Text>
+                        <Text
+                            fontFamily={'Inter'}
+                            fontWeight={'medium'}
+                            fontSize={'20px'}
+                        >
+                            {content}
+                        </Text>
+                        <Text
+                            fontFamily={'Inter'}
+                            fontWeight={'medium'}
+                            color={'gray.500'}>
+                            {year}
+                        </Text>
+                    </Flex>
+                    <Img
+                        src={image}
+                        height={{ base: '200px', md: "max-content" }}
+                        width={{ base: "max-content", md: '400px' }}
+                        alignSelf={'center'}
+                        borderRadius="10%"
+                        m={{ base: '0 0 35px 0', md: '0 0 0 50px' }}
+                    />
                 </Flex>
-                <Img
-                    src={image}
-                    height={{ base: '200px', md: "max-content" }}
-                    width={{ base: "max-content", md: '400px' }}
-                    alignSelf={'center'}
-                    borderRadius="10%"
-                    m={{ base: '0 0 35px 0', md: '0 0 0 50px' }}
-                />
             </Flex>
-        </Flex>
-
+        </Link>
     );
 }
 

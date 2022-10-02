@@ -5,6 +5,7 @@ import {
     Text,
 } from '@chakra-ui/react';
 import { useEffect } from "react";
+import { GetStaticProps } from "next";
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -56,3 +57,5 @@ export default function Cookies() {
 
     </>
 }
+
+export const getStaticProps: GetStaticProps = async (_context) => { return { props: {} } }

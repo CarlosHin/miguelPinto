@@ -1,3 +1,4 @@
+import { GetStaticProps } from "next";
 import React from "react";
 import DetalleEpoca from "../components/DetalleEpoca";
 
@@ -11,3 +12,5 @@ export default function Figurativa() {
         />
     </>
 }
+
+export const getStaticProps: GetStaticProps = async (_context) => { return { props: {} } }

@@ -5,6 +5,7 @@ import {
 import React, { useEffect } from "react";
 import { Marquee } from "../components/Marquee";
 import Link from "next/link";
+import { GetStaticProps } from "next";
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -147,3 +148,5 @@ export default function Obra() {
 
     </>
 }
+
+export const getStaticProps: GetStaticProps = async (_context) => { return { props: {} } }

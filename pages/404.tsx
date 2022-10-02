@@ -1,4 +1,5 @@
 import { Box, Heading, Text, Button } from '@chakra-ui/react';
+import { GetStaticProps } from 'next';
 import Obra from './_components/Obra';
 
 export default function NotFound() {
@@ -25,3 +26,5 @@ export default function NotFound() {
         </Box>
     );
 }
+
+export const getStaticProps: GetStaticProps = async (_context) => { return { props: {} } }
