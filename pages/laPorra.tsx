@@ -13,6 +13,7 @@ import {
 import { useEffect } from "react";
 import Slider from "react-slick";
 import { GetStaticProps } from "next";
+import { ImgHQ } from "../components/ImgHQ";
 
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
@@ -27,7 +28,7 @@ export default function LaPorra() {
         customPaging: function (i) {
             return (
                 <a>
-                    <Img src={`/img/la-porra/laporra${i + 1}.jpg`} />
+                    <Img src={`/img/la-porra/thumbs/laPorra${i + 1}.jpg`} />
                 </a>
             );
         },
@@ -42,7 +43,7 @@ export default function LaPorra() {
     };
     const CUADROS_COUNT = 8;
     const cuadros = Array.from({ length: CUADROS_COUNT }).map((el: number, index: number) => (
-        `/img/la-porra/laporra${index + 1}.jpg`
+        `laPorra${index + 1}`
     ))
     return <>
         <SectionHero title="La Porra" />
@@ -98,7 +99,10 @@ export default function LaPorra() {
                         <Slider {...settings}>
                             {cuadros?.map(el =>
                                 <Box key={el} >
-                                    <Img src={el} />
+                                    <ImgHQ
+                                        img={`/img/la-porra/thumbs/${el}.jpg`}
+                                        imgHQ={`/img/la-porra/images/${el}.png`}
+                                    />
                                 </Box>
                             )}
                         </Slider>

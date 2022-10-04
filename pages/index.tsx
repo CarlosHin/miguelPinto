@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import Exposiciones from "./_components/Exposiciones";
 import Link from "next/link";
 import { GetStaticProps } from "next";
+import Contacto from "../components/Contacto";
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -66,7 +67,7 @@ export default function Home() {
     <Obra />
     <ObrasDestacadas />
     <Exposiciones />
-    <Center mt={0} pt={4} px={6} className={"wow fadeInUp"}>
+    <Center py={4} px={6} className={"wow fadeInUp"}>
 
       <Link href="exposiciones">
         <Button
@@ -77,9 +78,7 @@ export default function Home() {
         </Button>
       </Link>
     </Center>
-
-    <Stack h="300px"></Stack>
-
+    <Contacto />
   </>
 }
 
