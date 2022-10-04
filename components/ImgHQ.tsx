@@ -17,8 +17,9 @@ export const ImgHQ = (props) => {
                 src={src}
                 h="max-content"
                 w="full"
+                onLoad={() => setLoaded(true)}
             />
-            {!isServer && < Img
+            {loaded && !isServer && < Img
                 src={imgHQ}
                 display="none !important"
                 onLoad={() => setLoadedHQ(true)}
