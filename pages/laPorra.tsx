@@ -90,7 +90,7 @@ export default function LaPorra() {
             cuadros.map(el =>
                 <Box key={el} display="none !important" id="AAA">
                     <ImgLoad
-                        src={`${path}${el}.jpg`}
+                        src={`${path}${el}.png`}
                         className="img-loaded"
                     />
                 </Box>
