@@ -37,7 +37,7 @@ export default function LaPorra() {
             return (
                 <a>
                     <Img
-                        src={`${imagesLoadedHQ ? pathHQ : path}laPorra${i + 1}.${imagesLoadedHQ ? "png" : "jpg"}`}
+                        src={`${imagesLoadedHQ ? pathHQ : path}laPorra${i + 1}.png`}
                     />
                 </a>
             );
@@ -159,7 +159,7 @@ export default function LaPorra() {
                             {cuadros?.map(el =>
                                 <Img
                                     key={el}
-                                    src={`${imagesLoadedHQ ? pathHQ : path}${el}.${imagesLoadedHQ ? "png" : "jpg"}`}
+                                    src={`${imagesLoadedHQ ? pathHQ : path}${el}.png`}
                                 />
                             )}
                         </Slider>
