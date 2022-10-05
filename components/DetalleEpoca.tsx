@@ -76,10 +76,10 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
             })
     }
     useEffect(() => {
+        new WOW.WOW({
+            live: true
+        }).init();
         setTimeout(() => {
-            new WOW.WOW({
-                live: true
-            }).init();
             checkLoaded()
         }, 1500);
         importImages();

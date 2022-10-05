@@ -3,32 +3,42 @@ import {
     Stack,
     Text,
     Img,
-    SimpleGrid,
     Box,
     Center,
     Heading,
     Flex,
     Link
 } from '@chakra-ui/react';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { GetStaticProps } from "next";
-import { ImgHQ } from "../components/ImgHQ";
+import { ImgLoad } from "../components/ImgLoad";
 
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
+const path = "/img/la-porra/thumbs/";
+const pathHQ = "/img/la-porra/images/";
 export default function LaPorra() {
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+    const [imagesLoadedHQ, setImagesLoadedHQ] = useState(false);
+
     useEffect(() => {
         new WOW.WOW({
             live: false
         }).init();
+        setTimeout(() => {
+            checkLoaded()
+        }, 1500);
+        // eslint-disable-next-line 
     }, [])
     const settings = {
         customPaging: function (i) {
             return (
                 <a>
-                    <Img src={`/img/la-porra/thumbs/laPorra${i + 1}.jpg`} />
+                    <Img
+                        src={`${imagesLoadedHQ ? pathHQ : path}laPorra${i + 1}.${imagesLoadedHQ ? "png" : "jpg"}`}
+                    />
                 </a>
             );
         },
@@ -45,8 +55,57 @@ export default function LaPorra() {
     const cuadros = Array.from({ length: CUADROS_COUNT }).map((el: number, index: number) => (
         `laPorra${index + 1}`
     ))
+
+    const checkLoaded = () => {
+        const loaded = document.getElementsByClassName("img-loaded");
+        if (loaded.length >= cuadros.length) {
+            setImagesLoaded(true);
+            setTimeout(() => {
+                checkLoadedHQ()
+            }, 1500);
+        } else {
+            setTimeout(() => {
+                checkLoaded()
+            }, 500);
+        }
+    }
+
+    const checkLoadedHQ = () => {
+        const loaded = document.getElementsByClassName("imgHQ-loaded");
+        if (loaded.length >= cuadros.length) {
+            setImagesLoadedHQ(true)
+        } else {
+            setTimeout(() => {
+                checkLoadedHQ()
+            }, 500);
+        }
+    }
+
+
+
     return <>
         <SectionHero title="La Porra" />
+
+        {!isServer && (
+            cuadros.map(el =>
+                <Box key={el} display="none !important" id="AAA">
+                    <ImgLoad
+                        src={`${path}${el}.jpg`}
+                        className="img-loaded"
+                    />
+                </Box>
+            )
+        )}
+        {imagesLoaded && !isServer && (
+            cuadros.map(el =>
+                <Box key={el} display="none !important">
+                    <ImgLoad
+                        src={`${pathHQ}${el}.png`}
+                        className="imgHQ-loaded"
+                    />
+                </Box>
+            )
+        )}
         <Stack px={{ base: 5, md: 20 }} pb={10} align="center" >
             <Stack maxW="1000px">
                 <Text>
@@ -98,12 +157,10 @@ export default function LaPorra() {
                     >
                         <Slider {...settings}>
                             {cuadros?.map(el =>
-                                <Box key={el} >
-                                    <ImgHQ
-                                        img={`/img/la-porra/thumbs/${el}.jpg`}
-                                        imgHQ={`/img/la-porra/images/${el}.png`}
-                                    />
-                                </Box>
+                                <Img
+                                    key={el}
+                                    src={`${imagesLoadedHQ ? pathHQ : path}${el}.${imagesLoadedHQ ? "png" : "jpg"}`}
+                                />
                             )}
                         </Slider>
                     </Box>
