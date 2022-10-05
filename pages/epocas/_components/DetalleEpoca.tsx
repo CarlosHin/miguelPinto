@@ -3,7 +3,7 @@ import {
 } from '@chakra-ui/react';
 import React, { useEffect, useState } from "react";
 import { ImageModal } from "./ImageModal";
-import SectionHero from '../pages/_components/SectionHero';
+import SectionHero from '../../_components/SectionHero';
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 

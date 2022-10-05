@@ -14,12 +14,12 @@ import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
 import { link } from 'fs';
 
 const Links = [
-    { title: 'Biografía', href: "biografia" },
-    { title: 'Obra', href: "obra" },
-    { title: 'Poesía', href: "poesia" },
-    { title: 'Obras destacadas', href: "obrasDestacadas" },
-    { title: 'Exposiciones', href: "exposiciones" },
-    { title: 'Contacto', href: "contacto" },
+    { title: 'Biografía', href: "/biografia" },
+    { title: 'Obra', href: "/obra" },
+    { title: 'Poesía', href: "/poesia" },
+    { title: 'Obras destacadas', href: "/obrasDestacadas" },
+    { title: 'Exposiciones', href: "/exposiciones" },
+    { title: 'Contacto', href: "/contacto" },
 ];
 
 const NavLink = ({ link }) => (

@@ -105,7 +105,7 @@ export default function Obra() {
                     ]}
                     path="/img/Figurativa/images/"
                     duration="200s"
-                    route="figurativa"
+                    route="/epocas/figurativa"
                 >
                     <Text>
                         Me expreso con temas de tipos y paisajes Castellanos en estructuras muy delimitadas y sobrias con fuerte colorido neofauve. Las formas se encuentran o alejan, para formar una topografía de soledades y movimientos. Los espacios se cierran en geometrías para producir más fuerza en los ambientes y no tenga lugar el engaño. Los paisajes tienen alma depositada en los equilibrios de sus cielos; limpios y totales.
@@ -122,7 +122,7 @@ export default function Obra() {
                     ]}
                     path="/img/Subjetiva/images/"
                     duration="100s"
-                    route="subjetiva"
+                    route="/epocas/subjetiva"
 
                 >
                     <Text>
@@ -138,7 +138,7 @@ export default function Obra() {
                     ]}
                     path="/img/Abstracta/images/"
                     duration="100s"
-                    route="abstracta"
+                    route="/epocas/abstracta"
                 >
                     <Text>
                         Trabajando, trato de llegar a los pozos oscuros de mi ser. Atrapar sutiles caricias, choque y golpes que no veo pero siento; llegar al estado más puro de las cosas, a través de una comunión abierta al todo. Encontrarme con la perfección de lo más pequeño y efímero; a lo más grande y sublime. Mi pasado es un cañamazo con infinitos agujeros y el futuro un fantasma que sueña ajeno a realidades. Mi presente es barroco emocional, con vigor de siembra y nuevos significados.                </Text>

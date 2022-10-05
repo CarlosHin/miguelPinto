@@ -88,7 +88,7 @@ export default function LaPorra() {
 
         {!isServer && (
             cuadros.map(el =>
-                <Box key={el} display="none !important" id="AAA">
+                <Box key={el} display="none !important">
                     <ImgLoad
                         src={`${path}${el}.png`}
                         className="img-loaded"

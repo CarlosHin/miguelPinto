@@ -1,7 +1,7 @@
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons"
 import { useDisclosure, Center, Text, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Img, useOutsideClick, keyframes, Button } from "@chakra-ui/react"
 import React, { useEffect, useState } from "react"
-import { useSwipe } from "../hooks/useSwipe";
+import { useSwipe } from "../../../hooks/useSwipe";
 
 export function ImageModal({ images, src, open, close }: { images: string[], src: string, open: boolean, close: Function }) {
     const { isOpen, onOpen, onClose } = useDisclosure()

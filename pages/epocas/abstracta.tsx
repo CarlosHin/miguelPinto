@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import DetalleEpoca from "../components/DetalleEpoca";
+import DetalleEpoca from "./_components/DetalleEpoca";
 
 export default function Figurativa() {
     return <>

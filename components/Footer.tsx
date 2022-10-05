@@ -25,18 +25,18 @@ export default function SmallCentered() {
                 <Link href={'/'}><Img src="/img/logo.png" /></Link>
                 <SimpleGrid columns={{ base: 1, md: 7 }} spacing={{ base: 2, md: 6 }} >
                     <Link href={'/'}>Home</Link>
-                    <Link href={'biografia'}>Biografía</Link>
-                    <Link href={'obra'}>Obra</Link>
-                    <Link href={'poesia'}>Poesia</Link>
-                    <Link href={'obrasDestacadas'}>Obras destacadas</Link>
-                    <Link href={'exposiciones'}>Exposiciones</Link>
-                    <Link href={'contacto'}>Contacto</Link>
+                    <Link href={'/biografia'}>Biografía</Link>
+                    <Link href={'/obra'}>Obra</Link>
+                    <Link href={'/poesia'}>Poesia</Link>
+                    <Link href={'/obrasDestacadas'}>Obras destacadas</Link>
+                    <Link href={'/exposiciones'}>Exposiciones</Link>
+                    <Link href={'/contacto'}>Contacto</Link>
                 </SimpleGrid>
                 <Divider w="80%" borderColor="#00000033" />
                 <SimpleGrid columns={3} spacing={{ base: 0, md: 0 }} px={{ base: 10, md: 8 }}>
-                    <Link href={'legal'}>Aviso Legal</Link>
-                    <Link href={'cookies'}>Cookies</Link>
-                    <Link href={'privacidad'}>Política de Privacidad</Link>
+                    <Link href={'/legal'}>Aviso Legal</Link>
+                    <Link href={'/cookies'}>Cookies</Link>
+                    <Link href={'/privacidad'}>Política de Privacidad</Link>
                 </SimpleGrid>
             </Stack>
 

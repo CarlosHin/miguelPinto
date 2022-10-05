@@ -3,9 +3,9 @@ import {
 } from '@chakra-ui/react';
 import Link from 'next/link';
 const epocas = [
-    { title: "Figurativa", image: "/img/Figurativa/images/110-140x190.jpg", path: "figurativa" },
-    { title: "Subjetiva", image: "/img/sub1.jpeg", path: "subjetiva" },
-    { title: "Abstracta", image: "/img/abs1.jpeg", path: "abstracta" }]
+    { title: "Figurativa", image: "/img/Figurativa/images/110-140x190.jpg", path: "/epocas/figurativa" },
+    { title: "Subjetiva", image: "/img/sub1.jpeg", path: "/epocas/subjetiva" },
+    { title: "Abstracta", image: "/img/abs1.jpeg", path: "/epocas/abstracta" }]
 
 export default function Obra({ showTitle = true }) {
     return <>
