@@ -1,5 +1,6 @@
 import "../styles/animate.min.css";
 import "../styles/marquee.css";
+import "../styles/global.css";
 import '@fontsource/nunito-sans/600.css'
 import '@fontsource/dancing-script/700.css'
 import { ChakraProvider } from "@chakra-ui/react";

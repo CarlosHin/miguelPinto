@@ -4,6 +4,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { ImageModal } from "./ImageModal";
 import SectionHero from '../../_components/SectionHero';
+import Waves from '../../../components/Waves';
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -98,9 +99,9 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
 
     const columns = useBreakpointValue({ base: 2, md: 5, lg: 6 });
     const imagesInColumns = images.length > 0 ? chunckArrayInColumns(images, columns) : [];
-    return <>
+    return <Box position="relative">
         <SectionHero title={title} />
-        <Stack spacing={10} py={{ base: 4, md: 10 }} px={{ base: 5, md: 20 }}>
+        <Stack spacing={10} pt={{ base: 4, md: 10 }} pb={{ base: 4, md: 20 }} px={{ base: 5, md: 20 }}>
             <Text>
                 {desc}
             </Text>
@@ -146,6 +147,6 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
             )}
         </Stack >
         <ImageModal images={images.map(el => `${pathHQ}${el}`)} src={modalImage} open={isOpen} close={() => setIsOpen(false)} />
-
-    </>
+        <Waves />
+    </Box>
 }

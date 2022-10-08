@@ -9,7 +9,7 @@ import {
     Divider,
 } from '@chakra-ui/react';
 
-export default function SmallCentered() {
+export default function Footer() {
     return (
         <Box bg="orange.100">
             <Stack
@@ -55,3 +55,4 @@ export default function SmallCentered() {
         </Box>
     );
 }
+

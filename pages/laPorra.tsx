@@ -144,10 +144,12 @@ export default function LaPorra() {
                             "li.slick-active": {
                                 filter: "drop-shadow(1px 2px 3px black)"
                             },
+                            ".slick-dots": {
+                                h: { base: "25px", md: "auto" },
+                            },
                             "li": {
                                 w: {
-                                    base: "20px !important",
-                                    sm: "40px !important",
+                                    base: "50px !important",
                                     md: "60px !important",
                                     lg: "100px !important"
                                 }

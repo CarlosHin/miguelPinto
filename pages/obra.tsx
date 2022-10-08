@@ -6,6 +6,7 @@ import React, { useEffect } from "react";
 import { Marquee } from "../components/Marquee";
 import Link from "next/link";
 import { GetStaticProps } from "next";
+import Waves from "../components/Waves";
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -81,9 +82,9 @@ export default function Obra() {
         }).init();
     }, [])
 
-    return <>
+    return <Box position="relative">
         <SectionHero title="Obra" />
-        <Stack px={{ base: 5, md: 20 }} py={10} align="center" >
+        <Stack px={{ base: 5, md: 20 }} py={0} pb={{ base: 0, md: 16 }} align="center" >
             <Stack maxW={{ md: "1000px" }}>
                 <Stack>
                     <Text>
@@ -146,7 +147,9 @@ export default function Obra() {
             </Stack >
         </Stack >
 
-    </>
+        <Waves />
+
+    </Box >
 }
 
 export const getStaticProps: GetStaticProps = async (_context) => { return { props: {} } }
