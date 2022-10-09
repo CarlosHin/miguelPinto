@@ -19,6 +19,8 @@ import {
 } from 'react-icons/md';
 import { BsPerson } from 'react-icons/bs';
 import { useState } from 'react';
+import axios from 'axios';
+import qs from 'qs';
 
 export default function Contacto() {
     const toast = useToast()
@@ -51,13 +53,27 @@ export default function Contacto() {
             });
             return;
         }
-        toast({
-            title: 'Gracias ' + name,
-            description: "Mensaje enviado con éxito",
-            status: 'success',
-            duration: 9000,
-            isClosable: true,
-        });
+        const body = { nombre: name, email: email, msg: message }
+        axios.post(`https://www.carlosh.es/recibirMensajeMiguelPinto.php`, qs.stringify(body))
+            .then(res => {
+                if (res.data === 1) {
+                    toast({
+                        title: 'Gracias ' + name,
+                        description: "Mensaje enviado con éxito",
+                        status: 'success',
+                        duration: 9000,
+                        isClosable: true,
+                    });
+                } else {
+                    toast({
+                        title: 'Error',
+                        description: "Error al enviar mensaje",
+                        status: 'error',
+                        duration: 9000,
+                        isClosable: true,
+                    });
+                }
+            })
     }
     return (
         <Container bg="brand.primary" maxW="full" mt={0} centerContent overflow="hidden" px={4} py={4}>
