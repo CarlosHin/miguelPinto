@@ -45,7 +45,6 @@ export default function Obra({ showTitle = true }) {
                                 backgroundRepeat="no-repeat"
                                 backgroundPosition="center"
                                 cursor="pointer"
-                                onClick={() => console.log("AAA")}
                                 transition="all 3s ease-out"
                             >
                             </Box>
