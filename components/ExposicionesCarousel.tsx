@@ -40,9 +40,6 @@ export default function ExposicionesCarousel({ items, speed }) {
                         ".slick-slide": {
                             mr: "10px",
                         },
-                        ".slick-list": {
-                            overflow: "visible"
-                        }
 
                     }}
                 >
@@ -59,10 +56,13 @@ export default function ExposicionesCarousel({ items, speed }) {
                                     zIndex: 20
 
                                 }}
+                                py={5}
+                                w={{ base: "250px !important", md: "400px !important" }}
+
                             >
                                 <Box
                                     position="absolute"
-                                    top={4}
+                                    top={10}
                                     right={4}
                                     bg="brand.primary"
                                     zIndex={30}
@@ -76,7 +76,7 @@ export default function ExposicionesCarousel({ items, speed }) {
                                     src={`/img/exposiciones/${card.image}`}
                                     border="1px solid #00000044"
                                     borderRadius="5px"
-                                    width="400px !important"
+                                    w="full"
 
                                 />
                             </Box>
