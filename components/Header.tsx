@@ -41,7 +41,7 @@ export function Header() {
 
     return (
         <>
-            <Box bg="orange.100" px={4}>
+            <Box bg="brand.primary" px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                     <IconButton
                         size={'md'}

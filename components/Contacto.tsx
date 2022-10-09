@@ -60,7 +60,7 @@ export default function Contacto() {
         });
     }
     return (
-        <Container bg="orange.100" maxW="full" mt={0} centerContent overflow="hidden" px={4} py={4}>
+        <Container bg="brand.primary" maxW="full" mt={0} centerContent overflow="hidden" px={4} py={4}>
             <Box
                 bg="orange.200"
                 color="white"

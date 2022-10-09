@@ -2,9 +2,9 @@ import {
     Stack, Text, Grid, GridItem, Img, useBreakpointValue, Center, Spinner, Box
 } from '@chakra-ui/react';
 import React, { useEffect, useState } from "react";
-import { ImageModal } from "./ImageModal";
-import SectionHero from '../../_components/SectionHero';
-import Waves from '../../../components/Waves';
+import ImageModal from "../../components/ImageModal";
+import SectionHero from './SectionHero';
+import Waves from '../../components/Waves';
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 

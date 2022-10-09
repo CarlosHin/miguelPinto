@@ -11,7 +11,7 @@ import {
 
 export default function Footer() {
     return (
-        <Box bg="orange.100">
+        <Box bg="brand.primary">
             <Stack
                 py={4}
                 spacing={4}

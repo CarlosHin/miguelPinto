@@ -1,9 +1,10 @@
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons"
 import { useDisclosure, Center, Text, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Img, useOutsideClick, keyframes, Button } from "@chakra-ui/react"
+import { GetStaticProps } from "next";
 import React, { useEffect, useState } from "react"
-import { useSwipe } from "../../../hooks/useSwipe";
+import { useSwipe } from "../hooks/useSwipe";
 
-export function ImageModal({ images, src, open, close }: { images: string[], src: string, open: boolean, close: Function }) {
+export default function ImageModal({ images, src, open, close }: { images: string[], src: string, open: boolean, close: Function }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [index, setindex] = useState(0)
     useEffect(() => {
@@ -43,8 +44,8 @@ export function ImageModal({ images, src, open, close }: { images: string[], src
     } = useSwipe({ onLeftSwipe: next, onRightSwipe: previous })
 
     const isFirst = index === 0;
-    const isLast = index === images.length - 1;
-    const numReferencia = images[index]?.split("/")[images[index]?.split("/").length - 1].split("-")[0]
+    const isLast = index === images?.length - 1;
+    const numReferencia = images[index]?.split("/")[images[index]?.split("/")?.length - 1].split("-")[0]
     return (
         <>
             <Modal onClose={() => { onClose(); close(); }} closeOnOverlayClick={true} size="full" isOpen={isOpen}>
@@ -109,3 +110,4 @@ export function ImageModal({ images, src, open, close }: { images: string[], src
         </>
     )
 }
+

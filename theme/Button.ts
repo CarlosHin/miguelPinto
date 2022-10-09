@@ -4,7 +4,7 @@ export const ButtonStyle: ComponentStyleConfig = {
     baseStyle: {
         rounded:'full',
         px:6,
-        bgColor:'orange.100 !important',
+        bgColor:'brand.primary !important',
         _hover :{
             bgColor:'orange.200 !important',
         },
