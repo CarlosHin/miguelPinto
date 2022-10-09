@@ -8,6 +8,7 @@ import {
     Text,
     Container,
     Center,
+    Img
 } from '@chakra-ui/react';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import Slider from 'react-slick';
@@ -18,8 +19,8 @@ export default function ExposicionesCarousel({ items, speed }) {
     const settings = {
         dots: false,
         arrows: false,
-        infinite: true,
-        autoplay: true,
+        infinite: false,
+        autoplay: false,
         slidesToShow: 1,
         variableWidth: true,
         speed: speed,
@@ -38,42 +39,30 @@ export default function ExposicionesCarousel({ items, speed }) {
                     sx={{
                         ".slick-slide": {
                             mr: "10px",
+                        },
+                        ".slick-list": {
+                            overflow: "visible"
                         }
 
                     }}
                 >
                     <Slider {...settings} ref={(slider) => setSlider(slider)}>
                         {items.map((card, index) => (
-                            <AspectRatio
+                            <Img
                                 key={index}
-                                ratio={5 / 3}
-                                w={{ base: "300px !important", md: '600px !important' }}
-                                position="relative"
-                                backgroundPosition="center"
-                                backgroundRepeat="no-repeat"
-                                backgroundSize="cover"
-                                backgroundImage={`url(${card.image})`}>
-                                <Container size="container.lg" height="full" position="relative">
-                                    <Stack
-                                        spacing={0}
-                                        w={'full'}
-                                        maxW={'lg'}
-                                        position="absolute"
-                                        bottom={4}
-                                        left={4}
-                                    >
-                                        <Text color="white" border="1px solid white" w="max-content" py="1px" px={2} bg="#00000040">
-                                            {card.date}
-                                        </Text>
-                                        <Heading color="white">
-                                            {card.title}
-                                        </Heading>
-                                        <Text color="white">
-                                            {card.text}
-                                        </Text>
-                                    </Stack>
-                                </Container>
-                            </AspectRatio>
+                                src={`/img/exposiciones/${card.image}`}
+                                border="1px solid #00000044"
+                                borderRadius="5px"
+                                width="400px !important"
+                                cursor="pointer"
+                                zIndex={10}
+                                transition="all .4s ease-out"
+                                _hover={{
+                                    transform: "scale(1.1)",
+                                    zIndex: 20
+
+                                }}
+                            />
                         ))}
                     </Slider>
                 </Box>

@@ -12,30 +12,54 @@ import ExposicionesCarousel from '../../components/ExposicionesCarousel';
 export default function Exposiones() {
     const exposiones = [
         {
-            title: 'Morata',
-            text: "Descripción exposición",
-            image: "/img/pueblos1.jpeg",
-            date: "Julio 2021"
+            title: 'CartelIEA2021',
+            text: "",
+            image: "CartelIEA2021.png",
+            date: ""
         },
         {
-            title: 'Madrid',
-            text: "Descripción exposición",
-            image: "/img/abs1.jpeg",
-            date: "Septiembre 2021"
+            title: 'Cid 2021',
+            text: "",
+            image: "CartelCid2021.jpeg",
+            date: ""
+        },
+        {
+            title: 'MAC CROHOM 2021',
+            text: "",
+            image: "CartelMACCROHON2021.png",
+            date: ""
 
         },
         {
-            title: 'Perales',
-            text: "Descripción exposición",
-            image: "/img/porra1.jpeg",
-            date: "Noviembre 2022"
+            title: 'Perales 2022',
+            text: "",
+            image: "CartelPerales2022.png",
+            date: ""
         },
+
+
         {
-            title: 'Valdelaguna',
-            text: "Descripción exposición",
-            image: "/img/Figurativa/images/110-140x190.jpg",
-            date: "Mayo 2021"
+            title: 'Valdelaguna 2022',
+            text: "",
+            image: "CartelValdelaguna2022.png",
+            date: ""
         },
+
+        {
+            title: 'Paco de Lucía 2022',
+            text: "",
+            image: "CartelPacodeLucia2022.png",
+            date: ""
+        },
+
+        {
+            title: 'Cid 2022',
+            text: "",
+            image: "CartelCid2022.png",
+            date: ""
+        },
+
+
     ];
     const speed = useBreakpointValue({ base: 500, md: 2000 })
 

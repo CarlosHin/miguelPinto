@@ -7,7 +7,7 @@ import {
     SimpleGrid,
     Stack,
     useBreakpointValue,
-    Text
+    Img
 } from '@chakra-ui/react';
 import { useEffect } from "react";
 import ExposicionesCarousel from "../components/ExposicionesCarousel";
@@ -18,58 +18,106 @@ const WOW = !isServer ? require('wowjs') : null
 
 const exposionesActuales = [
     {
-        title: 'Morata3',
-        text: "Descripción exposición",
-        image: "/img/pueblos1.jpeg",
-        date: "Julio 2021"
+        title: 'CartelIEA2021',
+        text: "",
+        image: "CartelIEA2021.png",
+        date: ""
     },
     {
-        title: 'Madrid',
-        text: "Descripción exposición",
-        image: "/img/abs1.jpeg",
-        date: "Septiembre 2021"
+        title: 'Cid 2021',
+        text: "",
+        image: "CartelCid2021.jpeg",
+        date: ""
+    },
+    {
+        title: 'MAC CROHOM 2021',
+        text: "",
+        image: "CartelMACCROHON2021.png",
+        date: ""
 
     },
     {
-        title: 'Perales',
-        text: "Descripción exposición",
-        image: "/img/porra1.jpeg",
-        date: "Noviembre 2022"
+        title: 'Perales 2022',
+        text: "",
+        image: "CartelPerales2022.png",
+        date: ""
     },
+
+
     {
-        title: 'Valdelaguna',
-        text: "Descripción exposición",
-        image: "/img/Figurativa/images/110-140x190.jpg",
-        date: "Mayo 2021"
+        title: 'Valdelaguna 2022',
+        text: "",
+        image: "CartelValdelaguna2022.png",
+        date: ""
     },
+
+    {
+        title: 'Paco de Lucía 2022',
+        text: "",
+        image: "CartelPacodeLucia2022.png",
+        date: ""
+    },
+
+    {
+        title: 'Cid 2022',
+        text: "",
+        image: "CartelCid2022.png",
+        date: ""
+    },
+
+
 ];
 
 const exposionesAntiguas = [
     {
-        title: 'Morata',
-        text: "Descripción exposición",
-        image: "/img/pueblos1.jpeg",
-        date: "Julio 2021"
+        title: 'CartelIEA2021',
+        text: "",
+        image: "CartelIEA2021.png",
+        date: ""
     },
     {
-        title: 'Madrid',
-        text: "Descripción exposición",
-        image: "/img/abs1.jpeg",
-        date: "Septiembre 2021"
+        title: 'Cid 2021',
+        text: "",
+        image: "CartelCid2021.jpeg",
+        date: ""
+    },
+    {
+        title: 'MAC CROHOM 2021',
+        text: "",
+        image: "CartelMACCROHON2021.png",
+        date: ""
 
     },
     {
-        title: 'Perales',
-        text: "Descripción exposición",
-        image: "/img/porra1.jpeg",
-        date: "Noviembre 2022"
+        title: 'Perales 2022',
+        text: "",
+        image: "CartelPerales2022.png",
+        date: ""
     },
+
+
     {
-        title: 'Valdelaguna',
-        text: "Descripción exposición",
-        image: "/img/Figurativa/images/110-140x190.jpg",
-        date: "Mayo 2021"
+        title: 'Valdelaguna 2022',
+        text: "",
+        image: "CartelValdelaguna2022.png",
+        date: ""
     },
+
+    {
+        title: 'Paco de Lucía 2022',
+        text: "",
+        image: "CartelPacodeLucia2022.png",
+        date: ""
+    },
+
+    {
+        title: 'Cid 2022',
+        text: "",
+        image: "CartelCid2022.png",
+        date: ""
+    },
+
+
 ];
 
 
@@ -93,39 +141,22 @@ export default function Exposiciones() {
                     <Heading>Exposiciones Antiguas</Heading>
                 </Center>
 
-                <SimpleGrid columns={{ base: 2, md: 5 }} spacing={10}>
+                <SimpleGrid columns={{ base: 2, md: 5 }} spacing={5}>
                     {exposionesAntiguas.map((card, index) => (
-                        <AspectRatio
+                        <Img
                             key={index}
-                            ratio={4 / 3}
-                            w={"full"}
-                            position="relative"
-                            backgroundPosition="center"
-                            backgroundRepeat="no-repeat"
-                            backgroundSize="cover"
-                            backgroundImage={`url(${card.image})`}>
-                            <Container size="container.lg" height="full" position="relative">
-                                <Stack
-                                    spacing={1}
-                                    w={'full'}
-                                    maxW={'lg'}
-                                    position="absolute"
-                                    bottom="5%"
-                                    left={2}
-                                >
-                                    <Text color="white"
-                                        border="1px solid white"
-                                        w="max-content" py="1px" px={2} bg="#00000040"
-                                        fontSize="10px"
-                                    >
-                                        {card.date}
-                                    </Text>
-                                    <Heading color="white" fontSize="20px">
-                                        {card.title}
-                                    </Heading>
-                                </Stack>
-                            </Container>
-                        </AspectRatio>
+                            src={`/img/exposiciones/${card.image}`}
+                            border="1px solid #00000044"
+                            borderRadius="5px"
+                            cursor="pointer"
+                            zIndex={10}
+                            transition="all .4s ease-out"
+                            _hover={{
+                                transform: "scale(1.1)",
+                                zIndex: 20
+
+                            }}
+                        />
                     ))}
                 </SimpleGrid>
             </Stack >

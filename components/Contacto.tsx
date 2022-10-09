@@ -79,7 +79,7 @@ export default function Contacto(
             })
     }
     return (
-        <Container bg="brand.primary" maxW="full" mt={0} centerContent overflow="hidden" px={4} py={4} {...styles.container}>
+        <Container bg="brand.primary" maxW="full" mt={0} centerContent overflow="hidden" px={4} py={4} {...styles?.container}>
             <Box
                 bg="orange.200"
                 color="white"
