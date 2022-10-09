@@ -19,8 +19,8 @@ export default function ExposicionesCarousel({ items, speed }) {
     const settings = {
         dots: false,
         arrows: false,
-        infinite: false,
-        autoplay: false,
+        infinite: true,
+        autoplay: true,
         slidesToShow: 1,
         variableWidth: true,
         speed: speed,
@@ -48,21 +48,39 @@ export default function ExposicionesCarousel({ items, speed }) {
                 >
                     <Slider {...settings} ref={(slider) => setSlider(slider)}>
                         {items.map((card, index) => (
-                            <Img
+                            <Box
                                 key={index}
-                                src={`/img/exposiciones/${card.image}`}
-                                border="1px solid #00000044"
-                                borderRadius="5px"
-                                width="400px !important"
+                                position="relative"
                                 cursor="pointer"
                                 zIndex={10}
-                                transition="all .4s ease-out"
+                                transition="all .2s ease-out"
                                 _hover={{
-                                    transform: "scale(1.1)",
+                                    transform: "scale(1.02)",
                                     zIndex: 20
 
                                 }}
-                            />
+                            >
+                                <Box
+                                    position="absolute"
+                                    top={4}
+                                    right={4}
+                                    bg="brand.primary"
+                                    zIndex={30}
+                                    p={2}
+                                    borderRadius={10}
+                                    fontWeight={600}
+                                >
+                                    {card.date}
+                                </Box>
+                                <Img
+                                    src={`/img/exposiciones/${card.image}`}
+                                    border="1px solid #00000044"
+                                    borderRadius="5px"
+                                    width="400px !important"
+
+                                />
+                            </Box>
+
                         ))}
                     </Slider>
                 </Box>

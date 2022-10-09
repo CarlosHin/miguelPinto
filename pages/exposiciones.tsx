@@ -21,7 +21,7 @@ const exposionesActuales = [
         title: 'CartelIEA2021',
         text: "",
         image: "CartelIEA2021.png",
-        date: ""
+        date: "Octubre-Noviembre 2021"
     },
     {
         title: 'Cid 2021',
