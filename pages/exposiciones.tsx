@@ -84,7 +84,7 @@ export default function Exposiciones() {
             live: false
         }).init();
     }, [])
-    const speed = useBreakpointValue({ base: 500, md: 2000 })
+    const speed = useBreakpointValue({ base: 500, md: 1000 })
 
     return <>
         <SectionHero title="Exposiciones" />
@@ -139,6 +139,8 @@ export default function Exposiciones() {
                                 fontWeight={600}
                                 fontSize={10}
                                 opacity={0.9}
+                                maxW="100px"
+
                             >
                                 {card.date}
                             </Box>
