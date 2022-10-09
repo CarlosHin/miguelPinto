@@ -1,4 +1,4 @@
-import SectionHero from "./_components/SectionHero";
+import SectionHero from "./_components/_SectionHero";
 import {
     Stack, Text, Box, Heading, Button, Flex
 } from '@chakra-ui/react';

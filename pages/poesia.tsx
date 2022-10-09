@@ -1,4 +1,4 @@
-import SectionHero from "./_components/SectionHero";
+import SectionHero from "./_components/_SectionHero";
 import {
     Stack,
     useBreakpointValue,

@@ -1,11 +1,11 @@
-import Hero from "./_components/Hero";
+import Hero from "./_components/_Hero";
 import {
   Text, Stack, Button, Center
 } from '@chakra-ui/react';
-import Obra from "./_components/Obra";
-import ObrasDestacadas from "./_components/ObrasDestacadas";
+import Obra from "./_components/_Obra";
+import ObrasDestacadas from "./_components/_ObrasDestacadas";
 import { useEffect } from "react";
-import Exposiciones from "./_components/Exposiciones";
+import Exposiciones from "./_components/_Exposiciones";
 import Link from "next/link";
 import { GetStaticProps } from "next";
 import Contacto from "../components/Contacto";

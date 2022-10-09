@@ -1,6 +1,6 @@
 import { Box, Heading, Text, Button } from '@chakra-ui/react';
 import { GetStaticProps } from 'next';
-import Obra from './_components/Obra';
+import Obra from './_components/_Obra';
 
 export default function NotFound() {
     return (
