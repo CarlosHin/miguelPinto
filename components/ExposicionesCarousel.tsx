@@ -2,11 +2,7 @@ import React from 'react';
 import {
     Box,
     IconButton,
-    AspectRatio,
     Stack,
-    Heading,
-    Text,
-    Container,
     Center,
     Img
 } from '@chakra-ui/react';
@@ -24,7 +20,7 @@ export default function ExposicionesCarousel({ items, speed }) {
         slidesToShow: 1,
         variableWidth: true,
         speed: speed,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 8000,
 
     };
 
@@ -62,23 +58,26 @@ export default function ExposicionesCarousel({ items, speed }) {
                             >
                                 <Box
                                     position="absolute"
-                                    top={10}
-                                    right={4}
+                                    top={7}
+                                    right={2}
                                     bg="brand.primary"
                                     zIndex={30}
                                     p={2}
                                     borderRadius={10}
                                     fontWeight={600}
+                                    fontSize={12}
+                                    opacity={0.9}
                                 >
                                     {card.date}
                                 </Box>
-                                <Img
-                                    src={`/img/exposiciones/${card.image}`}
-                                    border="1px solid #00000044"
-                                    borderRadius="5px"
-                                    w="full"
-
-                                />
+                                <a href={card.href} target="_blank" rel="noreferrer">
+                                    <Img
+                                        src={`/img/exposiciones/${card.image}`}
+                                        border="1px solid #00000044"
+                                        borderRadius="5px"
+                                        w="full"
+                                    />
+                                </a>
                             </Box>
 
                         ))}

@@ -1,6 +1,6 @@
 import SectionHero from "./_components/_SectionHero";
 import {
-    AspectRatio,
+    Box,
     Center,
     Container,
     Heading,
@@ -16,83 +16,36 @@ const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
 
-const exposionesActuales = [
-    {
-        title: 'CartelIEA2021',
-        text: "",
-        image: "CartelIEA2021.png",
-        date: "Octubre-Noviembre 2021"
-    },
-    {
-        title: 'Cid 2021',
-        text: "",
-        image: "CartelCid2021.jpeg",
-        date: ""
-    },
-    {
-        title: 'MAC CROHOM 2021',
-        text: "",
-        image: "CartelMACCROHON2021.png",
-        date: ""
-
-    },
-    {
-        title: 'Perales 2022',
-        text: "",
-        image: "CartelPerales2022.png",
-        date: ""
-    },
-
-
-    {
-        title: 'Valdelaguna 2022',
-        text: "",
-        image: "CartelValdelaguna2022.png",
-        date: ""
-    },
-
-    {
-        title: 'Paco de Lucía 2022',
-        text: "",
-        image: "CartelPacodeLucia2022.png",
-        date: ""
-    },
-
-    {
-        title: 'Cid 2022',
-        text: "",
-        image: "CartelCid2022.png",
-        date: ""
-    },
-
-
-];
 
 const exposionesAntiguas = [
     {
         title: 'CartelIEA2021',
         text: "",
         image: "CartelIEA2021.png",
-        date: ""
+        date: "Octubre 2021-Noviembre 2021",
+        href: "https://expo.miguelpinto.com/iea"
     },
     {
         title: 'Cid 2021',
         text: "",
         image: "CartelCid2021.jpeg",
-        date: ""
+        date: "Agosto 2021-Enero 2022",
+        href: "https://expo.miguelpinto.com/cid"
     },
     {
         title: 'MAC CROHOM 2021',
         text: "",
         image: "CartelMACCROHON2021.png",
-        date: ""
+        date: "Diciembre 2021-Enero 2022",
+        href: "https://expo.miguelpinto.com/Mac-Crohon-Nov-2021"
 
     },
     {
         title: 'Perales 2022',
         text: "",
         image: "CartelPerales2022.png",
-        date: ""
+        date: "Abril 2022",
+        href: "https://expo.miguelpinto.com/Perales-2022"
     },
 
 
@@ -100,25 +53,29 @@ const exposionesAntiguas = [
         title: 'Valdelaguna 2022',
         text: "",
         image: "CartelValdelaguna2022.png",
-        date: ""
+        date: "Abril 2022",
+        href: "https://expo.miguelpinto.com/Valdelaguna-2022"
     },
 
     {
         title: 'Paco de Lucía 2022',
         text: "",
         image: "CartelPacodeLucia2022.png",
-        date: ""
+        date: "Mayo 2022",
+        href: "https://expo.miguelpinto.com/Paco-de-Lucia-2022"
     },
 
     {
         title: 'Cid 2022',
         text: "",
         image: "CartelCid2022.png",
-        date: ""
+        date: "Agosto 2022",
+        href: "https://expo.miguelpinto.com/Cid-2022"
     },
 
 
 ];
+const exposionesActuales = exposionesAntiguas;
 
 
 export default function Exposiciones() {
@@ -143,20 +100,38 @@ export default function Exposiciones() {
 
                 <SimpleGrid columns={{ base: 2, md: 5 }} spacing={5}>
                     {exposionesAntiguas.map((card, index) => (
-                        <Img
+                        <Box
                             key={index}
-                            src={`/img/exposiciones/${card.image}`}
-                            border="1px solid #00000044"
-                            borderRadius="5px"
-                            cursor="pointer"
+                            position="relative"
                             zIndex={10}
                             transition="all .4s ease-out"
                             _hover={{
                                 transform: "scale(1.1)",
                                 zIndex: 20
-
                             }}
-                        />
+                            border="1px solid #00000044"
+                            borderRadius="5px"
+                            cursor="pointer"
+                        >
+                            <Box
+                                position="absolute"
+                                top={2}
+                                left={2}
+                                bg="brand.primary"
+                                zIndex={30}
+                                p={2}
+                                borderRadius={10}
+                                fontWeight={600}
+                                fontSize={10}
+                                opacity={0.9}
+                            >
+                                {card.date}
+                            </Box>
+                            <Img
+                                src={`/img/exposiciones/${card.image}`}
+
+                            />
+                        </Box>
                     ))}
                 </SimpleGrid>
             </Stack >
