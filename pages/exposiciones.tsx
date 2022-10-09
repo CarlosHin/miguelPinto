@@ -88,14 +88,29 @@ export default function Exposiciones() {
 
     return <>
         <SectionHero title="Exposiciones" />
-        <Stack px={{ base: 5, md: 20 }} py={10} align="center" >
-            <Stack maxW={{ base: "full", md: "800px", lg: "1100px" }}>
+        <Stack px={{ base: 5, md: 10 }} py={10} align="center" >
+            <Stack maxW={{ base: "full", md: "800px", lg: "1300px" }}>
                 <Center pt={10} pb={8}>
-                    <Heading>Exposiciones Actuales</Heading>
+                    <Heading
+                        sx={{
+                            fontSize: { base: "30px", md: "50px" },
+                            textAlign: "center",
+                            "background": "-webkit-linear-gradient( #FBD38D,#FEEBC8)",
+                            "-webkit-background-clip": "text",
+                            "-webkit-text-fill-color": "transparent",
+                            fontFamily: ""
+                        }}
+                        fontWeight={800}
+                    >
+                        Pulsa en cada cartel para acceder a su exposición virtual
+                    </Heading>
+                </Center>
+                <Center pt={10} pb={8}>
+                    <Heading fontSize="50px" textAlign="center">Exposiciones Actuales</Heading>
                 </Center>
                 <ExposicionesCarousel items={exposionesActuales} speed={speed} />
                 <Center pt={10} pb={8}>
-                    <Heading>Exposiciones Antiguas</Heading>
+                    <Heading fontSize="50px" textAlign="center">Exposiciones Antiguas</Heading>
                 </Center>
 
                 <SimpleGrid columns={{ base: 2, md: 5 }} spacing={5}>
@@ -127,10 +142,9 @@ export default function Exposiciones() {
                             >
                                 {card.date}
                             </Box>
-                            <Img
-                                src={`/img/exposiciones/${card.image}`}
-
-                            />
+                            <a href={card.href} target="_blank" rel="noreferrer">
+                                <Img src={`/img/exposiciones/${card.image}`} />
+                            </a>
                         </Box>
                     ))}
                 </SimpleGrid>
