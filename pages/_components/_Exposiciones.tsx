@@ -68,7 +68,7 @@ export default function Exposiones() {
 
 
     ];
-    const speed = useBreakpointValue({ base: 500, md: 100 })
+    const speed = useBreakpointValue({ base: 500, md: 1000 })
 
 
     return (
