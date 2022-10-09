@@ -75,16 +75,18 @@ export default function Obra({ showTitle = true }) {
             }
         </Stack>
         <Center mt={0} px={6} className={"wow fadeInUp"}>
-            <Button
-                rounded={'full'}
-                size={'lg'}
-                w={{ base: "full", sm: "fit-content" }}
-                fontWeight={'normal'}
-                px={6}
-                bg={'orange.200'}
-            >
-                Obra Completa
-            </Button>
+            <Link href="/obra">
+                <Button
+                    rounded={'full'}
+                    size={'lg'}
+                    w={{ base: "full", sm: "fit-content" }}
+                    fontWeight={'normal'}
+                    px={6}
+                    bg={'orange.200'}
+                >
+                    Obra Completa
+                </Button>
+            </Link>
         </Center>
 
     </>
