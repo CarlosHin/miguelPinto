@@ -12,7 +12,8 @@ import {
     Textarea,
     Checkbox,
     Link,
-    useToast
+    useToast,
+    ContainerProps
 } from '@chakra-ui/react';
 import {
     MdOutlineEmail,
@@ -22,7 +23,9 @@ import { useState } from 'react';
 import axios from 'axios';
 import qs from 'qs';
 
-export default function Contacto() {
+export default function Contacto(
+    { styles }: { styles?: { container: ContainerProps } }
+) {
     const toast = useToast()
     const [invalidInputs, setInvalidInputs] = useState({
         name: false,
@@ -76,7 +79,7 @@ export default function Contacto() {
             })
     }
     return (
-        <Container bg="brand.primary" maxW="full" mt={0} centerContent overflow="hidden" px={4} py={4}>
+        <Container bg="brand.primary" maxW="full" mt={0} centerContent overflow="hidden" px={4} py={4} {...styles.container}>
             <Box
                 bg="orange.200"
                 color="white"
