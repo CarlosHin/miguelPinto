@@ -75,7 +75,7 @@ const exposionesAntiguas = [
 
 
 ];
-const exposionesActuales = exposionesAntiguas;
+const exposionesActuales = [];
 
 
 export default function Exposiciones() {
@@ -108,7 +108,13 @@ export default function Exposiciones() {
                 <Center pt={10} pb={8}>
                     <Heading fontSize="50px" textAlign="center">Exposiciones Actuales</Heading>
                 </Center>
-                <ExposicionesCarousel items={exposionesActuales} speed={speed} />
+                {exposionesActuales.length > 0 ?
+                    <ExposicionesCarousel items={exposionesActuales} speed={speed} />
+                    :
+                    <Center >
+                        <Heading fontSize="20px" textAlign="center">No hay exposiciones actualmente</Heading>
+                    </Center>
+                }
                 <Center pt={10} pb={8}>
                     <Heading fontSize="50px" textAlign="center">Exposiciones Antiguas</Heading>
                 </Center>

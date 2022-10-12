@@ -56,8 +56,8 @@ function TestimonialCard(props: TestimonialCardProps) {
             >
                 <Flex
                     boxShadow={'lg'}
-                    maxW={'80%'}
-                    direction={{ base: 'column-reverse', md: 'row' }}
+                    maxW={'1000px'}
+                    direction={{ base: 'column-reverse', lg: 'row' }}
                     width={'full'}
                     rounded={'xl'}
                     p={10}
@@ -82,7 +82,9 @@ function TestimonialCard(props: TestimonialCardProps) {
                     <Flex
                         direction={'column'}
                         textAlign={'left'}
-                        justifyContent={'space-between'}>
+                        justifyContent={'space-between'}
+                        pt={{ md: 5, lg: 0 }}
+                    >
                         <Text
                             fontFamily={'Inter'}
                             fontWeight={'medium'}
@@ -118,7 +120,7 @@ function TestimonialCard(props: TestimonialCardProps) {
     );
 }
 
-export default function ObrasDestacadas() {
+export default function ObrasDestacadas({ showTitle = true }: { showTitle?: boolean }) {
     return (
         <Flex
             textAlign={'center'}
@@ -126,11 +128,13 @@ export default function ObrasDestacadas() {
             justifyContent={'center'}
             direction={'column'}
             width={'full'}>
-            <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
-                <Heading>
-                    Obras destacadas
-                </Heading>
-            </Box>
+            {showTitle &&
+                <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
+                    <Heading>
+                        Obras destacadas
+                    </Heading>
+                </Box>
+            }
             <SimpleGrid
                 w="full"
                 columns={1}
