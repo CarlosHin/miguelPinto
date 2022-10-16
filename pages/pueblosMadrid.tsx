@@ -15,9 +15,10 @@ const path = "/img/Pueblos"
 const pueblos2 = [
     // 'AlcaladeHenares.jpg', 'Alcorcón.jpg',
     // 'Ambite.jpg', 'Aranjuez.jpg', 
-    'ArgandadelRey.jpg',
-    'BuitragodeLozoya.jpg', 'CadalsodelosVidrios.jpg',
-    'CampoReal.jpg', 'Carabaña.jpg', 'Cenicientos.jpg',
+    // 'ArgandadelRey.jpg',
+    // 'BuitragodeLozoya.jpg', 'CadalsodelosVidrios.jpg',
+    // 'CampoReal.jpg', 
+    'Carabaña.jpg', 'Cenicientos.jpg',
     'Cercedilla.jpg', 'Ciempozuelos.jpg', 'ColmenarViejo.jpg',
     'ColmenardeOreja.jpg', 'Chinchon.jpg', 'Estremera.jpg',
     'FuendidueñadelTajo.jpg', 'Getafe.jpg', 'Humanes.jpg',
@@ -72,7 +73,6 @@ const pueblos = [
             'https://www.alcorcon.org/'
         ]
     },
-
     {
         nombre: "Ambite",
         img: "Ambite",
@@ -89,7 +89,6 @@ const pueblos = [
             'http://www.viasverdes.com/itinerarios/itinerario.asp?id=84'
         ]
     },
-
     {
         nombre: "Aranjuez",
         img: "Aranjuez",
@@ -107,6 +106,68 @@ const pueblos = [
             "https://www.aranjuez.es/",
             "https://www.patrimonionacional.es/real-sitio/palacio-real-de-aranjuez",
             "https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/espacios-protegidos-red-natura-2000"
+        ]
+    },
+    {
+        nombre: "Arganda del Rey",
+        img: "ArgandadelRey",
+        formato: "jpg",
+        text: `
+        Población de la Comunidad de Madrid pertenece a la Comarca de la Cuenca de Henares casi la mitad de su término municipal se encuentra dentro del Parque Regional del Sureste.
+        <br><br>Dentro de su patrimonio histórico- cultural destacar la Iglesia de San Juan Bautista construida a final del siglo XVII donde cuelgan una importante colección de pinturas de los siglos XVII y XVIII.
+        <br><br>La Casa del Obispo Sancho Granado data del siglo XVIII, destacar también La Casa del Rey un palacete de final del Siglo XVI y la Ermita de la Soledad edificio barroco del siglo XVII.
+        <br><br>En Arganda se inicia la vía verde del Tajuña, finalizando en Ambite, un total de 49 KM bordeando la vega del río Tajuña.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.ayto-arganda.es",
+            "http://www.parqueregionalsureste.org/es/",
+            "http://www.viasverdes.com"
+        ]
+    },
+    {
+        nombre: "Buitrago de Lozoya",
+        img: "BuitragodeLozoya",
+        formato: "jpg",
+        text: `
+        Buitrago población de la Comunidad de Madrid situada en la Comarca Sierra Norte en el Valle Medio del Lozoya.
+        <br><br>Buitrago fue declarada en 1993 Conjunto Histórico-Artístico y Bien de Interés Cultural, por su espectacular recinto amurallado de origen árabe y rodeado por el río Lozoya, el mejor conservado de la Comunidad de Madrid. Su Castillo junto a la Iglesia María del Castillo, la Torre del Reloj y sus murallas le dan una aire medieval formando parte del programa de promoción turística Villas de Madrid, y por alzarse con el titulo de mejor rincón en 2015 en el concurso convocado por la Guía Repsol en el que competian 17 municipios turísticos. 
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.buitrago.org",
+            "https://www.turismomadrid.es/es/portada/10374-villas-de-madrid.html"
+        ]
+    },
+    {
+        nombre: "Cadalso de los Vidrios",
+        img: "CadalsodelosVidrios",
+        formato: "jpg",
+        text: `
+        Cadalso de los vidrios, situado en la comarca de la Sierra Oeste de la Comunidad de Madrid. Su nombre hace referencia a la industria vidriera instalada hasta principios del siglo XX. Esta incluido en una Zona de Especial Protección para las Aves (ZEPA)
+        <br><br>Destacar en el patrimonio artístico de Cadalso la Iglesia de Nuestra Señora de la Asunción, construida en 1498 con parte del a muralla árabe de Cadalso,.El Palacio de Villena construido con sillares de piedra den el siglo XV, catalogado como Bien de Interés Cultural. La Casa de los Salvajes o el Casón de los Austrias es un edificio solariego con estilo renacentista y la Fuente de los Álamos de origen musulmán es una antiguo manantial.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://www.cadalsodelosvidrios.es/%C3%A1reas-de-gobierno/turismo",
+            "https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/espacios-protegidos-red-natura-2000"
+        ]
+    },
+    {
+        nombre: "CampoReal",
+        img: "CampoReal",
+        formato: "jpg",
+        text: `
+        Pueblo de la comunidad de Madrid situado en la comarca de la Cuenca de Henares, famoso por sus aceitunas, citadas por Cervantes y consideradas un manjar digno de reyes en la Corte de Felipe II.
+        <br><br>Dentro del patrimonio artístico del municipio se encuentra la Iglesia de Santa María del Castillo, declarada Monumento Histórico Artístico Provincial en 1981. Los elementos más antiguos están datados entre los siglos XII y XIII. Otros ejemplos de su arquitectura son; la Ermita de la Virgen de los Remedios, la Ermita de la Virgen de las Angustias y la Ermita del Santisímo Cristo de la Peña.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://www.camporeal.es",
         ]
     },
 ]
@@ -138,13 +199,10 @@ export default function PueblosMadrid() {
                 <br /><br />
                 Miguel Pinto (Febrero 2011)
             </Text>
-            <SimpleGrid columns={{ base: 2, md: 4 }} w="full" gap={1}>
-                {[...pueblos, ...pueblos].map((pueblo: Pueblo) => (
-                    <AspectRatio
+            <SimpleGrid columns={{ base: 1, md: 4 }} w="full" gap={1}>
+                {pueblos.map((pueblo: Pueblo) => (
+                    <Box
                         key={pueblo.nombre}
-                        bgImage={`${path}/${pueblo?.img}.${pueblo?.formato}`}
-                        bgSize="contain"
-                        ratio={1.6}
                         w="full"
                         transition="all 0.4s ease-out"
                         zIndex="1"
@@ -158,20 +216,27 @@ export default function PueblosMadrid() {
                             onOpen();
                         }}
                     >
+                        <Img
+                            src={`${path}/${pueblo?.img}.${pueblo?.formato}`}
+                        >
+                        </Img>
                         <Box position="relative">
                             <Box
                                 position="absolute"
                                 bottom="5px"
+                                left="10px"
+                                right="0px"
                                 w="max-content"
+                                maxW="70%"
                                 px={2}
                                 py={1}
                                 borderRadius={"10px"}
                                 bg="brand.primary"
                             >
-                                <Text>{pueblo.nombre}</Text>
+                                <Text textAlign="center">{pueblo.nombre}</Text>
                             </Box>
                         </Box>
-                    </AspectRatio>
+                    </Box>
                 ))}
             </SimpleGrid>
         </Stack >

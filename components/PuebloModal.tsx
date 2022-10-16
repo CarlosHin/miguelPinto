@@ -29,17 +29,7 @@ export default function PuebloModal(
                     bg='blackAlpha.300'
                     backdropFilter='blur(10px) '
                 />
-                <ModalContent w='90%' sx={{
-                    "& .chakra-modal__content": {
-                        w: "80% !important",
-                        bg: "red !important",
-                    },
-                    "& .chakra-modal__content-container": {
-                        w: "80% !important",
-                        bg: "red !important",
-                    }
-
-                }}>
+                <ModalContent w='90%' >
                     <ModalHeader>{pueblo?.nombre}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
