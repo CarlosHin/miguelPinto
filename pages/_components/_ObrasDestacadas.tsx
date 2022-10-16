@@ -11,14 +11,12 @@ import Link from 'next/link';
 
 const testimonials = [
     {
-        year: '2011',
         title: "Pueblos de Madrid",
         image: "/img/pueblos1.jpeg",
         content: "La comunidad de Madrid me proporciono una variedad infinita de pueblos y paisajes. Aquí nací y viví, admirando constantemente sus tierras y costumbres, enriqueciendo mi sensibilidad.",
         link: "pueblosMadrid"
     },
     {
-        year: '2011',
         title: "La cabeza de La Porra",
         image: "/img/porra1.jpeg",
         content: "Buscando un paisaje para pintar y memorizar en un cuadro, me encuentro con un paraje llamado LA PORRA.",
@@ -35,7 +33,6 @@ const backgrounds = [
 
 interface TestimonialCardProps {
     title: string;
-    year: string;
     content: string;
     image: string;
     index: number;
@@ -43,7 +40,7 @@ interface TestimonialCardProps {
 }
 
 function TestimonialCard(props: TestimonialCardProps) {
-    const { title, year, image, content, index, link } = props;
+    const { title, image, content, index, link } = props;
     return (
         <Link key={index} href={link}>
             <Flex
@@ -82,7 +79,6 @@ function TestimonialCard(props: TestimonialCardProps) {
                     <Flex
                         direction={'column'}
                         textAlign={'left'}
-                        justifyContent={'space-between'}
                         pt={{ md: 5, lg: 0 }}
                     >
                         <Text
@@ -98,12 +94,6 @@ function TestimonialCard(props: TestimonialCardProps) {
                             fontSize={'20px'}
                         >
                             {content}
-                        </Text>
-                        <Text
-                            fontFamily={'Inter'}
-                            fontWeight={'medium'}
-                            color={'gray.500'}>
-                            {year}
                         </Text>
                     </Flex>
                     <Img
