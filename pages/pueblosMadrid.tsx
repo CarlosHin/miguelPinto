@@ -18,9 +18,9 @@ const pueblos2 = [
     // 'ArgandadelRey.jpg',
     // 'BuitragodeLozoya.jpg', 'CadalsodelosVidrios.jpg',
     // 'CampoReal.jpg', 
-    'Carabaña.jpg', 'Cenicientos.jpg',
-    'Cercedilla.jpg', 'Ciempozuelos.jpg', 'ColmenarViejo.jpg',
-    'ColmenardeOreja.jpg', 'Chinchon.jpg', 'Estremera.jpg',
+    // 'Carabaña.jpg', 'Cenicientos.jpg',
+    // 'Cercedilla.jpg', 'Ciempozuelos.jpg', 'ColmenarViejo.jpg',
+    // 'ColmenardeOreja.jpg', 'Chinchon.jpg', 'Estremera.jpg',
     'FuendidueñadelTajo.jpg', 'Getafe.jpg', 'Humanes.jpg',
     'Loeches.jpg', 'Madrid.jpg', 'Manzanareselreal.jpg',
     'MirafloresdelaSierra.jpg', 'MontejodelaSierra.jpg',
@@ -170,7 +170,133 @@ const pueblos = [
             "http://www.camporeal.es",
         ]
     },
+    {
+        nombre: "Carabaña",
+        img: "Carabaña",
+        formato: "jpg",
+        text: `
+        Carabaña municipio que forma parte de la comarca de las Vegas de la Comunidad de Madrid. Famosa por su agua, fueron declaradas aguas minero-medicinales, embotellándose para su comercialización.
+        <br><br>Lo mas destacado de su patrimonio artístico en la Iglesia de Nuestra Señora de la Asunción del siglo XVI, la Ermita de Santa Lucia y la Ermita de Santa Barbara. Nos podemos encontrar también el Palacio del Virrey, el Palacio de la Plaza España.
+        <br><br>Desde esta localidad parte la Vía verde del tren de los 40 días, recorrido de 14 km que termina en el pueblo de Estremera. Esta vía de tren se construyo en el año 1938, durante la guerra Civil en tan solo 40 días, para abastecer a la población de Madrid durante la contienda, entre Torrejón de Ardoz(Madrid) y Tarancón (Cuenca).
+        <br><br>También forma parte de otra vía verde, La Vía Verde del Tajuña, con 49Km, partiendo de Arganda y terminando en Ambite.`,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://www.xn--ayuntamientocarabaa-d4b.es/",
+            "http://www.viasverdes.com"
+        ]
+    },
+    {
+        nombre: "Cenicientos",
+        img: "Cenicientos",
+        formato: "jpg",
+        text: `
+        Cenicientos población situada en la comarca de la Sierra Oeste de la Comunidad de Madrid. Rodeada de montañas de una gran riqueza natural esta incluida en una zona de Especial Protección de las Aves (ZEPA), denominada Encinares del río Alberche y Río Cofio.
+        <br><br>Como muestra de su patrimonio artístico destacamos La Iglesia de San Esteban Protomartir del siglo XV-XVI , la Ermita de Nuestra Señora del Roble del siglo XV y la Piedra Escrita es un monumento megalítico del siglo III ó IV, es una roca de granito de siete metros de altura y nueve de circunferencia, en una de sus caras se aprecian tres figuras humanas.`,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://cenicientos.net/",
+            "https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/espacios-protegidos-red-natura-2000"
+        ]
+    },
+    {
+        nombre: "Cercedilla",
+        img: "Cercedilla",
+        formato: "jpg",
+        text: `
+        Cercedilla población de la Comunidad de Madrid situada en la Comarca de la cuenca de Guadarrama en el corazón del Parque Nacional de la Sierra de Guadarrama, es un hermosos pueblo serrano rodeado de vegetación, y piscinas naturales.
+        <br><br>El patrimonio artístico cultural destacar sus puentes y calzada romana, que atraviesa el puerto de Fuenfría. La Iglesia de San Sebastián y la Ermita de Santa María del siglo XVII.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://www.cercedilla.es",
+            "https://www.parquenacionalsierraguadarrama.es"
+        ]
+    },
+    {
+        nombre: "Ciempozuelos",
+        img: "Ciempozuelos",
+        formato: "jpg",
+        text: `
+        Ciempozuelos pueblo de la comunidad de Madrid, perteneciente a la comarca de las Vegas e incluido en el Parque Regional del Sureste.
+        <br><br>Llamada Ischadia en su época romana, se localizan las Salinas Espartinas, una de las explotaciones de sal mas antiguas de la Península. Una de las principales muestras de su patrimonio artístico en la Iglesia Parroquial de Santa María Magdalena, construida sobre un templo mudéjar en varias etapas. Destacar la Ermita de Nuestra Señora del Consuelo y la plaza de la Constitución del siglo XVI, de tradición castellana renacentista.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.ayto-ciempozuelos.org",
+            "http://www.parqueregionalsureste.org/es/"
+        ]
+    },
+    {
+        nombre: "Colmenar Viejo",
+        img: "ColmenarViejo",
+        formato: "jpg",
+        text: `
+        Colmenar Viejo Es un municipio situado en la Cuenca Alta del Manzanares, dentro de la comunidad de Madrid. Gran parte de su territorio se encuentra en el Parque Regional de la Cuenca Alta del Manzanares.
+        <br><br>Dentro del patrimonio artístico de Colmenar destacar la Basílica de la Asunción de Nuestra Señora es un templo gótico con elementos renacentistas con un impresionante campanario y un magnífico retablo mayor, fue levantada en el siglo XV, bajo el patronazgo de los Mendoza, señores de Colmenar Viejo. La Ermita de la Virgen de los Remedios y las capillas de Santa Ana y San Francisco de Asís. Dentro de su casco histórico señalar su Plaza Mayor y la Plaza de Luis Gutiérrez.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.colmenarviejo.com/",
+            "http://www.parqueregionalcamanzanares.org/"
+        ]
+    },
+    {
+        nombre: "Colmenar de Oreja",
+        img: "ColmenardeOreja",
+        formato: "jpg",
+        text: `
+        Colmenar Oreja, municipio de la Comarca de las Vegas, al sureste de la Comunidad de Madrid. Situado en la meseta hidrográfica de los ríos Tajo y Tajuña. Forma parte del programa de promoción turística Villas de Madrid.
+        <br><br>Su plaza Mayor, una de las mas bellas de la comunidad de Madrid declarada Bien de interés cultural en la categoría de conjunto Histórico. Su iglesia De Santa María la Mayor, fue construida por la Orden de Santiago en el siglo XIII y ampliada durante el siglo XVI no pasando desapercibida por su imponente aire de fortaleza.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://aytocdo.com/",
+            "https://www.turismomadrid.es/es/portada/10374-villas-de-madrid.html"
+        ]
+    },
+    {
+        nombre: "Chinchon",
+        img: "Chinchon",
+        formato: "jpg",
+        text: `
+        Chinchón situado al sureste de la Comunidad de Madrid en la comarca de las Vegas. Su casco urbano o fue declarado Conjunto Histórico-Artístico y en 2008 su Plaza Mayor fue declarada la 4º Maravilla de la comunidad de Madrid. En la actualidad la localidad forma parte de la asociación Los pueblos más bonitos de España, siendo la única localidad de la comunidad de Madrid de la asociación. Forma parte del parque regional del sureste. Forma parte del programa de promoción turística Villas de Madrid.
+        <br><br>Destacar, sin duda alguna, su Plaza Mayor, ejemplo de arquitectura popular, las primeras casas con soportales y balcones se construyeron en el siglo xv. El castillo de los Condes de Chinchón construido en el siglo XV responde a las características de la arquitectura renacentista.
+        <br><br>La Torre del reloj, lo único que quedo en pie de la Iglesia de Ntra Sra de Gracia del siglo XIV, después de la guerra de la independencia. Existe un dicho polular: “Chinchón tiene una torre sin iglesia y una iglesia sin torre”.
+        <br><br>Destacar la Iglesia de Nuestra señora de la Asunción, se inicia su construcción en 1534 como capilla adosada al palacio condal. Destacar en el centro del retablo principal el magnifico cuadro de la Asunción de la Virgen, pintado por Francisco de Goya, por encargo de su hermano Camillo, capellán de los condes de Chinchón.
+        <br><br>Mencionar, también, el Convento de San Agustín actualmente Parador Nacional de Turismo y el Castillo de Casasola del siglo XV próximo al río Tajuña.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://www.ciudad-chinchon.com",
+            "http://www.parqueregionalsureste.org/es/",
+            "https://www.turismomadrid.es/es/portada/10374-villas-de-madrid.html"
+        ]
+    },
+    {
+        nombre: "Estremera",
+        img: "Estremera",
+        formato: "jpg",
+        text: `
+        Estremera pueblo perteneciente a la comarca de las Vegas de la comunidad de Madrid.
+        <br><br>Estremera muestra un patrimonio artístico de gran valor como la Iglesia de nuestra Señora de los Remedios siglo XVII y las cuevas de Pedro Fernández que data de la Edad de Bronce, formada por unas galería con aproximadamente ocho kilómetros de longitud.
+        <br><br>En esta localidad termina la Vía verde del tren de los 40 días, recorrido de 14 km que empieza en el pueblo de Carabaña. Esta via de tren se construyo en el año 1938, durante la guerra Civil en tan solo 40 días, para abastecer a la población de Madrid durante la contienda ,entre Torrejón de Ardoz(Madrid) y Tarancón (Cuenca).  
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://www.viasverdes.com",
+        ]
+    },
 ]
+
+
 
 export default function PueblosMadrid() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -208,7 +334,7 @@ export default function PueblosMadrid() {
                         zIndex="1"
                         cursor="pointer"
                         _hover={{
-                            transform: "scale(1.1)",
+                            transform: { md: "scale(1.1)" },
                             zIndex: "2"
                         }}
                         onClick={() => {
