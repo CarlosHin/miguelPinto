@@ -261,7 +261,7 @@ const pueblos = [
         ]
     },
     {
-        nombre: "Chinchon",
+        nombre: "Chinchón",
         img: "Chinchon",
         formato: "jpg",
         text: `
