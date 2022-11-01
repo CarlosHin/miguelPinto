@@ -21,10 +21,10 @@ const pueblos2 = [
     // 'Carabaña.jpg', 'Cenicientos.jpg',
     // 'Cercedilla.jpg', 'Ciempozuelos.jpg', 'ColmenarViejo.jpg',
     // 'ColmenardeOreja.jpg', 'Chinchon.jpg', 'Estremera.jpg',
-    'FuendidueñadelTajo.jpg', 'Getafe.jpg', 'Humanes.jpg',
-    'Loeches.jpg', 'Madrid.jpg', 'Manzanareselreal.jpg',
-    'MirafloresdelaSierra.jpg', 'MontejodelaSierra.jpg',
-    'MoratadeTajuña.jpg', 'Navacerrada.jpg', 'Navalcarnero.jpg',
+    // 'FuendidueñadelTajo.jpg', 'Getafe.jpg', 'Humanes.jpg',
+    // 'Loeches.jpg', 'Madrid.jpg', 'Manzanareselreal.jpg',
+    // 'MirafloresdelaSierra.jpg', 'MontejodelaSierra.jpg',
+    // 'MoratadeTajuña.jpg', 'Navacerrada.jpg', 'Navalcarnero.jpg',
     'NuevoBaztan.jpg', 'PeralesdeTajuña.jpg', 'Quijorna.jpg',
     'Rascafria.jpg', 'San-Lorenzo-Escorial.jpg', 'SanAgustindeGuadalix.jpg',
     'SanMartinVega.jpg', 'SanMartindeValdeIglesias.jpg', 'Santorcaz.jpg',
@@ -294,9 +294,172 @@ const pueblos = [
             "http://www.viasverdes.com",
         ]
     },
+    {
+        nombre: "FuendidueñadelTajo",
+        img: "FuendidueñadelTajo",
+        formato: "jpg",
+        text: `
+        Fuentidueña pueblo de la comunidad de Madrid, sitiado en la Comarca de las Vegas.
+        <br><br>Situada en la orilla del río Tajo, la historia de Fuentidueña está relacionada con dos castillos, uno el de Alharilla, desaparecido, pero tuvo gran importancia durante la dominación musulmana y otro el de Santiago que se le conoce como torre de los Piquillos. Destacar la Iglesia de San Andrés, barroca del siglo XVII. Otro ejemplo patrimonial es la Torre del Reloj.
+`,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://www.fuentiduenadetajo.org/",
+        ]
+    },
+    {
+        nombre: "Getafe",
+        img: "Getafe",
+        formato: "jpg",
+        text: `
+        Getafe población de la Comunidad de Madrid y pertenece al área metropolitana de la capital de Madrid, forma parte del Parque regional del Sureste, en su término se halla el Cerro de los Ángeles, centro geográfico de la Península Ibérica.
+        <br><br>Destacar dentro de su patrimonio artístico la Iglesia Catedral de Santa María Magdalena, construcción renacentista construida en 1549 sobre una iglesia mudéjar del siglo XIV, fue declarado Bien de interés Cultural en 1958. En el Cerro de los Ángeles podemos ver la Ermita de Nuestra Señora de los Ángeles, El sagrado Corazón de Jesús y el convento de las Carmelitas.      
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.getafe.es/",
+            "https://www.turismomadrid.es",
+            "http://www.parqueregionalsureste.org/es/ ",
+        ]
+    },
+    {
+        nombre: "Humanes de Madrid",
+        img: "Humanes",
+        formato: "jpg",
+        text: `
+        Humanes es una población de la Comunidad de Madrid situada en la Comarca Sur.
+        <br><br>El ejemplo más destacado de su patrimonio artístico en la Iglesia Parroquial de Santo Domingo de Guzmán construida entre los siglos XIII y XVIII, parte de ella tubo que ser reconstruida tras la Guerra Civil española.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://ayto-humanesdemadrid.es",
+        ]
+    },
+    {
+        nombre: "Loeches",
+        img: "Loeches",
+        formato: "jpg",
+        text: `
+        Loeches población situada en la comarca de la Cuenca de Henares en el este de la Comunidad de Madrid.
+        <br><br>Loeches muy ligada al Conde-Duque de Olivares impulsor del conocido como Convento Grande, el Monasterio de Inmaculada Concepción, que alberga el panteón familiar de sus descendientes, actual Casa de Alba, construido en el siglo XVII. Destacar también la Iglesia de nuestra Señora de Asunción construida en el siglo XVI.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://loeches.es/turismo/",
+        ]
+    },
+    {
+        nombre: "Madrid",
+        img: "Madrid",
+        formato: "jpg",
+        text: `
+        Madrid como núcleo urbano se inicia en el siglo IX promovida por el emir Mohamed I, todavía conservando algunos vestigios de una murralla musulmana, declarada Monumento Histórico-Artístico en 1954.
+        <br><br>En 1561, Felipe II marca como sede de la Corte la Villa de Madrid. Actualmente como capital de España, alberga las más importantes instituciones del Estado ya que es sede del gobierno Central.
+        <br><br>Con un inmenso patrimonio cultural y artístico, podemos destacar; El Palacio Real, la Biblioteca Nacional, El Templo de Debod, La Plaza Mayor, el Museo del Prado, El Círculo de Bellas Artes, La Puerta de Alcalá, El Parque del Retiro, Las Fuentes la Cibeles y Neptuno, la Catedral de la Almudena, una larga lista lugares y rincones que poder visitar.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.patrimonionacional.es/",
+            "https://www.esmadrid.com",
+        ]
+    },
+    {
+        nombre: "Manzanareselreal",
+        img: "Manzanareselreal",
+        formato: "jpg",
+        text: `
+        Manzanares El Real población ubicada en la zona centro-norte de la Comunidad de Madrid en la Comarca Cuenca Alta del Manzanares, a los pies de la sierra de Guadarrama y en la orilla del embalse de Santillana. Localidad situada en el Camino de Santiago de Madrid. En su superficie Se encuentra situado en el parque Nacional de Sierra de Guadarrama y el Parque Regional de la Cuenca Alta del Manzanares, se hallan espacios naturales tan significativos como la Pedriza, el Ventisquero de la Condesa donde nace el río Manzanares. Forma parte del programa de promoción turística Villas de Madrid.
+        <br><br>Dentro de su patrimonio artístico destacamos el Castillo de los Mendoza construido a final del siglo XV el mejor conservado de la Comunidad de Madrid, incluido en el itinerario turístico de la Ruta de los Castillos y atalayas de la Comunidad de Madrid. Destacar también el castillo Viejo, hoy en ruinas, la iglesia de Nuestra Señora de las Nieves fechada en el siglo XIV bajo la tutela del primer marqués de Santillana y la Ermita de Nuestra Señora de la Peña Sacra del siglo XVI.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://manzanareselreal.es/",
+            "http://www.parqueregionalcamanzanares.org/",
+            "https://www.parquenacionalsierraguadarrama.es",
+            "https://www.turismomadrid.es/es/portada/10374-villas-de-madrid.html",
+        ]
+    },
+    {
+        nombre: "MirafloresdelaSierra",
+        img: "MirafloresdelaSierra",
+        formato: "jpg",
+        text: `
+        Miraflores de la Sierra población de la Comunidad de Madrid ubicada en el extremo norte de en la Comarca de la Cuenca alta del Manzanares. Situado en el entorno del parque Nacional de la Sierra de Guadarrama, Parque regional de la cuenca Alta del Manzanares y zona de protección de aves (ZEPA). Es además Reserva de la Biosfera declara por la UNESCO
+        <br><br>Dentro de su patrimonio artístico destacar la Iglesia y la Gruta de Nuestra Señora de Begoña. La iglesia del siglo XV. Otra muestras patrimoniales del municipio es el ayuntamiento y sus numerosas fuentes.   
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.turismomirafloresdelasierra.es/",
+        ]
+    },
+    {
+        nombre: "MontejodelaSierra",
+        img: "MontejodelaSierra",
+        formato: "jpg",
+        text: `
+        Montejo de la Sierra población de la Comunidad de Madrid situada en la Comarca de la Sierra Norte
+        <br><br>El hayedo de Montejo uno delo bosques más sigulares de la región de Madrid, patrimonio Natural del Humanidad por la UNESCO, forma parte de una candidatura conjunta de Hayedos Europeos.
+        <br><br>Destacar del patrimonio artístico de Montejo La iglesia de San Pedro construida en los siglos XVI y XVII, la Ermita de la Soledad del siglo XVI y la Ermita de Nuestra Señora de Nazaret del siglo XIV.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.montejodelasierra.net/",
+        ]
+    },
+    {
+        nombre: "MoratadeTajuña",
+        img: "MoratadeTajuña",
+        formato: "jpg",
+        text: `
+        Morata situada al sureste de la Comunidad de Madrid en la comarca de las Vegas, próximo al río Tajuña. Las aguas del río se usan para el riego de su vega por la que discurre, a través de numerosa acequias, también proporciona energía hidráulica a los molinos harineros, por ejemplo el Molino de la Huerta de Angulo, referente turístico de la comarca. El espacio protegido por el parque Regional del Sureste esta dentro de su término municipal
+        <br><br>Morata dispone de interesantes ejemplos de patrimonio artístico como la iglesia Parroquial de la Inmaculada Concepción del siglo XVI, la Ermita de la Virgen de la Antigua, La Ermita de la Soledad y de Fátima y la Ermita del Cristo de la Sala.
+        <br><br>Forma parte de la Via Verde del Tajuña con 49 km de recorrido partiendo de Arganda y terminando en Ambite.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.ayuntamientodemorata.es/",
+            "http://www.parqueregionalsureste.org/es/",
+            "http://www.viasverdes.com",
+        ]
+    },
+    {
+        nombre: "Navacerrada",
+        img: "Navacerrada",
+        formato: "jpg",
+        text: `
+        Navacerrada población de la Comunidad de Madrid ubicado en la Comarca de la Cuenca de Guadarrama., junto a el embalse del mismo nombre. Forma parte del Camino de Santiago de Madrid
+        <br><br>Dentro de su patrimonio artístico destacar la Parroquia de Nuestra Señora de la Natividad del siglo XVI, la Ermita de San Antonio y las Fuentes de San Antonio, del Nogal y de los Ángeles.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.aytonavacerrada.org/",
+        ]
+    },
+    {
+        nombre: "Navalcarnero",
+        img: "Navalcarnero",
+        formato: "jpg",
+        text: `
+        Navalcarnero es un municipio del sur de la Comunidad de Madrid enmarcado dentro de la Comarca Sur. Forma parte del programa villas de Madrid
+        <br><br> Destacar dentro de su patrimonio artístico la iglesia de Nuestra Señora de la Asunción del siglo XVI, declarada Monumento Histórico artístico Nacional y Bien de Interés Cultural en la categoría de Conjunto Histórico- Artístico es el símbolo más notable del municipio. Tiene también numerosas Ermitas y la plaza de Segovia del siglo XVI, completamente empedrada con pórticos en tres de sus cuatro lados.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://www.turismo-navalcarnero.com/navalcarnero/turismo/",
+            "https://www.turismomadrid.es/es/portada/10374-villas-de-madrid.html ",
+        ]
+    },
 ]
-
-
 
 export default function PueblosMadrid() {
     const { isOpen, onOpen, onClose } = useDisclosure();
