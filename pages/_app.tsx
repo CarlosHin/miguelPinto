@@ -9,6 +9,7 @@ import { Header } from "../components/Header";
 import Footer from "../components/Footer";
 import theme from "../theme";
 import CookieConsent from "react-cookie-consent";
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -42,6 +43,7 @@ function MyApp({ Component, pageProps }) {
       >
         Está página we utiliza Cookies para mejorar la experiencia de usuario.
       </CookieConsent>
+      <Analytics />
     </ChakraProvider>
   );
 }
