@@ -25,9 +25,9 @@ const pueblos2 = [
     // 'Loeches.jpg', 'Madrid.jpg', 'Manzanareselreal.jpg',
     // 'MirafloresdelaSierra.jpg', 'MontejodelaSierra.jpg',
     // 'MoratadeTajuña.jpg', 'Navacerrada.jpg', 'Navalcarnero.jpg',
-    'NuevoBaztan.jpg', 'PeralesdeTajuña.jpg', 'Quijorna.jpg',
-    'Rascafria.jpg', 'San-Lorenzo-Escorial.jpg', 'SanAgustindeGuadalix.jpg',
-    'SanMartinVega.jpg', 'SanMartindeValdeIglesias.jpg', 'Santorcaz.jpg',
+    // 'NuevoBaztan.jpg', 'PeralesdeTajuña.jpg', 'Quijorna.jpg',
+    // 'Rascafria.jpg', 'San-Lorenzo-Escorial.jpg', 'SanAgustindeGuadalix.jpg',
+    // 'SanMartinVega.jpg', 'SanMartindeValdeIglesias.jpg', 'Santorcaz.jpg',
     'SantosdelaHumosa.jpg', 'Tielmes.jpg', 'Titulcia.jpg',
     'TorrejóndeArdóz.jpg', 'Torrelaguna.jpg', 'Torrelodones.jpg',
     'Valdelaguna.jpg', 'Valdemorillo.jpg', 'Valdemoro.jpg',
@@ -450,7 +450,7 @@ const pueblos = [
         formato: "jpg",
         text: `
         Navalcarnero es un municipio del sur de la Comunidad de Madrid enmarcado dentro de la Comarca Sur. Forma parte del programa villas de Madrid
-        <br><br> Destacar dentro de su patrimonio artístico la iglesia de Nuestra Señora de la Asunción del siglo XVI, declarada Monumento Histórico artístico Nacional y Bien de Interés Cultural en la categoría de Conjunto Histórico- Artístico es el símbolo más notable del municipio. Tiene también numerosas Ermitas y la plaza de Segovia del siglo XVI, completamente empedrada con pórticos en tres de sus cuatro lados.
+        <br><br>Destacar dentro de su patrimonio artístico la iglesia de Nuestra Señora de la Asunción del siglo XVI, declarada Monumento Histórico artístico Nacional y Bien de Interés Cultural en la categoría de Conjunto Histórico- Artístico es el símbolo más notable del municipio. Tiene también numerosas Ermitas y la plaza de Segovia del siglo XVI, completamente empedrada con pórticos en tres de sus cuatro lados.
         `,
         imgCount: 2,
         links: [
@@ -459,7 +459,147 @@ const pueblos = [
             "https://www.turismomadrid.es/es/portada/10374-villas-de-madrid.html ",
         ]
     },
+    {
+        nombre: "Nuevo Baztan",
+        img: "NuevoBaztan",
+        formato: "jpg",
+        text: `
+        Es un municipio perteneciente a la Comunidad de Madrid situado en la comarca de la Cuenca de Henares. Geográficamente Nuevo Baztán, está situado en la zona Sureste de la Comunidad de Madrid.
+        <br><br>El conjunto formado por el Palacio de Juan De Goyeneche y la Iglesia de San Francisco Javier anexa a la edificación y las dos plazas situadas en la parte delantera y trasera recibió la declaración de Monumento Histórico Artístico en el año 1941 . En el año 2000 el conjunto monumental fue catalogado como Bien de Interés Cultural por parte de la Comunidad de Madrid. Forma parte del programa de promoción turística villas de Madrid.
+        <br><br>El Palacio de Goyeneche es un edificio de principios del siglo XVIII, que fue levantado en estilo barroco a partir de un diseño del arquitecto José de Churriguera. Era el núcleo central de un complejo industrial, ideado, promovido y desarrollado por el editor, periodista y político Juan de Goyeneche, que posteriormente dio origen al actual municipio de Nuevo Baztán.
+        `,
+        imgCount: 2,
+        links: [
+            "http://turismo.ayto-nuevobaztan.es/",
+            "https://www.turismomadrid.es/es/portada/10374-villas-de-madrid.html",
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Perales de Tajuña",
+        img: "PeralesdeTajuña",
+        formato: "jpg",
+        text: `
+        Es un municipio del sureste de la Comunidad de Madrid, enmarcado en la comarca de las Vegas.
+        <br><br>Es destacable el conjunto de cuevas “Risco de las cuevas” que pudieron ser escavadas en el Neolítico , situadas cerca del margen derecho del Tajuña y declaradas Monumento Nacional en 1931. Se conservan 50 cuevas, donde se encontraron materiales de distintas épocas que están expuestos en el Museo Arqueológico Regional de Alcalá de Henares.
+        <br><br>El lugar, tuvo antaño un castillo, del que apenas quedan restos de un torreón. La iglesia parroquial, templo barroco del siglo XVII, está dedicada a Santa María del Castillo, fue construida sobre los cimientos de una anterior iglesia medieval que sirvió de capilla y posteriormente iglesia para la población.
+        <br><br>Forma La Vía Verde del Tajuña, con 49Km, partiendo de Arganda y terminando en Ambite.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.ayto-peralestajuna.org/",
+            "http://www.viasverdes.com",
+        ]
+    },
+    {
+        nombre: "Quijorna",
+        img: "Quijorna",
+        formato: "jpg",
+        text: `
+        Quijorna población ubicada en la zona oeste de la Comunidad de Madrid situada en la comarca Cuenca del Guadarrama. La mitad de su termino municipal esta protegido dentro de la denominada zona de protección para las Aves (ZEPA)
+        <br><br>El patrimonio artístico de Quijorna esta formado por la Iglesia de San Juan Evangelista del siglo XV. También podemos visitar un horno de cal que refleja la importancia de la calera municipal.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://aytoquijorna.org/nuestro-pueblo/",
+            "https://www.comunidad.madrid/servicios/urbanismo-medio-ambiente/espacios-protegidos-red-natura-2000",
+        ]
+    },
+    {
+        nombre: "Rascafria",
+        img: "Rascafria",
+        formato: "jpg",
+        text: `
+        Rascafría Población situada al noroeste de la Comunidad de Madrid en el Valle del Lozoya en la Comarca de La Sierra Norte. Es el municipio que mas terreno aporta al Parque Nacional de la Sierra de Guadarrama. Forma parte del programa de promoción turística villas de Madrid.
+        <br><br>Forma pare de su patrimonio artístico el Monasterio de Santa María del Paular fundada en 1390 regido por la orden de La Cartuja, desde 1954 es una abadía Benedictina. Lo mando construir Enrique II de Castilla. La Iglesia de San Andrés Apóstol del siglo XV.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.rascafria.org/",
+            "https://www.turismomadrid.es/es/portada/10374-villas-de-madrid.html",
+        ]
+    },
+    {
+        nombre: "San Lorenzo de elEscorial",
+        img: "San-Lorenzo-Escorial",
+        formato: "jpg",
+        text: `
+        Población de la Comunidad de Madrid perteneciente a la Comarca de la Cuenca de Guadarrama.
+        <br><br>Sin duda alguna, dentro de su patrimonio artístico-cultural destacar El Monasterio de San Lorenzo de El Escorial en el siglo XVI construido durante el reinado de Felipe II para conmemorar la Batalla de San Quintín, según proyectos de Juan Bautista de Toledo y Juan Herrera. A finales del siglo XVI, fue considerado la Octava Maravilla del Mundo por su tamaño y complejidad. En 1984, la UNESCO declaró el Monasterio y Sitio de El escorial como Patrimonio de la Humanidad, es una de las principales atracciones turísticas de la Comunidad de Madrid.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.sanlorenzoturismo.es/",
+            "https://www.patrimonionacional.es/real-sitio/real-sitio-de-san-lorenzo-de-el-escorial",
+        ]
+    },
+    {
+        nombre: "San Agustín de Guadalix",
+        img: "SanAgustindeGuadalix",
+        formato: "jpg",
+        text: `
+        San Agustín de Guadalix es una localidad de la Comunidad de Madrid ubicada en la Comarca de la Cuenca Media del Jarama, situada en las estribaciones de la Sierra de Guadarrama y entorno al río Guadalix encontramos espacios de interés natural como el Monte de Moncalvillo, declarado Monte de Utilidad Pública en 1926 y La Laguna de los Patos, parque recreativo con flora y fauna autóctona.
+        <br><br>La Iglesia Parroquial de San Agustín es el ejemplo mas destacado del patrimonio artístico de la localidad construido en el siglo XVI.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.sanagustindelguadalix.net/",
+        ]
+    },
+    {
+        nombre: "San Martín de la Vega",
+        img: "SanMartinVega",
+        formato: "jpg",
+        text: `
+        San Martín de la Vega es un municipio situado en el Sur de la Comunidad de Madrid, perteneciente a la comarca de las Vegas, bañado por el río Jarama, su termino municipal esta incluido en el ámbito del Parque Regional del Sureste, dado su interés ecológico y medioambiental. En 2002 se abre, el Parque Warner, el parque temático más grande e importante del mundo de los dedicados a la compañía Warner Bros.
+        <br><br>Dentro de su patrimonio artístico destaca la Iglesia de la Natividad de nuestra Señora declarada Bien de interés Cultural empezó su construcción en el siglo XVI. Señalar también la cas Palacio de Góquez de Arriba, mandado construir por Felipe II, incluido en el sistema de conjuntos y elementos conexos con el monasterio del Escorial, construcción de aparejo toledano dedicado a la elaboración de vino.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://ayto-smv.es/",
+            "http://www.parqueregionalsureste.org/es/",
+        ]
+    },
+    {
+        nombre: "San Martín de ValdeIglesias",
+        img: "SanMartindeValdeIglesias",
+        formato: "jpg",
+        text: `
+        San Martín de Valdeiglesias, pueblo de la Comunidad de Madrid, situado en la comarca de la Sierra Oeste, es conocido por estar a los pies del Embalse de San Juan. Forma parte del programa de promoción turística villas de Madrid.
+        <br><br>Su castillo de la Coracera forma parte de la Red de Castillos y declarado Bien de Interés Cultural. Se construyo a principios del siglo XV por Don Álvaro de Luna, valido de Juan II.
+        <br><br>La Iglesia de San Martín se empezó a construir en 1634 pero nunca se llego a terminar, solo se construyo una tercera parte de lo proyectado.
+        <br><br>De las muchas Iglesias que existieron en la zona, que le dieron el nombre de Valle de Las Iglesias se pueden observar seis: Ermita del Cristo, Ermita del Ecce Homo, Ermita de la Sangre, Ermita de la Salud, Ermita de la Virgen nueva y Ermita del Rosario.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.sanmartindevaldeiglesias.es/",
+            "https://www.turismomadrid.es/es/portada/10374-villas-de-madrid.html",
+        ]
+    },
+    {
+        nombre: "Santorcaz",
+        img: "Santorcaz",
+        formato: "jpg",
+        text: `
+        Municipio de la comarca de la cuenca de Henares situado dentro de la comunidad de Madrid, muchos declaran que es el municipio más antiguo de la Comunidad de Madrid.
+        <br><br>Destacar el Castillo de Torremocha fechado en el siglo XIII, tuvo diferentes usos; defensivo, residencial y cárcel. Junto a las murallas se erige la Iglesia de San Torcuato también del siglo XIII
+        <br><br>Su arquitectura urbana mantiene el espíritu tradicional , viviendas, lavadero, las fuentes de la plaza y del Caño Alto.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://ayuntamientosantorcaz.com",
+        ]
+    },
 ]
+
 
 export default function PueblosMadrid() {
     const { isOpen, onOpen, onClose } = useDisclosure();
