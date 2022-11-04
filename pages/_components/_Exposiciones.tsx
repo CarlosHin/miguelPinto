@@ -12,6 +12,13 @@ import ExposicionesCarousel from '../../components/ExposicionesCarousel';
 export default function Exposiones() {
     const exposiones = [
         {
+            title: 'MAC CROHOM 2022',
+            text: "",
+            image: "CartelMacCrohon2022-2.jpg",
+            date: "Noviembre 2022-Diciembre 2022",
+            href: "https://expo.miguelpinto.com/Mac-Crohon-Nov-2022/"
+        },
+        {
             title: 'CartelIEA2021',
             text: "",
             image: "CartelIEA2021.png",

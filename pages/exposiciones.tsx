@@ -79,7 +79,7 @@ const exposionesActuales = [
     {
         title: 'MAC CROHOM 2022',
         text: "",
-        image: "CartelMACCROHON2021.png",
+        image: "CartelMacCrohon2022-2.jpg",
         date: "Noviembre 2022-Diciembre 2022",
         href: "https://expo.miguelpinto.com/Mac-Crohon-Nov-2022/"
     },
