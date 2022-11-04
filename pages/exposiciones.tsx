@@ -38,7 +38,6 @@ const exposionesAntiguas = [
         image: "CartelMACCROHON2021.png",
         date: "Diciembre 2021-Enero 2022",
         href: "https://expo.miguelpinto.com/Mac-Crohon-Nov-2021"
-
     },
     {
         title: 'Perales 2022',
@@ -75,7 +74,16 @@ const exposionesAntiguas = [
 
 
 ];
-const exposionesActuales = [];
+
+const exposionesActuales = [
+    {
+        title: 'MAC CROHOM 2022',
+        text: "",
+        image: "CartelMACCROHON2021.png",
+        date: "Noviembre 2022-Diciembre 2022",
+        href: "https://expo.miguelpinto.com/Mac-Crohon-Nov-2022/"
+    },
+];
 
 
 export default function Exposiciones() {
