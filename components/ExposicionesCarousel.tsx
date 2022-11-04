@@ -84,22 +84,25 @@ export default function ExposicionesCarousel({ items, speed }) {
                     </Slider>
                 </Box>
             </Center >
-
-            <Stack direction="row" justify="center" mt={5} >
-                <IconButton
-                    aria-label="left-arrow"
-                    variant="ghost"
-                    onClick={() => slider?.slickPrev()}>
-                    <BiLeftArrowAlt size="40px" />
-                </IconButton>
-                {/* Right Icon */}
-                <IconButton
-                    aria-label="right-arrow"
-                    variant="ghost"
-                    onClick={() => slider?.slickNext()}>
-                    <BiRightArrowAlt size="40px" />
-                </IconButton>
-            </Stack>
+            {items.length >1 &&
+                <>
+                    <Stack direction="row" justify="center" mt={5} >
+                        <IconButton
+                            aria-label="left-arrow"
+                            variant="ghost"
+                            onClick={() => slider?.slickPrev()}>
+                            <BiLeftArrowAlt size="40px" />
+                        </IconButton>
+                        {/* Right Icon */}
+                        <IconButton
+                            aria-label="right-arrow"
+                            variant="ghost"
+                            onClick={() => slider?.slickNext()}>
+                            <BiRightArrowAlt size="40px" />
+                        </IconButton>
+                    </Stack>
+                </>
+            }
         </>
     );
 }
