@@ -12,7 +12,6 @@ const WOW = !isServer ? require('wowjs') : null
 
 
 const path = "/img/Pueblos"
-];
 export interface Pueblo {
     nombre: string;
     img: string;
