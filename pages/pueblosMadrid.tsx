@@ -12,28 +12,6 @@ const WOW = !isServer ? require('wowjs') : null
 
 
 const path = "/img/Pueblos"
-const pueblos2 = [
-    // 'AlcaladeHenares.jpg', 'Alcorcón.jpg',
-    // 'Ambite.jpg', 'Aranjuez.jpg', 
-    // 'ArgandadelRey.jpg',
-    // 'BuitragodeLozoya.jpg', 'CadalsodelosVidrios.jpg',
-    // 'CampoReal.jpg', 
-    // 'Carabaña.jpg', 'Cenicientos.jpg',
-    // 'Cercedilla.jpg', 'Ciempozuelos.jpg', 'ColmenarViejo.jpg',
-    // 'ColmenardeOreja.jpg', 'Chinchon.jpg', 'Estremera.jpg',
-    // 'FuendidueñadelTajo.jpg', 'Getafe.jpg', 'Humanes.jpg',
-    // 'Loeches.jpg', 'Madrid.jpg', 'Manzanareselreal.jpg',
-    // 'MirafloresdelaSierra.jpg', 'MontejodelaSierra.jpg',
-    // 'MoratadeTajuña.jpg', 'Navacerrada.jpg', 'Navalcarnero.jpg',
-    // 'NuevoBaztan.jpg', 'PeralesdeTajuña.jpg', 'Quijorna.jpg',
-    // 'Rascafria.jpg', 'San-Lorenzo-Escorial.jpg', 'SanAgustindeGuadalix.jpg',
-    // 'SanMartinVega.jpg', 'SanMartindeValdeIglesias.jpg', 'Santorcaz.jpg',
-    'SantosdelaHumosa.jpg', 'Tielmes.jpg', 'Titulcia.jpg',
-    'TorrejóndeArdóz.jpg', 'Torrelaguna.jpg', 'Torrelodones.jpg',
-    'Valdelaguna.jpg', 'Valdemorillo.jpg', 'Valdemoro.jpg',
-    'Valdilecha.jpg', 'Vallecas.jpg', 'Villaconejos.jpg',
-    'VilladelPrado.jpg', 'VillamanriquedeTajo.jpg',
-    'VillardelOlmo.jpg', 'VillarejodeSalvanes.jpg', 'VillaviciosadeOdón.jpg'
 ];
 export interface Pueblo {
     nombre: string;
@@ -295,7 +273,7 @@ const pueblos = [
         ]
     },
     {
-        nombre: "FuendidueñadelTajo",
+        nombre: "Fuendidueña del Tajo",
         img: "FuendidueñadelTajo",
         formato: "jpg",
         text: `
@@ -368,7 +346,7 @@ const pueblos = [
         ]
     },
     {
-        nombre: "Manzanareselreal",
+        nombre: "Manzanares el real",
         img: "Manzanareselreal",
         formato: "jpg",
         text: `
@@ -385,7 +363,7 @@ const pueblos = [
         ]
     },
     {
-        nombre: "MirafloresdelaSierra",
+        nombre: "Miraflores de la Sierra",
         img: "MirafloresdelaSierra",
         formato: "jpg",
         text: `
@@ -414,7 +392,7 @@ const pueblos = [
         ]
     },
     {
-        nombre: "MoratadeTajuña",
+        nombre: "Morata de Tajuña",
         img: "MoratadeTajuña",
         formato: "jpg",
         text: `
@@ -523,7 +501,7 @@ const pueblos = [
         ]
     },
     {
-        nombre: "San Lorenzo de elEscorial",
+        nombre: "San Lorenzo de el Escorial",
         img: "San-Lorenzo-Escorial",
         formato: "jpg",
         text: `
@@ -596,6 +574,262 @@ const pueblos = [
         links: [
             "https://www.turismomadrid.es",
             "http://ayuntamientosantorcaz.com",
+        ]
+    },
+    {
+        nombre: "Santos de la Humosa",
+        img: "SantosdelaHumosa",
+        formato: "jpg",
+        text: `
+        Población de la Comunidad de Madrid situada en la comarca Cuenca de Henares. En su paisaje se encuentran tres elementos geográficos: La vega, la Campiña y el páramo.
+        <br><br>Destacar dentro de su patrimonio artístico, la Iglesia de San Pedro Apóstol, construida entre los siglos XVI y XVII, situada coronando el páramo ofrece unas magnificas vistas de las tierras que conforman la cuenca de Henares.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://lossantosdelahumosa.eu/",
+        ]
+    },
+    ,
+    {
+        nombre: "Tielmes",
+        img: "Tielmes",
+        formato: "jpg",
+        text: `
+        Tielmes pueblo perteneciente a la comarca de las Vegas en la Comunidad de Madrid.
+        <br><br>Dentro del patrimonio artístico de Tielmes nos encontramos la Iglesia Parroquial de los Santos Justo y Pastor, construida entre 1637 y 1787 de estilo renacentista-barroco. Otros ejemplos de arquitectura religiosa es la Ermita de los Santos Niños del siglo XVIII.
+        <br><br>Dentro de la Arquitectura civil figura el puente sobre el río Tajuña del siglo XVII . Forma parte de La Vía Verde del Tajuña, con 49Km, partiendo de Arganda y terminando en Ambite.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://www.tielmes.es",
+        ]
+    },
+    ,
+    {
+        nombre: "Titulcia",
+        img: "Titulcia",
+        formato: "jpg",
+        text: `
+        Titulcia pueblo de la comunidad de Madrid situado al sureste en la comarca de las Vegas.
+        <br><br>Hasta 1814 se llamo Bayona del Tajuña. Incluido dentro del Parque Regional del Sureste, destacar los ríos Jarama y Tajuña. El patrimonio artístico ofrece un conjunto formado por la Plaza Mayor y la Iglesia de Santa María Magdalena originaria del siglo XVI, destacamos también la Ermita de Nuestra Señora de la Soledad..
+        <br><br>El Puente de piedra sobre el Tajuña del siglo XVIII y las cuevas excavadas como residencia o dependencia agropecuaria forman parte de su patrimonio.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://www.parqueregionalsureste.org/es/",
+        ]
+    },
+    {
+        nombre: "Torrejón de Ardóz",
+        img: "TorrejóndeArdóz",
+        formato: "jpg",
+        text: `
+        Torrejón de Árdoz municipio de la Comunidad de Madrid englobada dentro del corredor de Henares y el área metropolitana de Madrid.
+        <br><br>Destacar de su patrimonio artístico la Casa Grande de finales del siglo XIV, fue una casa de labor de la Compañía de Jesús, tras ser expulsados por Carlos III tuvo varios propietarios, hoy en día es un centro hostelero artístico. La iglesia de San Juan Evangelista se construyó a partir del siglo XVI.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "https://www.ayto-torrejon.es/",
+        ]
+    },
+    {
+        nombre: "Torrelaguna",
+        img: "Torrelaguna",
+        formato: "jpg",
+        text: `
+        Torrelaguna se sitúa en el nordeste de la Comunidad de Madrid, en la comarca conocida como del Jarama. El territorio municipal está cruzado por los ríos Jarama y Lozoya.
+        <br><br>El conjunto urbano de Torrelaguna ha sido declarado Monumento Histórico Artístico Nacional, tiene varios edificios y estructuras relevantes, como la plaza Mayor o la iglesia parroquial de Santa María Magdalena. Su estructura urbana deja ver su impronta medieval.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+            "http://www.torrelagunaweb.es/turismo/",
+        ]
+    },
+    {
+        nombre: "Torrelodones",
+        img: "Torrelodones",
+        formato: "jpg",
+        text: `
+        Torrelodones es un municipio de la Comunidad de Madrid localizado entre la Comarca de la Sierra de Guadarrama y el área metropolitana. Parte de su territorio esta protegido a través del Parque de la Cuenca Alta del Manzanares y del Parque Regional del curso Medio del río Guadarrama.
+        <br><br>Torrelodones forma parte de dos importantes rutas turísticas, La Ruta Imperial y la Ruta por los Castillos , Fortalezas y Atalayas, al que queda vinculado el pueblo al estar levantado sobre una atalaya que formaba parte de un sistema defensivo durante el periodo andalusí.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.torrelodones.es/",
+            "http://www.parqueregionalguadarrama.org/",
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Valdelaguna",
+        img: "Valdelaguna",
+        formato: "jpg",
+        text: `
+        Valdelaguna situada en la comarca de las Vegas dentro de la comunidad de Madrid.
+        <br><br>En el siglo XII emergía una laguna en su valle ahora desaparecida, por su termino municipal no discurre ningún río pero dispone de abundante agua gracias a los arroyos de la Fuente María y de la Veguilla y de mas fuentes-manantiales.
+        <br><br>Ofrece interesantes muestra patrimonial como la iglesia de Nuestra Señora de la Asunción, cuyo origen se remonta al siglo XV.
+        <br><br>Paseando por su calles nos podemos encontrar con la Fuente Lavadero, restos del Molino aceitero de Empiedro, la Prensa del vino, la Plaza del Ayuntamiento y las casonas fechadas en el siglo XVII, Casa el Cura y Casa Grande.
+        `,
+        imgCount: 2,
+        links: [
+            "https://valdelaguna.org/",
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Valdemorillo",
+        img: "Valdemorillo",
+        formato: "jpg",
+        text: `
+        Valdemorillo población de la Comunidad de Madrid pertenece a la Comarca de la Cuenca de Guadarrama. Se encuentra localizado parte del embalse de Valmayor.
+        <br><br>Su término municipal esta incluido parcialmente en el Parque Regional del curso medio del río Guadarrama y su entorno, también forma parte del itinerario turístico conocido como Ruta Imperial de la Comunidad de Madrid
+        <br><br>Las principales muestras de su patrimonio artístico es la Iglesia de la Asunción de Nuestra Señora y la Ermita de la Esperanza ambas construidas en el siglo XVI.
+        `,
+        imgCount: 2,
+        links: [
+            "https://aytovaldemorillo.com/",
+            "http://www.parqueregionalguadarrama.org/",
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Valdemoro",
+        img: "Valdemoro",
+        formato: "jpg",
+        text: `
+        Valdemoro es una población que pertenece a la comarca Sur de la Comunidad de Madrid.
+        <br><br>Adentrando en el patrimonio artístico de Valdemoro nos encontramos con la Iglesia Parroquial de Asunción de Nuestra Señora de estilo barroco,el siglo XVII, declarada Monumento Histórico Artístico en 1981. Destacar también el Convento de Santa Clara siglo XVII y La Ermita del Santísimo Cristo de la Salud.
+        <br><br>Su Plaza de la Constitución construida entre los siglos XVI y XVII, es un ejemplo de arquitectura Castellana, con soportales y balconadas de dos cuerpos.
+        `,
+        imgCount: 2,
+        links: [
+            "http://www.valdemoro.es/",
+            "http://www.parqueregionalsureste.org/es/",
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Valdilecha",
+        img: "Valdilecha",
+        formato: "jpg",
+        text: `
+        Valdilecha pueblo de la Comunidad de Madrid pertenece a la comarca de las Vegas.
+        <br><br>Su origen tiene lugar en el siglo XII. Su patrimonio artístico más destacado es la Iglesia de San Martín Obispo del siglo XIII, estilo gótico-mudejar. También destacar la Ermita de la Virgen de la Oliva del siglo XVII, con sus impresionantes vistas y la ermita del Cristo del Amparo.
+        `,
+        imgCount: 2,
+        links: [
+            "http://www.valdilecha.org/",
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Vallecas",
+        img: "Vallecas",
+        formato: "jpg",
+        text: `
+        <br><br>Vallecas fue un municipio de la provincia de Madrid, pero en 1950 se anexiono al término municipal de Madrid. Actualmente constituye una extensa zona Madrid dividida en dos distritos, Puente Vallecas al noreste y Villa Vallecas al sureste.
+        <br><br>Dentro de su patrimonio artístico destacar la Iglesia de San Pedro Ad Víncula emplazada en el Casco Histórico de Vallecas (Distrito Villa de Vallecas), iglesia diseñada por Juan Herrera en el año 1600. La iglesia de San Ramón Nonato en el distrito de Puente Vallecas construida a principios del siglo XIX.
+        <br><br>En los años 20 surge la Escuela de Vallecas, movimiento artístico que intento renovar el arte español frente al arte de vanguardia instado en París. Les atrae lo rural y buscan el reencuentro con el paisaje castellano. Tras la guerra civil vuelve a resurgir la Segunda Escuela de Vallecas (1939-1942), desapareciendo pero alimento la Joven Escuela de Madrid.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Villaconejos",
+        img: "Villaconejos",
+        formato: "jpg",
+        text: `
+        Villaconejos localidad de la comunidad de Madrid enmarcada en la comarca de las Vegas. Famosa por su fruto estrella el melón
+        <br><br>La principal muestra del patrimonio artístico de Villaconejos es la Iglesia de San Nicolás de Bari construida sobre el siglo XVI, también de la época y dentro del ámbito religiosos esta la Ermita de Santa Ana.
+        <br><br>Destacar La Cueva de los Frailes del siglo XVIII, su nombre se debe a que fue realiza por los monjes del Carmen Calzado y tuvo uso vinícola.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.ayto-villaconejos.com/",
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Villa del Pardo",
+        img: "VilladelPrado",
+        formato: "jpg",
+        text: `
+        Villa del Pardo población de la Comunidad de Madrid, situada en la Comarca de la Sierra Oeste. Bañado por el río Alberche de aguas cristalinas aptas para el baño .
+        <br><br>Su arquitectura popular basada en las casas blasonadas y adinteladas de los siglos XVII y XVIII junto con su Plaza Mayor es uno de sus mayores atractivos. Destacar también la Iglesia de Santiago Apóstol, l Ermita de Nuestra Señora de la Poveda barroco del siglo XVII, la Ermita de Santa Lucia o la Ermita del Cristo de Sangre. No podemos olvidarnos de su ayuntamiento típico castellano del siglo XVII; la portada del Palacio Álvaro de Luna o las Fuentes de los Caños de Picañejo y de La Reguera.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.villadelprado.es/",
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Villamanrique del Tajo",
+        img: "VillamanriquedeTajo",
+        formato: "jpg",
+        text: `
+        Villamanrique municipio de la comarca de las Vegas ubicada en el Este de la Comunidad de Madrid.
+        <br><br>Bañado por el río Tajo y otros cauces como los Arroyos del Valle, del Charco Negro y de las Salinas, así como del Embalse de Buenamesón. Nos ofrece un interesante patrimonio artístico. La antigua villa de Buenamesón, conjunto de edificios del siglo XVII que formaban una finca de recreo y agropecuaria. El Castillo de Albuher importante durante la dominación musulmana y la Reconquista, actualmente solo quedan unos restos y la Real Salina de Carcavallana del siglo XVIII.
+        `,
+        imgCount: 2,
+        links: [
+            "https://villamanriquedetajo.madrid/",
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Villar del Olmo",
+        img: "VillardelOlmo",
+        formato: "jpg",
+        text: `
+        Villar del Olmo es un municipio situado al Este de la Comunidad de Madrid. En la comarca de las Vegas, se distingue por sus casa encaladas sus estrechas calles y sus zonas verdes.
+        <br><br>Destacar la Iglesia de Nuestra Señora de la Antigua de estilo románico-rural originario del siglo XI y XII que se le fueron añadiendo elementos como la capilla de nuestra Señora de la Soledad.
+        <br><br>La localidad tiene cuatro fuentes ubicada en distintos puntos de la localidad. Ubicadas en vías pecuarias y procedentes de manantiales de la zona, reflejando la importancia de la agricultura y la ganadería en los habitantes de la comarca.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.villardelolmo.es/",
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Villarejo de Salvanes",
+        img: "VillarejodeSalvanes",
+        formato: "jpg",
+        text: `
+        Es una localidad situada en la zona Suroriental de la Comunidad de Madrid. Se encuentra en la denominada Comarca de la Vegas y forma parte del programa de promoción turística villas de Madrid.
+        <br><br>Integrado dentro del conjunto Histórico-Artístico de este pueblo, se encuentra La Torre del Homenaje, últimos restos del Castillo de Villarejo de Salvanés, constituye una muestra arquitectónica única en España.
+        <br><br>El castillo de Villarejo de Salvanés erá una fortaleza de la Orden de Santiago que formaba parte del sistema defensivo que protegía el paso por el antiguo Camino de Toledo (o Toledano), así como por la llamada Senda Galiana (calzada romana que enlazaba la Galia e Hispania, en uso durante la Edad Media.
+        <br><br>El castillo de Villarejo de Salvanés fue sede del Tribunal Especial de las Órdenes Militares y en el siglo XIX, acogió como refugiado a El Empecinado, además de convertirse en el punto de origen de uno de los fracasados levantamientos de Juan Prim.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.turismovillarejodesalvanes.com/",
+            "https://www.turismomadrid.es/es/portada/10374-villas-de-madrid.html",
+            "https://www.turismomadrid.es",
+        ]
+    },
+    {
+        nombre: "Villaviciosa de Odón",
+        img: "VillaviciosadeOdón",
+        formato: "jpg",
+        text: `
+        Villaviciosa de Odón situada en la comarca de la cuenca media del río Guadarrama en el oeste de la comunidad de Madrid
+        <br><br>Las primeras noticias de población formadas en el entorno de Villaviciosa de Odón son de época visigoda como demuestran la necrópolis
+        <br><br>El Castillo de Viciosa de Odón se construyó a principios del siglo XV por iniciativa de los primeros condes de Chinchón. Sobre la edificación de esta fortaleza, en el año 1496. Otros monumentos son: la Fuente de los Tres Caños construida por Ventura Rodríguez, la conocida Casa Huerta del Arroyo de Manuel de Godoy reconstruida unos años antes de la Guerra Civil y el Palacio de la Candelaria, Palacio de los Duques de Gandía.
+        `,
+        imgCount: 2,
+        links: [
+            "https://www.aytovillaviciosadeodon.es/",
+            "http://www.parqueregionalguadarrama.org/",
+            "https://www.turismomadrid.es",
         ]
     },
 ]
