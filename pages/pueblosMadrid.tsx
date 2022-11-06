@@ -134,7 +134,7 @@ const pueblos = [
         ]
     },
     {
-        nombre: "CampoReal",
+        nombre: "Campo Real",
         img: "CampoReal",
         formato: "jpg",
         text: `
