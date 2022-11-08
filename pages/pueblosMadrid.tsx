@@ -843,15 +843,53 @@ export default function PueblosMadrid() {
         }).init();
 
     }, [])
+    const Item = ({ pueblo }: { pueblo: Pueblo }) => {
+        return <Box
+            w="full"
+            minH="200px"
+            transition="all 0.4s ease-out"
+            zIndex="1"
+            cursor="pointer"
+            _hover={{
+                transform: { md: "scale(1.1)" },
+                zIndex: "2"
+            }}
+            onClick={() => {
+                setPuebloOpened(pueblo)
+                onOpen();
+            }}
+        >
+            <Img
+                src={`${path}/${pueblo?.img}.${pueblo?.formato}`}
+            >
+            </Img>
+            <Box position="relative">
+                <Box
+                    position="absolute"
+                    bottom="5px"
+                    left="10px"
+                    right="0px"
+                    w="max-content"
+                    maxW="70%"
+                    px={2}
+                    py={1}
+                    borderRadius={"10px"}
+                    bg="brand.primary"
+                >
+                    <Text textAlign="center">{pueblo.nombre}</Text>
+                </Box>
+            </Box>
+        </Box>
+    }
 
 
     return <>
         <SectionHero title="Pueblos de Madrid" />
         <Stack px={{ base: 5, md: 20 }} py={10} align="center" >
             <Text >
-                La comunidad de Madrid me proporciono una variedad infinita de pueblos y paisajes. Aquí nací y viví, admirando constantemente sus tierras y costumbres, enriqueciendo mi sensibilidad.
+                La comunidad de Madrid me proporcionó una variedad infinita de pueblos y paisajes. Aquí nací y viví, admirando constantemente sus tierras y costumbres, enriqueciendo mi sensibilidad.
                 <br /><br />
-                En mi primera etapa de pintor que denomino FIGURATIVA, me exprese a través de paisajes de sierras contrastadas; llanuras austeras y montes bajos con cielos únicos por limpios. En los desnudos de mujer, recree pintado sus formas ondulantes como campos, sus sutiles bellas posturas, sugerentes perfumes y calores de abrazos.
+                En mi primera etapa de pintor que denomino FIGURATIVA, me exprese a través de paisajes de sierras contrastadas; llanuras austeras y montes bajos con cielos únicos por limpios. En los desnudos de mujer, recreé pintando sus formas ondulantes como campos, sus sutiles bellas posturas, sugerentes perfumes y calores de abrazos.
                 <br /><br />
                 Con el tiempo, buscando, me encontré con nuevos mensajes de formas y misterios a través de otros mundos de una segunda etapa que denomino SUBJETIVA. Mis pinturas se muestran ante una figuración intangible con una lectura mas intimista armonizando sueños, cataclismos de sombras, silencios y milagros.
                 <br /><br />
@@ -863,42 +901,7 @@ export default function PueblosMadrid() {
             </Text>
             <SimpleGrid columns={{ base: 1, md: 4 }} w="full" gap={1}>
                 {pueblos.map((pueblo: Pueblo) => (
-                    <Box
-                        key={pueblo.nombre}
-                        w="full"
-                        transition="all 0.4s ease-out"
-                        zIndex="1"
-                        cursor="pointer"
-                        _hover={{
-                            transform: { md: "scale(1.1)" },
-                            zIndex: "2"
-                        }}
-                        onClick={() => {
-                            setPuebloOpened(pueblo)
-                            onOpen();
-                        }}
-                    >
-                        <Img
-                            src={`${path}/${pueblo?.img}.${pueblo?.formato}`}
-                        >
-                        </Img>
-                        <Box position="relative">
-                            <Box
-                                position="absolute"
-                                bottom="5px"
-                                left="10px"
-                                right="0px"
-                                w="max-content"
-                                maxW="70%"
-                                px={2}
-                                py={1}
-                                borderRadius={"10px"}
-                                bg="brand.primary"
-                            >
-                                <Text textAlign="center">{pueblo.nombre}</Text>
-                            </Box>
-                        </Box>
-                    </Box>
+                    <Item key={pueblo.nombre} pueblo={pueblo} />
                 ))}
             </SimpleGrid>
         </Stack >

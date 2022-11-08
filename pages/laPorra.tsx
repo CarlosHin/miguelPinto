@@ -113,7 +113,7 @@ export default function LaPorra() {
                     <br /><br />
                     LA PORRA es una gran montaña aislada, con la cima en forma de balcón circular, desde donde se divisan grandes perspectivas.
                     Todo su paisaje me transformo, hasta inquietarme con ensoñaciones que me empujaron a pintarlo para recordar y memorizar las fuentes que me proporcionaron emociones tan intensas.
-                    Su vista en forma circular en panorámicas abiertas, Me empujo a visualizar que se podrían exponer en ocho cuadros o partes, que pudieran vivir juntos o separados.
+                    Su vista en forma circular en panorámicas abiertas me empujo a visualizar que se podrían exponer en ocho cuadros o partes, que pudieran vivir juntos o separados.
                     Para pintar LA PORRA pase muchos amaneceres en su cima, esperando la luz del día poder trabajar. Los milagros de la luz me despertaron colores y matices fecundaron con ternura y amores a la naturaleza tan sensitiva como inexplicable.
                     Las dificultades del trabajo las asumí con suplicas de constancia, retos de perfección y alegrías; riquezas de asombro. La exuberante panorámica movía mi cuerpo y alma transformando con pinceladas para encontrar la belleza de equilibrios de las austeras quebradas, veredas, llanos y barrancos.
                     <br /><br />
