@@ -27,6 +27,7 @@
     "react-cookie-consent": "^8.0.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-lottie": "^1.2.3",
     "react-slick": "^0.29.0",
     "wowjs": "^1.1.3"
   },

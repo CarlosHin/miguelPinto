@@ -5,6 +5,9 @@ import React, { useEffect, useState } from "react";
 import ImageModal from "../../components/ImageModal";
 import SectionHero from './_SectionHero';
 import Waves from '../../components/Waves';
+import Lottie from 'react-lottie';
+import * as animationData from './spinner_art.json'
+
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
@@ -97,6 +100,15 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
         }
     }
 
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
+
     const columns = useBreakpointValue({ base: 2, md: 5, lg: 6 });
     const imagesInColumns = images.length > 0 ? chunckArrayInColumns(images, columns) : [];
     return <Box position="relative">
@@ -142,7 +154,10 @@ export default function DetalleEpoca({ path, pathHQ, title, desc }: { path: stri
                 </Grid>
             ) : (
                 <Center mt={10}>
-                    <Spinner w={{ base: "100px", md: '200px' }} h={{ base: "100px", md: '200px' }} thickness='4px' />
+                    <Lottie options={defaultOptions}
+                        height={200}
+                        width={200}
+                    />
                 </Center>
             )}
         </Stack >
