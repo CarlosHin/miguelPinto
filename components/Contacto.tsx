@@ -57,6 +57,13 @@ export default function Contacto(
             return;
         }
         const body = { nombre: name, email: email, msg: message }
+        axios
+            .post("https://getform.io/f/8b8ec62d-73b0-49cc-8c28-8a2cb7cd647f", {
+                ...body
+            },
+                { headers: { 'Accept': 'application/json' } })
+            .then(response => console.log(response))
+            .catch(error => console.log(error))
         axios.post(`https://www.carlosh.es/recibirMensajeMiguelPinto.php`, qs.stringify(body))
             .then(res => {
                 if (res.data === 1) {
