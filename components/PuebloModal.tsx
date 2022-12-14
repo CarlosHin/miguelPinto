@@ -2,10 +2,12 @@ import {
     ModalHeader,
     Modal, ModalOverlay, ModalContent, ModalCloseButton,
     ModalBody, Img,
-    Text, SimpleGrid, Box, Link
+    Text, SimpleGrid, Box
 } from "@chakra-ui/react"
 import React, { useEffect, useState } from "react"
 import { Pueblo } from "../pages/pueblosMadrid"
+import Link from 'next/link'
+
 const path = "/img/Pueblos"
 
 export default function PuebloModal(

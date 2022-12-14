@@ -3,15 +3,15 @@ import {
     Box,
     Flex,
     HStack,
-    Link,
     IconButton,
     useDisclosure,
     useColorModeValue,
     Stack,
-    Img
+    Img,
+    Text
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
-import { link } from 'fs';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import Link from 'next/link'
 
 const Links = [
     { title: 'Biografía', href: "/biografia" },
@@ -23,17 +23,21 @@ const Links = [
 ];
 
 const NavLink = ({ link }) => (
-    <Link
-        px={2}
+    <Text px={2}
         py={1}
         rounded={'md'}
         _hover={{
             textDecoration: 'none',
             bg: useColorModeValue('gray.200', 'gray.700'),
-        }}
-        href={link.href}>
-        {link.title}
-    </Link>
+        }}>
+
+        <Link
+
+            href={link.href}>
+            {link.title}
+        </Link>
+    </Text>
+
 );
 
 export function Header() {

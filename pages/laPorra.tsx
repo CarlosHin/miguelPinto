@@ -7,12 +7,12 @@ import {
     Center,
     Heading,
     Flex,
-    Link
 } from '@chakra-ui/react';
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { GetStaticProps } from "next";
 import { ImgLoad } from "../components/ImgLoad";
+import Link from 'next/link'
 
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null

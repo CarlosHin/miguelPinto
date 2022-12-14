@@ -1,11 +1,12 @@
 import SectionHero from "./_components/_SectionHero";
 import {
-    Link,
     Stack,
     Text,
 } from '@chakra-ui/react';
 import { useEffect } from "react";
 import { GetStaticProps } from "next";
+import Link from 'next/link'
+
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 

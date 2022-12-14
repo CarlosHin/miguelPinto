@@ -11,7 +11,6 @@ import {
     InputLeftElement,
     Textarea,
     Checkbox,
-    Link,
     useToast,
     ContainerProps
 } from '@chakra-ui/react';
@@ -22,6 +21,7 @@ import { BsPerson } from 'react-icons/bs';
 import { useState } from 'react';
 import axios from 'axios';
 import qs from 'qs';
+import Link from 'next/link'
 
 export default function Contacto(
     { styles }: { styles?: { container: ContainerProps } }

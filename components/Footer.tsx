@@ -1,13 +1,13 @@
 import {
     Box,
     Container,
-    Link,
     Stack,
     Text,
     SimpleGrid,
     Img,
     Divider,
 } from '@chakra-ui/react';
+import Link from 'next/link'
 
 export default function Footer() {
     return (
@@ -49,7 +49,7 @@ export default function Footer() {
                     spacing={4}
                     justify={{ base: 'center', md: 'space-between' }}
                     align={{ base: 'center', md: 'center' }}>
-                    <Text>Web realizada por <Link href="https://www.carlosh.es" fontWeight={700}>Carlos Hinojosa Pinto</Link></Text>
+                    <Text>Web realizada por <Link href="https://www.carlosh.es" >Carlos Hinojosa Pinto</Link></Text>
                 </Container>
             </Box>
         </Box>
