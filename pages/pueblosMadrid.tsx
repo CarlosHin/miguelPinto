@@ -501,7 +501,7 @@ const pueblos = [
     },
     {
         nombre: "San Lorenzo de el Escorial",
-        img: "San-Lorenzo-Escorial",
+        img: "SanLorenzoEscorial",
         formato: "jpg",
         text: `
         Población de la Comunidad de Madrid perteneciente a la Comarca de la Cuenca de Guadarrama.
