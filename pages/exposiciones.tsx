@@ -114,11 +114,13 @@ export default function Exposiciones() {
                         Pulsa en cada cartel para acceder a su exposición virtual
                     </Heading>
                 </Center>
-                <Center pt={10} pb={8}>
-                    <Heading fontSize="50px" textAlign="center">Exposiciones Actuales</Heading>
-                </Center>
                 {exposionesActuales.length > 0 ?
-                    <ExposicionesCarousel items={exposionesActuales} speed={speed} />
+                    <>
+                        <Center pt={10} pb={8}>
+                            <Heading fontSize="50px" textAlign="center">Exposiciones Actuales</Heading>
+                        </Center>
+                        <ExposicionesCarousel items={exposionesActuales} speed={speed} />
+                    </>
                     :
                     <></>
                 }
