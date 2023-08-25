@@ -1,6 +1,6 @@
 import SectionHero from "./_components/_SectionHero";
 import {
-    Stack, Text, Img, Circle, Flex
+    Stack, Text, Img, Circle, Flex, Box
 } from '@chakra-ui/react';
 import { useEffect } from "react";
 import { GetStaticProps } from "next";
@@ -10,6 +10,7 @@ const WOW = !isServer ? require('wowjs') : null
 type Year = {
     year: number | string;
     text: string;
+    img?: string;
 }
 const items: Year[] = [
     {
@@ -43,9 +44,8 @@ const items: Year[] = [
     {
         year: 1955,
         text: "Expone en la sala Libros de Zaragoza.",
-    }
-]
-const items2: Year[] = [
+        img: "/img/dibujo_a1p.jpeg"
+    },
     {
         year: 1956,
         text: "Expone en Bilbao, Sala Marcos."
@@ -68,11 +68,10 @@ const items2: Year[] = [
     },
     {
         year: 1963,
+        img: "/img/dibujo_a2p.jpeg",
         text: `Tiene estudio compartido en la calle Duque de Alba y hace cerámica y tapiz. Cambia el estudio a la calle Doctor Fourquet. Forma el grupo de pintores Castilla 63.. Se interesa por el grupo, el crítico de Arte, Carlos Areán y ayuda económicamente D. Luis Agosti Romero.
         <br><br>El Grupo Castilla 63 lo forman, Onésimo Anciones, Elena Asín, Luís García Núñez (Lugán), Manuel Prior, Victor Ventura, Julio Plaza y Miguel Pinto. Se hacen exposiciones: Sala Amadís, Ateneo, Galería Biosca, Segovia, Hospital Santa María, Casino Algeciras, Círculo Artístico Sant Llue.`
     },
-]
-const items3: Year[] = [
     {
         year: 1964,
         text: "Exposición en Sala Atril."
@@ -127,29 +126,27 @@ const items3: Year[] = [
     },
 ]
 
-const YearRow = ({ year }: { year: Year }) => {
+const YearRow = ({ year, index }: { year: Year, index: number }) => {
     return (
-        <Flex align="start" className="wow fadeIn">
-            < Circle
-                mt="6px"
-                mr={1}
-                sx={{
-                    w: 3,
-                    h: 3,
-                    border: "1px solid black"
-                }}
-            >
-                < Circle
-                    sx={{
-                        w: 1,
-                        h: 1,
-                        bg: "black"
-                    }}
-                ></Circle>
-            </Circle>
-            <Text mr={4} fontWeight="700" w="80px">{year.year}</Text>
-            <Text w="full" dangerouslySetInnerHTML={{ __html: year.text }}></Text>
-        </Flex>
+        <Stack
+            align={{ md: index % 2 === 0 ? "start" : "end" }}
+            className="wow fadeIn"
+            width={{ md: "50%" }}
+            spacing={0}
+            alignSelf={{ md: index % 2 === 0 ? "end" : "start" }}
+            paddingX={10}
+        >
+            <Text fontSize={34} mr={4} fontWeight="700">{year.year}</Text>
+            <Text
+                w="full"
+                dangerouslySetInnerHTML={{ __html: year.text }}
+                textAlign={{ md: index % 2 === 0 ? "left" : "right" }}
+            ></Text>
+            {year.img && <Flex w="full" justifyContent={{ md: index % 2 === 0 ? "start" : "end" }}
+                py={4} className="wow fadeIn">
+                <Img src={year.img} w={{ base: "80%", md: "400px" }} />
+            </Flex>}
+        </Stack >
     )
 }
 export default function Biografia() {
@@ -161,33 +158,22 @@ export default function Biografia() {
 
     return <>
         <SectionHero title="Biografía" />
-        <Stack px={{ base: 5, md: 20 }} py={10} align="center" >
+        <Stack px={{ base: 5, md: 20 }} mb={10} align="center" position="relative" >
+            <Box
+                position="absolute"
+                height={"full"}
+                width={0}
+                borderLeft="1px solid #55555533"
+                top="0px"
+                display={{ base: "none", md: "block" }}
+
+            ></Box>
             <Stack maxW="1000px">
                 <Stack>
                     {items.map((el, index) => (
-                        <YearRow key={index} year={el} />
+                        <YearRow key={index} year={el} index={index} />
                     ))}
                 </Stack>
-                <Flex w="full" justify="center" py={4} className="wow fadeIn">
-                    <Img src="/img/dibujo_a1p.jpeg" w={{ base: "80%", md: "400px" }} />
-                </Flex>
-
-                <Stack>
-                    {items2.map((el, index) => (
-                        <YearRow key={index} year={el} />
-                    ))}
-                </Stack>
-
-                <Flex w="full" justify="center" py={4} className="wow fadeIn">
-                    <Img src="/img/dibujo_a2p.jpeg" w={{ base: "80%", md: "400px" }} />
-                </Flex>
-
-                <Stack>
-                    {items3.map((el, index) => (
-                        <YearRow key={index} year={el} />
-                    ))}
-                </Stack>
-
             </Stack >
         </Stack >
     </>
