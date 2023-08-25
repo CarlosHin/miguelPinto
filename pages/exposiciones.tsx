@@ -19,6 +19,13 @@ const WOW = !isServer ? require('wowjs') : null
 
 const exposionesAntiguas = [
     {
+        title: 'MAC CROHOM 2022',
+        text: "",
+        image: "CartelMacCrohon2022-2.jpg",
+        date: "Noviembre 2022-Diciembre 2022",
+        href: "https://expo.miguelpinto.com/Mac-Crohon-Nov-2022/"
+    },
+    {
         title: 'CartelIEA2021',
         text: "",
         image: "CartelIEA2021.png",
@@ -76,13 +83,7 @@ const exposionesAntiguas = [
 ];
 
 const exposionesActuales = [
-    {
-        title: 'MAC CROHOM 2022',
-        text: "",
-        image: "CartelMacCrohon2022-2.jpg",
-        date: "Noviembre 2022-Diciembre 2022",
-        href: "https://expo.miguelpinto.com/Mac-Crohon-Nov-2022/"
-    },
+
 ];
 
 
@@ -119,9 +120,7 @@ export default function Exposiciones() {
                 {exposionesActuales.length > 0 ?
                     <ExposicionesCarousel items={exposionesActuales} speed={speed} />
                     :
-                    <Center >
-                        <Heading fontSize="20px" textAlign="center">No hay exposiciones actualmente</Heading>
-                    </Center>
+                    <></>
                 }
                 <Center pt={10} pb={8}>
                     <Heading fontSize="50px" textAlign="center">Exposiciones Antiguas</Heading>

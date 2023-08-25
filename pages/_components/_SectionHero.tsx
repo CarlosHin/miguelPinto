@@ -54,7 +54,7 @@ export default function SectionHero({ title }: { title?: string }) {
                             alt={'Hero Image'}
                             w={'100%'}
                             h={'100%'}
-                            src={"img/miguel.png"}
+                            src={"/img/miguel.png"}
                         />
                     </Box>
                 </Flex>
