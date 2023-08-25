@@ -134,7 +134,7 @@ const YearRow = ({ year, index }: { year: Year, index: number }) => {
             width={{ md: "50%" }}
             spacing={0}
             alignSelf={{ md: index % 2 === 0 ? "end" : "start" }}
-            paddingX={10}
+            paddingX={{ md: 10 }}
         >
             <Text fontSize={34} mr={4} fontWeight="700">{year.year}</Text>
             <Text
