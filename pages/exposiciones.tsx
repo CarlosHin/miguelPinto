@@ -19,6 +19,13 @@ const WOW = !isServer ? require('wowjs') : null
 
 const exposionesAntiguas = [
     {
+        title: 'Sara Montiel 2023',
+        text: "",
+        image: "SaraMontiel2023.png",
+        date: "Abril 2023",
+        href: "https://expo.miguelpinto.com/SaraMontiel-2023"
+    },
+    {
         title: 'MAC CROHOM 2022',
         text: "",
         image: "CartelMacCrohon2022-2.jpg",
@@ -82,9 +89,6 @@ const exposionesAntiguas = [
 
 ];
 
-const exposionesActuales = [
-
-];
 
 
 export default function Exposiciones() {
@@ -114,18 +118,8 @@ export default function Exposiciones() {
                         Pulsa en cada cartel para acceder a su exposición virtual
                     </Heading>
                 </Center>
-                {exposionesActuales.length > 0 ?
-                    <>
-                        <Center pt={10} pb={8}>
-                            <Heading fontSize="50px" textAlign="center">Exposiciones Actuales</Heading>
-                        </Center>
-                        <ExposicionesCarousel items={exposionesActuales} speed={speed} />
-                    </>
-                    :
-                    <></>
-                }
                 <Center pt={10} pb={8}>
-                    <Heading fontSize="50px" textAlign="center">Exposiciones Antiguas</Heading>
+                    <Heading fontSize="50px" textAlign="center">Exposiciones</Heading>
                 </Center>
 
                 <SimpleGrid columns={{ base: 2, md: 5 }} spacing={5}>

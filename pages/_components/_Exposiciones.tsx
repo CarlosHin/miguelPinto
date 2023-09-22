@@ -12,6 +12,13 @@ import ExposicionesCarousel from '../../components/ExposicionesCarousel';
 export default function Exposiones() {
     const exposiones = [
         {
+            title: 'Sara Montiel 2023',
+            text: "",
+            image: "SaraMontiel2023.png",
+            date: "Abril 2023",
+            href: "https://expo.miguelpinto.com/SaraMontiel-2023"
+        },
+        {
             title: 'MAC CROHOM 2022',
             text: "",
             image: "CartelMacCrohon2022-2.jpg",
