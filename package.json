@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "build:export": "next build && next export",
-    "start": "next start",
+    "start:next": "next start",
+    "start": "pm2 start yarn --name miguel_pinto -- start --port 3001",
     "lint": "next lint"
   },
   "dependencies": {
