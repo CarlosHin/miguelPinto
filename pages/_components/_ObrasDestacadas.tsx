@@ -82,14 +82,12 @@ function TestimonialCard(props: TestimonialCardProps) {
                         pt={{ md: 5, lg: 0 }}
                     >
                         <Text
-                            fontFamily={'Inter'}
                             fontWeight={'medium'}
                             fontSize={'30px'}
                         >
                             {title}
                         </Text>
                         <Text
-                            fontFamily={'Inter'}
                             fontWeight={'medium'}
                             fontSize={'20px'}
                         >
@@ -115,6 +113,7 @@ export default function ObrasDestacadas({ showTitle = true }: { showTitle?: bool
         <Flex
             textAlign={'center'}
             pt={10}
+            px={6}
             justifyContent={'center'}
             direction={'column'}
             width={'full'}>

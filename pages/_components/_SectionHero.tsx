@@ -18,12 +18,12 @@ export default function SectionHero({ title }: { title?: string }) {
                 maxW="full"
                 overflow="hidden"
                 align={'center'}
-                spacing={{ base: 8, sm: 20, md: 10 }}
-                pt={{ base: 10, md: 16 }}
-                pb={{ base: 10, md: 24 }}
-                direction={{ base: 'column-reverse', md: 'row' }}>
-                <Stack flex={1} spacing={{ base: 5, md: 10 }} px={{ base: 4, md: 2 }} className={"animated fadeIn"}>
-                    <Heading color="orange.200" fontSize={{ base: "60px", md: "100px" }} ml={{ lg: "100px" }}>
+                spacing={{ base: 8, sm: 20, lg: 10 }}
+                pt={{ base: 10, lg: 16 }}
+                pb={{ base: 10, lg: 24 }}
+                direction={{ base: 'column', lg: 'row' }}>
+                <Stack flex={1} spacing={{ base: 5, lg: 10 }} px={{ base: 4, lg: 2 }} className={"animated fadeIn"}>
+                    <Heading color="orange.200" fontSize={{ base: "60px", lg: "100px" }} ml={{ lg: "100px" }}>
                         {title}
                     </Heading>
                 </Stack>

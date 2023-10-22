@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react"
 import { Pueblo } from "../pages/pueblosMadrid"
 import Link from 'next/link'
 
-const path = "/img/Pueblos"
+const path = `${process.env.NEXT_PUBLIC_R2_PATH}/Pueblos`;
 
 export default function PuebloModal(
     {
