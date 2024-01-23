@@ -1,11 +1,26 @@
 const exposiciones = [
     {
+        title: 'Cid 2023',
+        text: "",
+        image: "CartelCid2023.png",
+        date: "Diciembre 2023",
+        href: "https://expo.miguelpinto.com/Cid-2024"
+    },
+    {
+        title: 'Sara Montiel 2023',
+        text: "",
+        image: "Parla2023.png",
+        date: "Octubre 2023",
+        href: "https://expo.miguelpinto.com/Parla-2023"
+    },
+    {
         title: 'Sara Montiel 2023',
         text: "",
         image: "SaraMontiel2023.png",
         date: "Abril 2023",
         href: "https://expo.miguelpinto.com/SaraMontiel-2023"
     },
+
     {
         title: 'MAC CROHOM 2022',
         text: "",
