@@ -58,32 +58,12 @@ export default function Contacto(
         }
         const body = { nombre: name, email: email, msg: message }
         axios
-            .post("https://getform.io/f/8b8ec62d-73b0-49cc-8c28-8a2cb7cd647f", {
+            .post("https://send_email.carlosh.ch/api/public/message/miguelpinto", {
                 ...body
             },
                 { headers: { 'Accept': 'application/json' } })
             .then(response => console.log(response))
             .catch(error => console.log(error))
-        axios.post(`https://www.carlosh.es/recibirMensajeMiguelPinto.php`, qs.stringify(body))
-            .then(res => {
-                if (res.data === 1) {
-                    toast({
-                        title: 'Gracias ' + name,
-                        description: "Mensaje enviado con éxito",
-                        status: 'success',
-                        duration: 9000,
-                        isClosable: true,
-                    });
-                } else {
-                    toast({
-                        title: 'Error',
-                        description: "Error al enviar mensaje",
-                        status: 'error',
-                        duration: 9000,
-                        isClosable: true,
-                    });
-                }
-            })
     }
     return (
         <Container bg="brand.primary" maxW="full" mt={0} centerContent overflow="hidden" px={4} py={4} {...styles?.container}>
