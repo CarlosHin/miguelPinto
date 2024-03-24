@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "build:export": "next build && next export",
     "start:next": "next start",
     "start": "pm2 start yarn --name miguel_pinto -- start:next --port 3001",
