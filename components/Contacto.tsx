@@ -61,7 +61,7 @@ export default function Contacto(
             .post("https://send_email.carlosh.ch/api/public/message/miguelpinto", {
                 ...body
             },
-                { headers: { 'Accept': 'application/json' } })
+                { headers: { 'Accept': 'application/json', "Content-Type": "application/json" } })
             .then(response => console.log(response))
             .catch(error => console.log(error))
     }
