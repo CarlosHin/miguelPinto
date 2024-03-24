@@ -62,8 +62,17 @@ export default function Contacto(
                 ...body
             },
                 { headers: { 'Accept': 'application/json', "Content-Type": "application/json" } })
-            .then(response => console.log(response))
+            .then(response => { setSuccessAlert(); })
             .catch(error => console.log(error))
+    }
+    const setSuccessAlert = () => {
+        toast({
+            title: 'Mensaje enviado',
+            description: "",
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+        });
     }
     return (
         <Container bg="brand.primary" maxW="full" mt={0} centerContent overflow="hidden" px={4} py={4} {...styles?.container}>
